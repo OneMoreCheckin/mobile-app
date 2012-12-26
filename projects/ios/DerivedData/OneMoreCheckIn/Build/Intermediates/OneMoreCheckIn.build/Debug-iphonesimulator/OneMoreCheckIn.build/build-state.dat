@@ -1,0 +1,636 @@
+TOneMoreCheckIn
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Info.plist OneMoreCheckIn/OneMoreCheckIn-Info.plist
+cPhaseScriptExecution "Touch www folder" /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Script-304B58A110DAC018002A0835.sh
+cCpResource www DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/www
+cCopyPlistFile /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Cordova.plist OneMoreCheckIn/Resources/../Cordova.plist
+cCpResource OneMoreCheckIn/Resources/icons/icon-72.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon-72.png
+cCpResource OneMoreCheckIn/Resources/icons/icon.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon.png
+cCpResource OneMoreCheckIn/Resources/icons/icon@2x.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon@2x.png
+cCpResource OneMoreCheckIn/Resources/Capture.bundle DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Capture.bundle
+cCopyStringsFile /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/en.lproj/Localizable.strings OneMoreCheckIn/Resources/en.lproj/Localizable.strings
+cCopyStringsFile /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/es.lproj/Localizable.strings OneMoreCheckIn/Resources/es.lproj/Localizable.strings
+cCompileXIB /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.xib
+cCopyStringsFile /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/de.lproj/Localizable.strings OneMoreCheckIn/Resources/de.lproj/Localizable.strings
+cCpResource OneMoreCheckIn/Resources/splash/Default-Landscape@2x~ipad.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Landscape@2x~ipad.png
+cCopyStringsFile /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/se.lproj/Localizable.strings OneMoreCheckIn/Resources/se.lproj/Localizable.strings
+cCpResource OneMoreCheckIn/Resources/splash/Default-Portrait@2x~ipad.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Portrait@2x~ipad.png
+cCpResource OneMoreCheckIn/Resources/splash/Default-Landscape~ipad.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Landscape~ipad.png
+cCpResource OneMoreCheckIn/Resources/splash/Default-Portrait~ipad.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Portrait~ipad.png
+cCpResource OneMoreCheckIn/Resources/splash/Default~iphone.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default~iphone.png
+cCpResource OneMoreCheckIn/Resources/splash/Default@2x~iphone.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default@2x~iphone.png
+cCpResource OneMoreCheckIn/Resources/splash/Default-568h@2x~iphone.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-568h@2x~iphone.png
+cProcessPCH /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/PrecompiledHeaders/OneMoreCheckIn-Prefix-gjonvqbmapgxthatdpgpzkihhgsd/OneMoreCheckIn-Prefix.pch.pth OneMoreCheckIn/OneMoreCheckIn-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/AppDelegate.o /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/main.o /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/MainViewController.o /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/OneMoreCheckIn normal i386
+cGenerateDSYMFile /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app.dSYM /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/OneMoreCheckIn
+cTouch /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk
+c0000000050941F500000000000000110
+t1351884624
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c0000000050941F3000000000001EAFC0
+t1351884592
+s2011072
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/AddressBook.framework/AddressBook
+c0000000050941F3100000000000C0EF0
+t1351884593
+s790256
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/AddressBookUI.framework/AddressBookUI
+c0000000050941F310000000000193640
+t1351884593
+s1652288
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c0000000050941F3200000000003D2B80
+t1351884594
+s4008832
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c0000000050941F320000000000215D60
+t1351884594
+s2186592
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c0000000050941F920000000000228FD0
+t1351884690
+s2265040
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+c0000000050941F33000000000009C220
+t1351884595
+s639520
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
+c0000000050941F340000000000085620
+t1351884596
+s546336
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c0000000050941F3500000000003DCEF0
+t1351884597
+s4050672
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/MediaPlayer.framework/MediaPlayer
+c0000000050941F3800000000002C6C10
+t1351884600
+s2911248
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c0000000050941F3900000000000BCB50
+t1351884601
+s772944
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c0000000050941F3A00000000001D57A0
+t1351884602
+s1922976
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c0000000050941F3B000000000006CC50
+t1351884603
+s445520
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c0000000050941F3D0000000000AB3D60
+t1351884605
+s11222368
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/AppDelegate.o
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/MainViewController.o
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/OneMoreCheckIn.LinkFileList
+c0000000050DB1EED0000000000000273
+t1356537581
+s627
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Script-304B58A110DAC018002A0835.sh
+c0000000050DB1EED0000000000000027
+t1356537581
+s39
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/PrecompiledHeaders/OneMoreCheckIn-Prefix-gjonvqbmapgxthatdpgpzkihhgsd/OneMoreCheckIn-Prefix.pch.pth
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app.dSYM
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Capture.bundle
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Cordova.plist
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-568h@2x~iphone.png
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Landscape@2x~ipad.png
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Landscape~ipad.png
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Portrait@2x~ipad.png
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Portrait~ipad.png
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default@2x~iphone.png
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default~iphone.png
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Info.plist
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/MainViewController.nib
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/OneMoreCheckIn
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/PkgInfo
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/de.lproj/Localizable.strings
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/en.lproj/Localizable.strings
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/es.lproj/Localizable.strings
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon-72.png
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon.png
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon@2x.png
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/se.lproj/Localizable.strings
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/www
+t2
+s0
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/libCordova.a
+c0000000050DB1EED0000000000319C18
+t1356537581
+s3251224
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/AppDelegate.m
+c0000000050DB1E9900000000000015B7
+t1356537497
+s5559
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.m
+c0000000050DB1E9900000000000012F8
+t1356537497
+s4856
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.xib
+c0000000050DB1E990000000000001759
+t1356537497
+s5977
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/OneMoreCheckIn-Prefix.pch
+c0000000050DB1E9900000000000003CD
+t1356537497
+s973
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/../Cordova.plist
+c0000000050DB1E990000000000000A33
+t1356537497
+s2611
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/Capture.bundle
+c0000000050DB1E99000000000000030E
+t1356537497
+s782
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/de.lproj/Localizable.strings
+c0000000050DB1E990000000000000485
+t1356537497
+s1157
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/en.lproj/Localizable.strings
+c0000000050DB1E990000000000000470
+t1356537497
+s1136
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/es.lproj/Localizable.strings
+c0000000050DB1E99000000000000047D
+t1356537497
+s1149
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/icons/icon-72.png
+c0000000050DB1E990000000000001350
+t1356537497
+s4944
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/icons/icon.png
+c0000000050DB1E990000000000000F3E
+t1356537497
+s3902
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/icons/icon@2x.png
+c0000000050DB1E990000000000001EBD
+t1356537497
+s7869
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/se.lproj/Localizable.strings
+c0000000050DB1E990000000000000471
+t1356537497
+s1137
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/splash/Default-568h@2x~iphone.png
+c0000000050DB1E990000000000055EBB
+t1356537497
+s351931
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/splash/Default-Landscape@2x~ipad.png
+c0000000050DB1E990000000000176888
+t1356537497
+s1534088
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/splash/Default-Landscape~ipad.png
+c0000000050DB1E9900000000000674B7
+t1356537497
+s423095
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/splash/Default-Portrait@2x~ipad.png
+c0000000050DB1E9900000000001892C2
+t1356537497
+s1610434
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/splash/Default-Portrait~ipad.png
+c0000000050DB1E990000000000066F23
+t1356537497
+s421667
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/splash/Default@2x~iphone.png
+c0000000050DB1E990000000000055981
+t1356537497
+s350593
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/splash/Default~iphone.png
+c0000000050DB1E990000000000016EC9
+t1356537497
+s93897
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/main.m
+c0000000050DB1E990000000000000460
+t1356537497
+s1120
+
+N/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/www
+c0000000050DB1E990000000000000154
+t1356537497
+s340
+
+NOneMoreCheckIn/OneMoreCheckIn-Info.plist
+c0000000050DB1E9900000000000009CE
+t1356537497
+s2510
+
+CBuild AST from /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/AppDelegate.m
+r0
+
+CBuild AST from /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.m
+r0
+
+CBuild AST from /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies3cbc3f6d568bb641^a54e406d568bb641^---0#1#0#--18"Check dependencies36"45FD9BE2-7B1C-41F2-96BF-26B0D593B3CA-
+
+CCompileC DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/AppDelegate.o /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s378230381.575750
+e378230381.634362
+r1
+xCompileC
+xDerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/AppDelegate.o
+x/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/AppDelegate.m:73:25: warning: 'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url. [-Wdeprecated-declarations]
+o    self.viewController.invokeString = invokeString;
+o                        ^
+o/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/include/Cordova/CDVViewController.h:43:50: note: 'invokeString' declared here
+o@property (nonatomic, readwrite, copy)NSString * invokeString CDV_DEPRECATED(2.0, "Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.");
+o                                                 ^
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/AppDelegate.mc781936d568bb641^4965a26d568bb641^-855"/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/AppDelegate.m:73:25: warning: 'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url. [-Wdeprecated-declarations]    self.viewController.invokeString = invokeString;                        ^/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/include/Cordova/CDVViewController.h:43:50: note: 'invokeString' declared here@property (nonatomic, readwrite, copy)NSString * invokeString CDV_DEPRECATED(2.0, "Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.");                                                 ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@161"'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.-378230381#18446744073709551615#0#1(2@28"'invokeString' declared here-378230381#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@118"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/CordovaLib/Classes/CDVViewController.h0000000000000000^42#49#42#49#1597#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@116"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/AppDelegate.m0000000000000000^72#24#72#24#2398#0#12"Deprecations--0#0#0#-19%DVTDocumentLocation4@116"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/AppDelegate.m0000000000000000^4928"CompileC DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/AppDelegate.o OneMoreCheckIn/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=4.3 -iquote /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/OneMoreCheckIn-generated-files.hmap -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/OneMoreCheckIn-own-target-headers.hmap -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/OneMoreCheckIn-all-target-headers.hmap -iquote /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/OneMoreCheckIn-project-headers.hmap -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/include -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/usr/local/lib/include -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/UninstalledProducts/include -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/DerivedSources/i386 -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/DerivedSources -F/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator -include /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/PrecompiledHeaders/OneMoreCheckIn-Prefix-gjonvqbmapgxthatdpgpzkihhgsd/OneMoreCheckIn-Prefix.pch -MMD -MT dependencies -MF /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/AppDelegate.dia -c /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/AppDelegate.m -o /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/AppDelegate.o36"47947B7F-2B0E-4625-814B-D477AE35C02A-
+
+CCompileC DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/MainViewController.o /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s378230381.575773
+e378230381.630255
+r1
+xCompileC
+xDerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/MainViewController.o
+x/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.m:125:14: warning: 'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url. [-Wdeprecated-declarations]
+o    if (self.invokeString) {
+o             ^
+o/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/include/Cordova/CDVViewController.h:43:50: note: 'invokeString' declared here
+o@property (nonatomic, readwrite, copy)NSString * invokeString CDV_DEPRECATED(2.0, "Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.");
+o                                                 ^
+o/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.m:128:93: warning: 'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url. [-Wdeprecated-declarations]
+o        NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
+o                                                                                            ^
+o2 warnings generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"Compile /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.md881936d568bb641^8658a16d568bb641^-1345"/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.m:125:14: warning: 'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url. [-Wdeprecated-declarations]    if (self.invokeString) {             ^/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/include/Cordova/CDVViewController.h:43:50: note: 'invokeString' declared here@property (nonatomic, readwrite, copy)NSString * invokeString CDV_DEPRECATED(2.0, "Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.");                                                 ^/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.m:128:93: warning: 'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url. [-Wdeprecated-declarations]        NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];                                                                                            ^2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@161"'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.-378230381#18446744073709551615#0#1(2@28"'invokeString' declared here-378230381#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@118"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/CordovaLib/Classes/CDVViewController.h0000000000000000^42#49#42#49#1597#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@123"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.m0000000000000000^124#13#124#13#3609#0#12"Deprecations--2@161"'invokeString' is deprecated: Deprecated in Cordova 2.0. Use window.handleOpenURL(url instead. It is called when the app is launched through a custom scheme url.-378230381#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@123"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.m0000000000000000^127#92#127#92#4020#0#12"Deprecations--0#0#0#-19%DVTDocumentLocation4@123"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.m0000000000000000^4970"CompileC DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/MainViewController.o OneMoreCheckIn/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=4.3 -iquote /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/OneMoreCheckIn-generated-files.hmap -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/OneMoreCheckIn-own-target-headers.hmap -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/OneMoreCheckIn-all-target-headers.hmap -iquote /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/OneMoreCheckIn-project-headers.hmap -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/include -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/usr/local/lib/include -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/UninstalledProducts/include -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/DerivedSources/i386 -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/DerivedSources -F/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator -include /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/PrecompiledHeaders/OneMoreCheckIn-Prefix-gjonvqbmapgxthatdpgpzkihhgsd/OneMoreCheckIn-Prefix.pch -MMD -MT dependencies -MF /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/MainViewController.d --serialize-diagnostics /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/MainViewController.dia -c /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.m -o /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/MainViewController.o36"CEFF5F26-2791-4427-AA84-CEE9545673FA-
+
+CCompileC DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/main.o /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s378230381.575764
+e378230381.595152
+r1
+xCompileC
+xDerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/main.o
+x/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/main.m5281936d568bb641^dd5c986d568bb641^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/main.m0000000000000000^4870"CompileC DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/main.o OneMoreCheckIn/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=4.3 -iquote /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/OneMoreCheckIn-generated-files.hmap -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/OneMoreCheckIn-own-target-headers.hmap -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/OneMoreCheckIn-all-target-headers.hmap -iquote /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/OneMoreCheckIn-project-headers.hmap -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/include -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/usr/local/lib/include -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/UninstalledProducts/include -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/DerivedSources/i386 -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/DerivedSources -F/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator -include /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/PrecompiledHeaders/OneMoreCheckIn-Prefix-gjonvqbmapgxthatdpgpzkihhgsd/OneMoreCheckIn-Prefix.pch -MMD -MT dependencies -MF /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/main.dia -c /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/main.m -o /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/main.o36"FDEADDB5-CCBF-45E8-B106-9323E941EB62-
+
+CCompileXIB /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.xib
+s378230381.301360
+e378230381.358092
+r1
+xCompileXIB
+x/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.xib
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Compiling /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.xibfe444d6d568bb641^3aad5b6d568bb641^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.xib0000000000000000^1277"CompileXIB OneMoreCheckIn/Classes/MainViewController.xib    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/MainViewController.nib /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Classes/MainViewController.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk36"98E6D40D-FD6B-426F-841D-AD6220E605F2-
+
+CCopyPlistFile /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Cordova.plist OneMoreCheckIn/Resources/../Cordova.plist
+s378230381.296677
+e378230381.304994
+r1
+xCopyPlistFile
+x/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Cordova.plist
+xOneMoreCheckIn/Resources/../Cordova.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection46"Copy OneMoreCheckIn/Resources/../Cordova.plist3c154c6d568bb641^a1134e6d568bb641^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/../Cordova.plist0000000000000000^890"CopyPlistFile DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Cordova.plist OneMoreCheckIn/Resources/../Cordova.plist    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copyPlist --convert binary1 --outdir /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app -- OneMoreCheckIn/Resources/../Cordova.plist36"306A808F-A397-4C8C-A8C7-C28DF7797474-
+
+CCopyStringsFile /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/de.lproj/Localizable.strings OneMoreCheckIn/Resources/de.lproj/Localizable.strings
+s378230381.302699
+e378230381.313386
+r1
+xCopyStringsFile
+x/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/de.lproj/Localizable.strings
+xOneMoreCheckIn/Resources/de.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy OneMoreCheckIn/Resources/de.lproj/Localizable.strings978e4d6d568bb641^0b47506d568bb641^---0#0#0#-19%DVTDocumentLocation2@133"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/de.lproj/Localizable.strings0000000000000000^981"CopyStringsFile DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/de.lproj/Localizable.strings OneMoreCheckIn/Resources/de.lproj/Localizable.strings    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/de.lproj -- OneMoreCheckIn/Resources/de.lproj/Localizable.strings36"84CB623A-DFB4-455F-A25B-405B7340461F-
+
+CCopyStringsFile /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/en.lproj/Localizable.strings OneMoreCheckIn/Resources/en.lproj/Localizable.strings
+s378230381.296730
+e378230381.305924
+r1
+xCopyStringsFile
+x/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/en.lproj/Localizable.strings
+xOneMoreCheckIn/Resources/en.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy OneMoreCheckIn/Resources/en.lproj/Localizable.strings93184c6d568bb641^8f514e6d568bb641^---0#0#0#-19%DVTDocumentLocation2@133"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/en.lproj/Localizable.strings0000000000000000^981"CopyStringsFile DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/en.lproj/Localizable.strings OneMoreCheckIn/Resources/en.lproj/Localizable.strings    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/en.lproj -- OneMoreCheckIn/Resources/en.lproj/Localizable.strings36"B31FE5B6-547E-48BF-BEE3-2D6EA4A04047-
+
+CCopyStringsFile /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/es.lproj/Localizable.strings OneMoreCheckIn/Resources/es.lproj/Localizable.strings
+s378230381.297170
+e378230381.307017
+r1
+xCopyStringsFile
+x/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/es.lproj/Localizable.strings
+xOneMoreCheckIn/Resources/es.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy OneMoreCheckIn/Resources/es.lproj/Localizable.strings67264c6d568bb641^42994e6d568bb641^---0#0#0#-19%DVTDocumentLocation2@133"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/es.lproj/Localizable.strings0000000000000000^981"CopyStringsFile DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/es.lproj/Localizable.strings OneMoreCheckIn/Resources/es.lproj/Localizable.strings    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/es.lproj -- OneMoreCheckIn/Resources/es.lproj/Localizable.strings36"1B34DBE2-50D8-4B82-A429-271A3BEBE878-
+
+CCopyStringsFile /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/se.lproj/Localizable.strings OneMoreCheckIn/Resources/se.lproj/Localizable.strings
+s378230381.304561
+e378230381.313377
+r1
+xCopyStringsFile
+x/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/se.lproj/Localizable.strings
+xOneMoreCheckIn/Resources/se.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy OneMoreCheckIn/Resources/se.lproj/Localizable.strings3d0b4e6d568bb641^a243506d568bb641^---0#0#0#-19%DVTDocumentLocation2@133"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/se.lproj/Localizable.strings0000000000000000^981"CopyStringsFile DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/se.lproj/Localizable.strings OneMoreCheckIn/Resources/se.lproj/Localizable.strings    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/se.lproj -- OneMoreCheckIn/Resources/se.lproj/Localizable.strings36"1AB5319D-6F6E-417C-897E-8C13AD65FB23-
+
+CCpResource OneMoreCheckIn/Resources/Capture.bundle DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Capture.bundle
+s378230381.296724
+e378230381.304198
+r1
+xCpResource
+xOneMoreCheckIn/Resources/Capture.bundle
+xDerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Capture.bundle
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Copy DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Capture.bundled8104c6d568bb641^d6e04d6d568bb641^---0#0#0#-19%DVTDocumentLocation2@177"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Capture.bundle000000000080d041^1008"CpResource OneMoreCheckIn/Resources/Capture.bundle DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Capture.bundle    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/Capture.bundle /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app36"68D8160D-4B87-4EF1-9A14-BF7C0136E848-
+
+CCpResource OneMoreCheckIn/Resources/icons/icon-72.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon-72.png
+s378230381.296686
+e378230381.303433
+r1
+xCpResource
+xOneMoreCheckIn/Resources/icons/icon-72.png
+xDerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon-72.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Copy DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon-72.png7b164c6d568bb641^36b04d6d568bb641^---0#0#0#-19%DVTDocumentLocation2@174"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon-72.png000000000080d041^1011"CpResource OneMoreCheckIn/Resources/icons/icon-72.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon-72.png    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/icons/icon-72.png /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app36"FE0BDCE3-9368-4932-858A-D048AE4ECF24-
+
+CCpResource OneMoreCheckIn/Resources/icons/icon.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon.png
+s378230381.296693
+e378230381.300115
+r1
+xCpResource
+xOneMoreCheckIn/Resources/icons/icon.png
+xDerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Copy DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon.png73104c6d568bb641^99d44c6d568bb641^---0#0#0#-19%DVTDocumentLocation2@171"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon.png000000000080d041^1002"CpResource OneMoreCheckIn/Resources/icons/icon.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon.png    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/icons/icon.png /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app36"E85BCECB-4204-4D52-8782-393B05ECDF1B-
+
+CCpResource OneMoreCheckIn/Resources/icons/icon@2x.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon@2x.png
+s378230381.296714
+e378230381.301482
+r1
+xCpResource
+xOneMoreCheckIn/Resources/icons/icon@2x.png
+xDerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Copy DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon@2x.pngae124c6d568bb641^622e4d6d568bb641^---0#0#0#-19%DVTDocumentLocation2@174"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon@2x.png000000000080d041^1017"CpResource "OneMoreCheckIn/Resources/icons/icon@2x.png" "DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/icon@2x.png"    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/icons/icon@2x.png" /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app36"01374022-2EB9-430E-8DF8-AAD3B7B79B9C-
+
+CCpResource OneMoreCheckIn/Resources/splash/Default-568h@2x~iphone.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-568h@2x~iphone.png
+s378230381.314652
+e378230381.318180
+r1
+xCpResource
+xOneMoreCheckIn/Resources/splash/Default-568h@2x~iphone.png
+xDerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-568h@2x~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Copy DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-568h@2x~iphone.png18b4506d568bb641^c574516d568bb641^---0#0#0#-19%DVTDocumentLocation2@189"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-568h@2x~iphone.png000000000080d041^1064"CpResource "OneMoreCheckIn/Resources/splash/Default-568h@2x~iphone.png" "DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-568h@2x~iphone.png"    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/splash/Default-568h@2x~iphone.png" /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app36"0A9776D3-17AF-46B5-8866-5E89F5192D12-
+
+CCpResource OneMoreCheckIn/Resources/splash/Default-Landscape@2x~ipad.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Landscape@2x~ipad.png
+s378230381.304555
+e378230381.313865
+r1
+xCpResource
+xOneMoreCheckIn/Resources/splash/Default-Landscape@2x~ipad.png
+xDerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Landscape@2x~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Copy DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Landscape@2x~ipad.png6b104e6d568bb641^395f506d568bb641^---0#0#0#-19%DVTDocumentLocation2@192"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Landscape@2x~ipad.png000000000080d041^1073"CpResource "OneMoreCheckIn/Resources/splash/Default-Landscape@2x~ipad.png" "DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Landscape@2x~ipad.png"    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/splash/Default-Landscape@2x~ipad.png" /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app36"59C908A6-3F5D-45DC-8922-F67C1419CE6F-
+
+CCpResource OneMoreCheckIn/Resources/splash/Default-Landscape~ipad.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Landscape~ipad.png
+s378230381.306122
+e378230381.315478
+r1
+xCpResource
+xOneMoreCheckIn/Resources/splash/Default-Landscape~ipad.png
+xDerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Landscape~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Copy DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Landscape~ipad.png0d6f4e6d568bb641^8fc3506d568bb641^---0#0#0#-19%DVTDocumentLocation2@189"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Landscape~ipad.png000000000080d041^1064"CpResource "OneMoreCheckIn/Resources/splash/Default-Landscape~ipad.png" "DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Landscape~ipad.png"    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/splash/Default-Landscape~ipad.png" /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app36"180328CA-801A-4C5F-8CB8-8FEF6C45F626-
+
+CCpResource OneMoreCheckIn/Resources/splash/Default-Portrait@2x~ipad.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Portrait@2x~ipad.png
+s378230381.306113
+e378230381.315743
+r1
+xCpResource
+xOneMoreCheckIn/Resources/splash/Default-Portrait@2x~ipad.png
+xDerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Portrait@2x~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"Copy DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Portrait@2x~ipad.png116e4e6d568bb641^99d4506d568bb641^---0#0#0#-19%DVTDocumentLocation2@191"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Portrait@2x~ipad.png000000000080d041^1070"CpResource "OneMoreCheckIn/Resources/splash/Default-Portrait@2x~ipad.png" "DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Portrait@2x~ipad.png"    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/splash/Default-Portrait@2x~ipad.png" /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app36"15A92B7F-F5FD-42F9-B76D-B075EAFFD736-
+
+CCpResource OneMoreCheckIn/Resources/splash/Default-Portrait~ipad.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Portrait~ipad.png
+s378230381.308217
+e378230381.316181
+r1
+xCpResource
+xOneMoreCheckIn/Resources/splash/Default-Portrait~ipad.png
+xDerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Portrait~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Copy DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Portrait~ipad.png50fe4e6d568bb641^a2f1506d568bb641^---0#0#0#-19%DVTDocumentLocation2@188"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Portrait~ipad.png000000000080d041^1061"CpResource "OneMoreCheckIn/Resources/splash/Default-Portrait~ipad.png" "DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default-Portrait~ipad.png"    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/splash/Default-Portrait~ipad.png" /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app36"55D113CA-0C8F-4734-9D83-A480765F7411-
+
+CCpResource OneMoreCheckIn/Resources/splash/Default@2x~iphone.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default@2x~iphone.png
+s378230381.314623
+e378230381.319227
+r1
+xCpResource
+xOneMoreCheckIn/Resources/splash/Default@2x~iphone.png
+xDerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default@2x~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Copy DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default@2x~iphone.pngd5b3506d568bb641^ccb8516d568bb641^---0#0#0#-19%DVTDocumentLocation2@184"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default@2x~iphone.png000000000080d041^1049"CpResource "OneMoreCheckIn/Resources/splash/Default@2x~iphone.png" "DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default@2x~iphone.png"    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/splash/Default@2x~iphone.png" /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app36"836CDAF0-FA4B-4637-BDE5-20297D3FD3BA-
+
+CCpResource OneMoreCheckIn/Resources/splash/Default~iphone.png DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default~iphone.png
+s378230381.314592
+e378230381.316816
+r1
+xCpResource
+xOneMoreCheckIn/Resources/splash/Default~iphone.png
+xDerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Copy DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default~iphone.png4eb3506d568bb641^931b516d568bb641^---0#0#0#-19%DVTDocumentLocation2@181"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default~iphone.png000000000080d041^1040"CpResource "OneMoreCheckIn/Resources/splash/Default~iphone.png" "DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Default~iphone.png"    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/Resources/splash/Default~iphone.png" /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app36"EF99F4CC-DDEF-4FE5-AFB1-3B84CC44F20B-
+
+CCpResource www DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/www
+s378230381.296675
+e378230381.316015
+r1
+xCpResource
+xwww
+xDerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/www
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Copy DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/www5a124c6d568bb641^d1e6506d568bb641^---0#0#0#-19%DVTDocumentLocation2@166"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/www000000000080d041^925"CpResource www DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/www    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/www /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app36"15DEDEE5-1705-4A5A-A905-DE3AF609C61D-
+
+CGenerateDSYMFile /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app.dSYM /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/OneMoreCheckIn
+s378230381.854019
+e378230381.953812
+r1
+xGenerateDSYMFile
+x/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app.dSYM
+x/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/OneMoreCheckIn
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection162"Generating /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app.dSYM8884db6d568bb641^282df46d568bb641^---0#0#0#-19%DVTDocumentLocation2@167"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app.dSYM000000000080d041^1116"GenerateDSYMFile DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app.dSYM DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/OneMoreCheckIn    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/OneMoreCheckIn -o /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app.dSYM36"A92F5E51-F65B-40B4-95F6-B40CCA4B2B93-
+
+CLd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/OneMoreCheckIn normal i386
+s378230381.641125
+e378230381.847191
+r1
+xLd
+x/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/OneMoreCheckIn
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection166"Link /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/OneMoreCheckIn7e38a46d568bb641^d6e1d86d568bb641^---0#0#0#--2288"Ld DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/OneMoreCheckIn normal i386    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv IPHONEOS_DEPLOYMENT_TARGET 4.3    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -L/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator -F/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator -filelist /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/OneMoreCheckIn.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -all_load -Obj-C -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=4.3 /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/libCordova.a -framework Foundation -weak_framework UIKit -framework CoreGraphics -framework AddressBook -framework AddressBookUI -framework AudioToolbox -weak_framework AVFoundation -framework CFNetwork -framework CoreLocation -framework MediaPlayer -framework QuartzCore -framework SystemConfiguration -framework MobileCoreServices -weak_framework CoreMedia -o /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/OneMoreCheckIn36"DDA6EB95-1CDC-4198-B9AA-67F1765E77AD-
+
+CPhaseScriptExecution "Touch www folder" /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Script-304B58A110DAC018002A0835.sh
+s378230381.270565
+e378230381.288683
+r1
+xPhaseScriptExecution
+xTouch www folder
+x/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Script-304B58A110DAC018002A0835.sh
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Run custom shell script 'Touch www folder'ddea456d568bb641^ffe6496d568bb641^---0#0#0#--23669"PhaseScriptExecution "Touch www folder" DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Script-304B58A110DAC018002A0835.sh    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER raildecom    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_UNIVERSAL_IPHONE_OS i386    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products    setenv BUILD_ROOT /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products    setenv BUILD_STYLE     setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator    setenv CACHE_ROOT /var/folders/mq/hm2s_jsx5z76bc1lb46pt6nh0000gp/C/com.apple.Xcode.502    setenv CCHROOT /var/folders/mq/hm2s_jsx5z76bc1lb46pt6nh0000gp/C/com.apple.Xcode.502    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLANG_ENABLE_OBJC_ARC NO    setenv CLANG_WARN_OBJCPP_ARC_ABI YES    setenv CLASS_FILE_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/mq/hm2s_jsx5z76bc1lb46pt6nh0000gp/C/com.apple.Xcode.502/CompositeSDKs    setenv COMPRESS_PNG_FILES YES    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator    setenv CONFIGURATION_TEMP_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator    setenv CONTENTS_FOLDER_PATH OneMoreCheckIn.app    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CORDOVALIB /Users/raildecom/Documents/CordovaLib    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym    setenv DEFAULT_COMPILER com.apple.compilers.llvm.clang.1_0    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Applications/Xcode.app/Contents/Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Applications/Xcode.app/Contents/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/Developer/Library    setenv DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Tools    setenv DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH OneMoreCheckIn.app/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/OneMoreCheckIn.dst    setenv DT_TOOLCHAIN_DIR /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain    setenv DWARF_DSYM_FILE_NAME OneMoreCheckIn.app.dSYM    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO    setenv DWARF_DSYM_FOLDER_PATH /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator    setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".DS_Store .svn .git .hg CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH OneMoreCheckIn.app/Executables    setenv EXECUTABLE_FOLDER_PATH OneMoreCheckIn.app    setenv EXECUTABLE_NAME OneMoreCheckIn    setenv EXECUTABLE_PATH OneMoreCheckIn.app/OneMoreCheckIn    setenv FILE_LIST /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH OneMoreCheckIn.app/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator\" "    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME OneMoreCheckIn.app    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD c99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_OBJC_LEGACY_DISPATCH YES    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER OneMoreCheckIn/OneMoreCheckIn-Prefix.pch    setenv GCC_SYMBOLS_PRIVATE_EXTERN YES    setenv GCC_THUMB_SUPPORT NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0    setenv GCC_VERSION_IDENTIFIER com_apple_compilers_llvm_clang_1_0    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/include\" \"/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/usr/local/lib/include\" \"/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/UninstalledProducts/include\" \"/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator\""    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE OneMoreCheckIn/OneMoreCheckIn-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT binary    setenv INFOPLIST_PATH OneMoreCheckIn.app/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH OneMoreCheckIn.app/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/OneMoreCheckIn.dst/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER raildecom    setenv INSTALL_PATH /Applications    setenv INSTALL_ROOT /tmp/OneMoreCheckIn.dst    setenv IPHONEOS_DEPLOYMENT_TARGET 4.3    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH OneMoreCheckIn.app/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/OneMoreCheckIn-LinkMap-normal-i386.txt    setenv LD_NO_PIE NO    setenv LEGACY_DEVELOPER_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal/i386/OneMoreCheckIn.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH OneMoreCheckIn.app/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 12C3006    setenv MAC_OS_X_VERSION_ACTUAL 1082    setenv MAC_OS_X_VERSION_MAJOR 1080    setenv MAC_OS_X_VERSION_MINOR 0802    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJC_ABI_VERSION 2    setenv OBJECT_FILE_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Objects-normal    setenv OBJROOT /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_LDFLAGS "-weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -all_load -Obj-C"    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Tools:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/Users/raildecom/Scripts:/usr/bin:/bin:/usr/sbin:/sbin"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Headers /Applications/Xcode.app/Contents/Developer/SDKs /Applications/Xcode.app/Contents/Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH OneMoreCheckIn.app/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS objective-c    setenv PKGINFO_FILE_PATH /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/PkgInfo    setenv PKGINFO_PATH OneMoreCheckIn.app/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr    setenv PLATFORM_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform    setenv PLATFORM_NAME iphonesimulator    setenv PLATFORM_PREFERRED_ARCH i386    setenv PLATFORM_PRODUCT_BUILD_VERSION 10A403    setenv PLATFORM_VERSION_AVAILABILITY_H_FORMAT 60000    setenv PLIST_FILE_OUTPUT_FORMAT binary    setenv PLUGINS_FOLDER_PATH OneMoreCheckIn.app/PlugIns    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH OneMoreCheckIn.app/PrivateHeaders    setenv PRODUCT_NAME OneMoreCheckIn    setenv PRODUCT_SETTINGS_PATH /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/OneMoreCheckIn-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT OneMoreCheckIn    setenv PROJECT_DERIVED_FILE_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/DerivedSources    setenv PROJECT_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PROJECT_FILE_PATH /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn.xcodeproj    setenv PROJECT_NAME OneMoreCheckIn    setenv PROJECT_TEMP_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build    setenv PUBLIC_HEADERS_FOLDER_PATH OneMoreCheckIn.app/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_HG_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH OneMoreCheckIn.app/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk    setenv SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk    setenv SDK_NAME iphonesimulator6.0    setenv SDK_PRODUCT_BUILD_VERSION 10A403    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHALLOW_BUNDLE YES    setenv SHARED_DERIVED_FILE_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH OneMoreCheckIn.app/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/PrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH OneMoreCheckIn.app/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv SRCROOT /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv STRINGS_FILE_OUTPUT_ENCODING binary    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_DEVICE_FAMILIES "1 2"    setenv SUPPORTED_PLATFORMS "iphonesimulator iphoneos"    setenv SYMROOT /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Applications/Xcode.app/Contents/Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Applications/Xcode.app/Contents/Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETED_DEVICE_FAMILY 1,2    setenv TARGETNAME OneMoreCheckIn    setenv TARGET_BUILD_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator    setenv TARGET_NAME OneMoreCheckIn    setenv TARGET_TEMP_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build    setenv TEMP_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build    setenv TEMP_FILES_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build    setenv TEMP_FILE_DIR /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build    setenv TEMP_ROOT /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates    setenv TEST_AFTER_BUILD NO    setenv TOOLCHAINS com.apple.dt.toolchain.XcodeDefault    setenv UID 502    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH OneMoreCheckIn.app    setenv UNSTRIPPED_PRODUCT NO    setenv USER raildecom    setenv USER_APPS_DIR /Users/raildecom/Applications    setenv USER_LIBRARY_DIR /Users/raildecom/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS i386    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH OneMoreCheckIn.app/version.plist    setenv VERSION_INFO_BUILDER raildecom    setenv VERSION_INFO_FILE OneMoreCheckIn_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:OneMoreCheckIn  PROJECT:OneMoreCheckIn-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME OneMoreCheckIn.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Applications/Xcode.app/Contents/Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4G2008a    setenv XCODE_VERSION_ACTUAL 0452    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0450    setenv YACC yacc    /bin/sh -c /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/Script-304B58A110DAC018002A0835.sh36"0D00CFDB-140E-43D3-A56C-9DF3D351DAC0-
+
+CProcessInfoPlistFile /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Info.plist OneMoreCheckIn/OneMoreCheckIn-Info.plist
+s378230381.256235
+e378230381.259365
+r1
+xProcessInfoPlistFile
+x/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Info.plist
+xOneMoreCheckIn/OneMoreCheckIn-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Process OneMoreCheckIn/OneMoreCheckIn-Info.plist2eae416d568bb641^bf65426d568bb641^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/OneMoreCheckIn-Info.plist0000000000000000^1112"ProcessInfoPlistFile DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Info.plist OneMoreCheckIn/OneMoreCheckIn-Info.plist    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-infoPlistUtility OneMoreCheckIn/OneMoreCheckIn-Info.plist -genpkginfo /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app/Info.plist36"D4F014CC-4B30-4BBA-B652-55C5E737372F-
+
+CProcessPCH /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/PrecompiledHeaders/OneMoreCheckIn-Prefix-gjonvqbmapgxthatdpgpzkihhgsd/OneMoreCheckIn-Prefix.pch.pth OneMoreCheckIn/OneMoreCheckIn-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s378230381.366092
+e378230381.568906
+r1
+xProcessPCH
+x/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/PrecompiledHeaders/OneMoreCheckIn-Prefix-gjonvqbmapgxthatdpgpzkihhgsd/OneMoreCheckIn-Prefix.pch.pth
+xOneMoreCheckIn/OneMoreCheckIn-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Precompile OneMoreCheckIn/OneMoreCheckIn-Prefix.pch50e45d6d568bb641^d3a3916d568bb641^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/OneMoreCheckIn-Prefix.pch0000000000000000^4733"ProcessPCH DerivedData/OneMoreCheckIn/Build/Intermediates/PrecompiledHeaders/OneMoreCheckIn-Prefix-gjonvqbmapgxthatdpgpzkihhgsd/OneMoreCheckIn-Prefix.pch.pth OneMoreCheckIn/OneMoreCheckIn-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=4.3 -iquote /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/OneMoreCheckIn-generated-files.hmap -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/OneMoreCheckIn-own-target-headers.hmap -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/OneMoreCheckIn-all-target-headers.hmap -iquote /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/OneMoreCheckIn-project-headers.hmap -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/include -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/usr/local/lib/include -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/UninstalledProducts/include -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/DerivedSources/i386 -I/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/OneMoreCheckIn.build/Debug-iphonesimulator/OneMoreCheckIn.build/DerivedSources -F/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator --serialize-diagnostics /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/PrecompiledHeaders/OneMoreCheckIn-Prefix-gjonvqbmapgxthatdpgpzkihhgsd/OneMoreCheckIn-Prefix.pch.dia -c /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/OneMoreCheckIn/OneMoreCheckIn-Prefix.pch -o /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/PrecompiledHeaders/OneMoreCheckIn-Prefix-gjonvqbmapgxthatdpgpzkihhgsd/OneMoreCheckIn-Prefix.pch.pth -MMD -MT dependencies -MF /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Intermediates/PrecompiledHeaders/OneMoreCheckIn-Prefix-gjonvqbmapgxthatdpgpzkihhgsd/OneMoreCheckIn-Prefix.pch.d36"9EBC4724-2048-4E11-BF84-A9517BB46765-
+
+CProcessPCH /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Index/PrecompiledHeaders/OneMoreCheckIn-Prefix-guxwhtbwbhsofdbgzzugmjetrfpw_ast/OneMoreCheckIn-Prefix.pch.pth OneMoreCheckIn/OneMoreCheckIn-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CTouch /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app
+s378230381.961859
+e378230381.966837
+r1
+xTouch
+x/Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection152"Touch /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app904df66d568bb641^0e85f76d568bb641^---0#0#0#--754"Touch DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app    cd /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/python3:/usr/local/share/npm/bin:/Users/raildecom/.rbenv/shims:/usr/local/share/python:/Users/raildecom/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /usr/bin/touch -c /Users/raildecom/workspace/webitup/omci/mobile-app/projects/ios/DerivedData/OneMoreCheckIn/Build/Products/Debug-iphonesimulator/OneMoreCheckIn.app36"231D6725-1DD5-47BE-9F1E-5FDD1EC059FB-
+

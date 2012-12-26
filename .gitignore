@@ -1,0 +1,14 @@
+.DS_Store
+/projects/ios/build/
+/projects/ios/CordovaLib/build/
+/projects/ios/cordova/console.log
+/build/*
+!/build/.gitkeep
+/projects/android/bin/
+/projects/android/gen/
+Build
+Logs
+DerivedData
+text-index.idx
+.sass-cache
+*.pyc
