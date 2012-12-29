@@ -13,6 +13,25 @@
     border-top:1px solid #5f6673;
     border-bottom:1px solid #111b33;
     @include background-image(linear-gradient(#424a5a, #242b39));
+    color:#e6eaf1;
+    font-size:17px;
+    line-height:2.7em;
+    font-family:"SignikaSemibold";
+    padding-left:10px;
+    @include text-shadow(0 1px 2px rgba(0,0,0,0.6));
+
+
+    .avatar {
+      margin-top:6px;
+      width: 31px;
+      height: 31px;
+      float: left;
+      background-size: 31px;
+      margin-right:10px;
+      @include border-radius(5px);
+      @include box-shadow(0px 0 3px rgba(0,0,0,0.6));
+    }
+
   }
   h3 {
     border-bottom:1px solid #242a37;
@@ -20,8 +39,15 @@
     margin:0;
     padding:10px;
     color:#9ca4b3;
+    font-family:"SignikaSemibold";
+    font-weight:normal;
+    font-size:18px;
     @include text-shadow(0 1px 2px rgba(0,0,0,0.6));
   }
+
+  
+
+
   ul {
     padding:0;
     margin:0;
@@ -43,12 +69,5 @@
         background-color:#2a303f;
       }
     }
-  }
-
-  .avatar {
-    width: 37px;
-    height: 37px;
-    float: left;
-    background-size: 37px;
   }
 }

@@ -2,6 +2,7 @@
 
 // Your custom settings file to override Foundation defaults
 @import "settings";
+@import "fonts";
 
 // Comment out this import if you are customizing you imports below
 //@import "foundation";
@@ -29,7 +30,7 @@ html, body, body > .app, .application {
 }
 
 body {
-  font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "SignikaRegular", "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
   background-color:#282f38;
   -webkit-backface-visibility: hidden;
 

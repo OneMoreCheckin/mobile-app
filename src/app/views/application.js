@@ -9,7 +9,7 @@ PhoneApp.pack('Omci.views', function() {
     didInsertElement: function() {
       console.warn('root view inserted');
       this.menu = new Swipe(document.getElementById('container'));
-
+      //this.menu.activate(true);
       var unscrollable = function(e) { e.preventDefault(); };
       this.$('#menu').on('touchmove', unscrollable);
       Omci.hideSplash();
@@ -17,6 +17,10 @@ PhoneApp.pack('Omci.views', function() {
 
     willDestroyElement: function() {
       console.warn('wild delete root view');
+    },
+
+    toggleMenu: function (e) {
+      this.menu.activate(!this.menu.activated);
     }
   });
 });

@@ -27,7 +27,11 @@
 	<key>BackupWebStorage</key>
 	<string>cloud</string>
 	<key>ExternalHosts</key>
-	<array/>
+	<array>
+		<string>foursquare.com</string>
+		<string>playfoursquare.s3.amazonaws.com</string>
+		<string>*.4sqi.net</string>
+	</array>
 	<key>Plugins</key>
 	<dict>
 		<key>Device</key>
