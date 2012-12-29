@@ -13,6 +13,11 @@ PhoneApp.pack('Omci.views', function() {
       var unscrollable = function(e) { e.preventDefault(); };
       this.$('#menu').on('touchmove', unscrollable);
       Omci.hideSplash();
+      // $('#page').hide();
+      // window.setTimeout(function () {
+        
+      //     $('#page').show();
+      // }, 5000);
     },
 
     willDestroyElement: function() {
