@@ -15,8 +15,8 @@ def default():
     libs = FileList('src/lib/phonegap', filter="*.js")
     combine(libs, 'build/js/phonegap.js')
 
-    libs = FileList('src/lib/jqmobi', filter="*.js")
-    combine(libs, 'build/js/jqmobi.js')
+    libs = FileList('src/lib/zepto', filter="*.js")
+    combine(libs, 'build/js/zepto.js')
 
     libs = FileList('src/lib/phoneapp/', filter="*namespace.js")
     libs.merge(FileList('src/lib/phoneapp/', filter="*.js", exclude="*namespace.js"))
@@ -39,6 +39,9 @@ def default():
 
     pictos = FileList('src/assets/fonts/generated', exclude="*.css")
     deepcopy(pictos, 'build/fonts/')
+
+    fonts = FileList('src/assets/fonts/signika')
+    deepcopy(fonts, 'build/fonts')
 
     deepcopy('src/lib/handlebars', 'build/js')
 
