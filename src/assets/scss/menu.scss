@@ -1,0 +1,54 @@
+@import "compass/css3/user-interface";
+
+#menu {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  @include user-select(none);
+
+  #menu-header {
+    height:43px;
+    border-top:1px solid #5f6673;
+    border-bottom:1px solid #111b33;
+    @include background-image(linear-gradient(#424a5a, #242b39));
+  }
+  h3 {
+    border-bottom:1px solid #242a37;
+    @include background-image(linear-gradient(#434a5e, #394052));
+    margin:0;
+    padding:10px;
+    color:#9ca4b3;
+    @include text-shadow(0 1px 2px rgba(0,0,0,0.6));
+  }
+  ul {
+    padding:0;
+    margin:0;
+
+    li {
+      list-style:none;
+      width:100%;
+      border-top:1px solid #3e4555;
+      border-bottom:1px solid #242a37;
+      height:42px;
+      background-color:#32394a;
+      color:#c4ccda;
+      font-size:17px;
+      line-height:2.4em;
+      padding-left:20px;
+      @include text-shadow(0 1px 2px rgba(0,0,0,0.6));
+
+      &:active {
+        background-color:#2a303f;
+      }
+    }
+  }
+
+  .avatar {
+    width: 37px;
+    height: 37px;
+    float: left;
+    background-size: 37px;
+  }
+}

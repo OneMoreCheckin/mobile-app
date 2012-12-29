@@ -8,7 +8,7 @@ PhoneApp.pack('Omci.views', function() {
 
     didInsertElement: function() {
       console.warn('root view inserted');
-      this.menu = new Swipe(document.getElementById('content'));
+      this.menu = new Swipe(document.getElementById('container'));
 
       var unscrollable = function(e) { e.preventDefault(); };
       this.$('#menu').on('touchmove', unscrollable);
