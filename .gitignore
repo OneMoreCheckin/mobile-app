@@ -12,3 +12,8 @@ DerivedData
 text-index.idx
 .sass-cache
 *.pyc
+
+/projects/ios/OneMoreCheckIn.xcodeproj/project.xcworkspace/xcuserdata/raildecom.xcuserdatad/UserInterfaceState.xcuserstate
+/projects/ios/DerivedData/OneMoreCheckIn/TextIndex/text-index.idx
+/projects/ios/DerivedData/OneMoreCheckIn/Logs/Issues/Cache.db
+/projects/ios/DerivedData/OneMoreCheckIn/Logs/Build/Cache.db
