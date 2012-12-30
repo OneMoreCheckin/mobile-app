@@ -238,7 +238,11 @@ PhoneApp.pack('PhoneApp.service', function(api) {
     }
 
     Object.keys(headers).forEach(function(i) {
-      inner.setRequestHeader(i, headers[i]);
+      try{
+        inner.setRequestHeader(i, headers[i]);
+      }catch(e){
+        console.error('Refusing to set header', i, headers[i], e);
+      }
     });
 
     // For restarters
