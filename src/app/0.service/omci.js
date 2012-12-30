@@ -215,22 +215,22 @@ PhoneApp.pack('Omci.service.venues', function(api) {
 });
 
 
-PhoneApp.use('Omci.service.core');
-PhoneApp.pack('Omci.service.users', function(api) {
-  'use strict';
+// PhoneApp.use('Omci.service.core');
+// PhoneApp.pack('Omci.service.users', function(api) {
+//   'use strict';
 
-  var SERVICE = 'users';
+//   var SERVICE = 'users';
 
-  this.badges = function(onSuccess, onFailure) {
-    api.core.queryFoursquare(
-        api.core.foursquare.GET, {
-          onsuccess: onSuccess,
-          onfailure: onFailure,
-          service: SERVICE,
-          id: 'self',
-          command: 'badges'
-        });
-  };
-});
+//   this.badges = function(onSuccess, onFailure) {
+//     api.core.queryFoursquare(
+//         api.core.foursquare.GET, {
+//           onsuccess: onSuccess,
+//           onfailure: onFailure,
+//           service: SERVICE,
+//           id: 'self',
+//           command: 'badges'
+//         });
+//   };
+// });
 
 

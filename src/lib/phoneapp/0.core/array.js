@@ -170,7 +170,7 @@ PhoneApp.pack('PhoneApp.types', function() {
           c = arr.filter(filter);
           m = c.map(map);
           s = m.filter(function() {return true;});
-          s.quickSort(sort, 0, s.length);
+          s.quickSort(sort, 0, s.length - 1);
         }
       }
     });
@@ -184,7 +184,7 @@ PhoneApp.pack('PhoneApp.types', function() {
         if (arr) {
           m = c.map(map);
           s = m.filter(function() {return true;});
-          s.quickSort(sort, 0, s.length);
+          s.quickSort(sort, 0, s.length - 1);
         }
       }
     });
@@ -196,7 +196,7 @@ PhoneApp.pack('PhoneApp.types', function() {
       set: function(callback) {
         sort = callback;
         if (arr)
-          s.quickSort(sort, 0, s.length);
+          s.quickSort(sort, 0, s.length - 1);
       }
     });
   };

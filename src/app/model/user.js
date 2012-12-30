@@ -69,10 +69,25 @@ PhoneApp.pack('Omci.model', function(api) {
     gender: '',
     lastName: '',
 
+/*
+4sqcities
+expertise
+foursquare
+partner
+ */
     init: function(){
+      this._badges = [];
+      this.badges = {};
+      ['cities', 'expertise', 'foursquare', 'partner'].forEach(function(cat){
+        this.badges[cat] = new api.ArrayController();
+        this.badges[cat].content = this._badges;
+        this.badges[cat].filter = function(item){
+          return item.type == (cat == 'cities' ? '4sqcities' : cat);
+        };
+      }, this);
+
       this.stats = Stats.create();
-      this.badges = new api.ArrayController();
-      this.badges.content = [];
+
       this.lastCheckin = Checkin.create();
       api.Object._super('init', this);
     },
@@ -83,11 +98,11 @@ PhoneApp.pack('Omci.model', function(api) {
           this.set(key, mesh.user[key]);
       }, this);
       this.stats.fromObject(mesh.stats);
-      this.badges.content.clear();
+      this._badges.clear();
       mesh.badges.forEach(function(item){
         var b = Badge.create();
         b.fromObject(item);
-        this.badges.content.pushObject(b);
+        this._badges.pushObject(b);
       }, this);
       this.lastCheckin.fromObject(mesh.lastCheckin);
     },
