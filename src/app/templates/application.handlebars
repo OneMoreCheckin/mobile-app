@@ -22,7 +22,11 @@
   </div>
   <div id="page">
     <div class="filters">
-
+      <ul>
+        <li class="active" {{action "view.sort" on="tap"}} data-sort="nearest">Nearest</li>
+        <li {{action "view.sort" on="tap"}} data-sort="easiest">Easiest</li>
+        <li {{action "view.sort" on="tap"}} data-sort="level">By level</li>
+      </ul>
     </div>
 
     <ul class="badges">

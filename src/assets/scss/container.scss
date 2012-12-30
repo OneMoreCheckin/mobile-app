@@ -66,10 +66,53 @@
   right:0;
 
   > .filters {
-    height:50px;
     width:100%;
     background-color:rgba(0,0,0,0.8);
     border-bottom:1px solid rgba(80,80,80,0.6);
+    padding:10px;
+    @include box-sizing(border-box);
+
+    > ul {
+      margin:0;
+      padding:0;
+      @include display-box;
+      @include box-orient(horizontal);
+      @include box-align(stretch);
+      width:100%;
+      @include border-bottom-radius(5px);
+      border-bottom:1px solid rgba(75,75,75,0.6);
+
+      > li {
+        list-style:none;
+        @include box-flex(1);
+        color:#b0aeab;
+        font-family:"SignikaSemibold";
+        text-align:center;
+        border:1px solid #010101;
+        border-left-width:0;
+        border-right-width:0;
+        padding:8px 0;
+        @include background-image(linear-gradient(#444444, #383838));
+        @include box-shadow(inset 0px 1px 1px rgba(0,0,0,0.3));
+        text-shadow:0 -1px 2px rgba(0,0,0,0.7);
+
+        &.active {
+          color:#efece8;
+          background:#1f1f1f;
+        }
+
+
+        &:first-of-type {
+          @include border-left-radius(5px);
+          border-left-width:1px;
+        }
+
+        &:last-of-type {
+          @include border-right-radius(5px);
+          border-right-width:1px;
+        }
+      }
+    }
   }
 
   > .badges {

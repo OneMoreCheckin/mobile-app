@@ -28,26 +28,23 @@
 	<string>cloud</string>
 	<key>ExternalHosts</key>
 	<array>
+		<string>*.onemorecheckin.com</string>
 		<string>foursquare.com</string>
 		<string>playfoursquare.s3.amazonaws.com</string>
 		<string>*.4sqi.net</string>
 	</array>
 	<key>Plugins</key>
 	<dict>
+		<key>ChildBrowserCommand</key>
+		<string>ChildBrowserCommand</string>
 		<key>Device</key>
 		<string>CDVDevice</string>
 		<key>Logger</key>
 		<string>CDVLogger</string>
 		<key>Compass</key>
 		<string>CDVLocation</string>
-		<key>Accelerometer</key>
-		<string>CDVAccelerometer</string>
-		<key>Camera</key>
-		<string>CDVCamera</string>
 		<key>NetworkStatus</key>
 		<string>CDVConnection</string>
-		<key>Contacts</key>
-		<string>CDVContacts</string>
 		<key>Debug Console</key>
 		<string>CDVDebugConsole</string>
 		<key>Echo</key>
@@ -66,10 +63,6 @@
 		<string>CDVCapture</string>
 		<key>SplashScreen</key>
 		<string>CDVSplashScreen</string>
-		<key>Battery</key>
-		<string>CDVBattery</string>
-		<key>Globalization</key>
-		<string>CDVGlobalization</string>
 	</dict>
 </dict>
 </plist>
