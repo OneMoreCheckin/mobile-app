@@ -29,7 +29,7 @@
 	<key>ExternalHosts</key>
 	<array>
 		<string>*.onemorecheckin.com</string>
-		<string>foursquare.com</string>
+		<string>*.foursquare.com</string>
 		<string>playfoursquare.s3.amazonaws.com</string>
 		<string>*.4sqi.net</string>
 	</array>
