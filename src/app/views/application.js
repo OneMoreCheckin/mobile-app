@@ -41,7 +41,7 @@ PhoneApp.pack('Omci.views', function() {
       Omci.hideSplash();
       // $('#page').hide();
       // window.setTimeout(function () {
-        
+
       //     $('#page').show();
       // }, 5000);
       // 
@@ -49,35 +49,35 @@ PhoneApp.pack('Omci.views', function() {
         var root = this;
                 console.log('before');
         ChildBrowser.install();
-        var cb = window.plugins.childBrowser;
-        console.log(cb);
-        console.log('after');
-        if(cb != null) {
-        cb.onLocationChange = function(loc){ root.locChanged(loc); };
-        cb.onClose = function(){root.onCloseBrowser(); };
-        cb.onOpenExternal = function(){root.onOpenExternal(); };
-        cb.showWebPage("https://foursquare.com/oauth2/authenticate?client_id=V4E5YSHBAG34FPQZA2X2ABUCHQP4M1AFIYWA5ZUTQWGSIPZE&response_type=code&redirect_uri=http://local.onemorecheckin.com");
+    //     var cb = window.plugins.childBrowser;
+    //     console.log(cb);
+    //     console.log('after');
+    //     if(cb != null) {
+    //     cb.onLocationChange = function(loc){ root.locChanged(loc); };
+    //     cb.onClose = function(){root.onCloseBrowser(); };
+    //     cb.onOpenExternal = function(){root.onOpenExternal(); };
+    //     cb.showWebPage("https://foursquare.com/oauth2/authenticate?client_id=V4E5YSHBAG34FPQZA2X2ABUCHQP4M1AFIYWA5ZUTQWGSIPZE&response_type=code&redirect_uri=http://local.onemorecheckin.com");
 
-        }
+    //     }
 
-    function onCloseBrowser() {
-        console.log("onCloseBrowser!");
-    }
+    // function onCloseBrowser() {
+    //     console.log("onCloseBrowser!");
+    // }
 
-    function locChanged(loc) {
-        console.log("locChanged!");
-    }
+    // function locChanged(loc) {
+    //     console.log("locChanged!");
+    // }
 
-    function onOpenExternal() {
-        alert("onOpenExternal!");
-    }
+    // function onOpenExternal() {
+    //     alert("onOpenExternal!");
+    // }
     },
 
     willDestroyElement: function() {
       console.warn('wild delete root view');
     },
 
-    toggleMenu: function (e) {
+    toggleMenu: function(e) {
       this.menu.activate(!this.menu.activated);
     },
 

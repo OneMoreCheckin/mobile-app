@@ -82,13 +82,13 @@ PhoneApp.pack('PhoneApp', function(api) {
       context.controller = controller;
       context.view = this;
 
-      context.get = function(key) {
+      context.get = (function(key) {
         var path = key.split('.');
         if (path[0] == 'view')
           path.shift();
 
         return this.get(path.join('.'));
-      }.bind(this);
+      }.bind(this));
 
       return context;
 

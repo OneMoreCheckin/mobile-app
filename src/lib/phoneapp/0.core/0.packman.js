@@ -23,7 +23,7 @@
     name.split('.').forEach(function(fragment) {
       if (!glob || !(fragment in glob))
         if (!optional)
-          throw new Error('MISSING', 'Trying to require something that doesn\'t exist: ' + name);
+          throw new Error('MISSING:' + name, 'Trying to require something that doesn\'t exist: ' + name);
         else
           return (glob = undefined);
         glob = glob[fragment];
