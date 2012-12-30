@@ -196,7 +196,8 @@ PhoneApp.pack('PhoneApp.service', function(api) {
       headers = {};
     headers.Accept = 'application/json';
     // Add our signature here - XXX shit
-    headers['X-IID'] = 'web';
+    // XXX doesn't work with foursquare API...
+    // headers['X-IID'] = 'web';
 
     // Inner XHR
     var inner = new api.XMLHttpRequest();

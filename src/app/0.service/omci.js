@@ -166,12 +166,12 @@ PhoneApp.pack('Omci.service', function(api) {
       foursquare.query(method, options);
     };
 
-    this.queryOmci = function(method, options) {
-      if (!options.params)
-        options.params = {};
-      options.params.token = seed.token;
-      omci.query(method, options);
-    };
+    // this.queryOmci = function(method, options) {
+    //   if (!options.params)
+    //     options.params = {};
+    //   options.params.token = seed.token;
+    //   omci.query(method, options);
+    // };
 
   })();
 
@@ -199,17 +199,19 @@ PhoneApp.pack('Omci.service.venues', function(api) {
   };
 
   this.search = function(onSuccess, onFailure, latitude, longitude, cat, limit) {
+    var p = {
+      ll: latitude + ',' + longitude,
+      limit: limit || 30
+    };
+    if(cat)
+      p.categoryId = cat;
     api.core.queryFoursquare(
         api.core.foursquare.GET, {
           onsuccess: onSuccess,
           onfailure: onFailure,
           service: SERVICE,
           command: SEARCH,
-          params: {
-            categoryId: cat,
-            ll: latitude + ',' + longitude,
-            limit: limit || 30
-          }
+          params: p
         });
   };
 });

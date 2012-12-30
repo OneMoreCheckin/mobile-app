@@ -14,6 +14,8 @@ Omci.service.core.initialize({
 PhoneApp.use('PhoneApp.types.Object');
 PhoneApp.use('PhoneApp.types.ArrayController');
 PhoneApp.use('Omci.service.core');
+PhoneApp.use('Omci.service.venues');
+
 
 PhoneApp.pack('Omci.model', function(api) {
   'use strict';
@@ -117,14 +119,85 @@ partner
 
   var User = api.Object.extend(userDescriptor);
 
-  var Checkin = api.Object.extend({
-    checkins: 0,
-    contact: {},
+  var Venue = api.Object.extend({
+    // beenHere: {
+    //   count: 0,
+    //   marked: false
+    // },
+    canonicalUrl: '',
+    categories: [],
+    // contact: {},
     createdAt: 0,
-    hereNow: 0,
-    icon: '',
+    // dislike: false,
+    // friendVisits: {
+    //   count: 5,
+    //   items: Array[6],
+    //   summary: "Toi et 5 amis avez visité ce lieu"
+    // },
+    // hereNow: Object
     id: '',
-    isMayor: false,
+    // like: true,
+    // likes: Object
+    // listed: Object
+    location: {
+      cc: '',
+      city: '',
+      country: '',
+      isFuzzed: false,
+      lat: 0,
+      lng: 0,
+      state: ''
+    },
+    // mayor: Object
+    name: '',
+
+    fetch: function(success, failure){
+      api.venues.read((function(data){
+        this.fromObject(data.response.venue);
+        if(success)
+          success(this);
+      }.bind(this)), function(){
+        console.error('Something is very wrong with 4sq');
+        if(failure)
+          failure();
+      }, this.id);
+    },
+
+    fromObject: function(mesh){
+      Object.keys(mesh).forEach(function(key){
+        if(key in this)
+          this.set(key, mesh[key]);
+      }, this);
+      this.set('createdAt', new Date(parseInt(this.createdAt, 10) * 1000));
+    }
+    // pageUpdates: Object
+    // photos: Object
+    // reasons: Object
+    // shortUrl: "http://4sq.com/mPmdjT",
+    // specials: Object
+    // stats: {
+    //   checkinsCount: 434
+    //   tipCount: 1
+    //   usersCount: 14
+    // },
+    // tags: Array[0]
+    // timeZone: "Europe/Paris",
+    // tips: Object
+    // verified: false
+  });
+
+
+
+
+
+  var Checkin = api.Object.extend({
+    // checkins: 0,
+    // contact: {},
+    // createdAt: 0,
+    // hereNow: 0,
+    // icon: '',
+    // id: '',
+    // isMayor: false,
 
 /*    location: Object
       cc: "FR"
@@ -135,10 +208,11 @@ partner
       lng: 2.3962543168971036
       state: "Île-de-France"
 */
-    name: '',
-    url: null,
-    users: 0,
+    // name: '',
+    // url: null,
+    // users: 0,
     venue: '',
+
     init: function(){
       api.Object._super('init', this);
     },
@@ -148,10 +222,38 @@ partner
         if(key in this)
           this.set(key, mesh[key]);
       }, this);
-      this.set('createdAt', new Date(parseInt(this.createdAt, 10) * 1000));
+      var v = Venue.create();
+      v.fromObject({id: this.venue});
+      v.fetch();
+      this.set('venue', v);
+
+      // this.set('createdAt', new Date(parseInt(this.createdAt, 10) * 1000));
     }
   });
 
+
+
+
   this.user = User.create();
+
+  var venues = [];
+  this.venues = new api.ArrayController();
+  this.venues.content = venues;
+
+  this.venues.search = function(latitude, longitude, cat, limit){
+    venues = [];
+    this.content = [];
+    api.venues.search((function(data){
+      data.response.venues.forEach(function(vm){
+        var v = Venue.create();
+        v.fromObject(vm);
+        venues.pushObject(v);
+      });
+      this.content = venues;
+    }.bind(this)), function(){
+      console.error('Terrible terrible bad bad things happened.');
+    }, latitude, longitude, cat, limit);
+  };
+
 
 });
