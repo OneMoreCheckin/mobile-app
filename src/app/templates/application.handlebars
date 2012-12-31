@@ -1,7 +1,7 @@
 <div id="menu">
   <div id="menu-header">
     <div class="avatar" {{bindAttr style="Omci.model.user.avatar:background-image:url({{this}})"}}></div>
-      {{Omci.model.user.firstName}} {{Omci.model.user.lastName}}
+      {{bind "Omci.model.user.formatedName"}}
   </div>
   <h3>Badges</h3>
   <ul>

@@ -230,13 +230,12 @@ PhoneApp.pack('PhoneApp.types', function() {
     return [scope, po.shift()];
   };
 
-  this.Object.prototype.get = function(path) {
+  PhoneApp.get = this.Object.prototype.get = function(path) {
     var ret = pullPoint(this, path) || pullPoint(window, path);
     if (ret)
       ret = (ret.shift())[ret.pop()];
     return ret;
   };
-
 
   var f;
   var t;

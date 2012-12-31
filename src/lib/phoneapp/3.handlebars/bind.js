@@ -10,4 +10,9 @@
     return new Handlebars.SafeString(this.view._addAttributeBindings(params));
 
   });
+
+  Handlebars.registerHelper('bind', function (path) {
+    var m = this.view._addMetamorph(path);
+    return new Handlebars.SafeString(m.renderWrapper());
+  });
 })();

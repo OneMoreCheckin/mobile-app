@@ -65,6 +65,7 @@ PhoneApp.pack('PhoneApp', function(api) {
     _compiledTpl: null,
     _isDestroying: false,
     _meta_observers: null,
+    _metamorphs: null,
 
     context: function() {
       var controller = null;
@@ -116,6 +117,7 @@ PhoneApp.pack('PhoneApp', function(api) {
         this.classNames = this.classNames.split(' ');
 
       this._meta_observers = [];
+      this._metamorphs = [];
 
       var tpl = null;
 
@@ -416,6 +418,12 @@ PhoneApp.pack('PhoneApp', function(api) {
       return boostrap;
     },
 
+    _addMetamorph: function (property) {
+      var m = new PhoneApp.Metamorph(property);
+      this._metamorphs.push(m);
+      return m;
+    },
+
 
     destroy: function() {
       this.willDestroyElement();
@@ -423,6 +431,10 @@ PhoneApp.pack('PhoneApp', function(api) {
 
       this._meta_observers.forEach(function(obs) {
         obs.parent.removeObserver(obs.property, obs.callback);
+      });
+
+      this._metamorphs.forEach(function(m) {
+        m.destroy();
       });
 
       //Parent has already destroyed dom element

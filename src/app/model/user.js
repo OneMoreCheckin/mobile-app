@@ -94,6 +94,10 @@ partner
       api.Object._super('init', this);
     },
 
+    formatedName: (function () {
+      return this.firstName + ' ' + this.lastName;
+    }).property('lastName', 'firstName'),
+
     fromObject: function(mesh){
       Object.keys(mesh.user).forEach(function(key){
         if(key in this)
