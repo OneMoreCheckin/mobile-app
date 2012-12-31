@@ -18,7 +18,8 @@ def default():
     libs = FileList('src/lib/zepto', filter="*.js")
     combine(libs, 'build/js/zepto.js')
 
-    libs = FileList('src/lib/phoneapp/', filter="*namespace.js")
+    libs = FileList('src/lib/shims/')
+    libs.merge(FileList('src/lib/phoneapp/', filter="*namespace.js"))
     libs.merge(FileList('src/lib/phoneapp/', filter="*.js", exclude="*namespace.js"))
     combine(libs, 'build/js/phoneapp.js')
 
@@ -49,19 +50,22 @@ def default():
 
 @task("Lint")
 def lint():
-  PH.linter("src/app")
   PH.linter("src/lib/phoneapp")
+  PH.linter("src/lib/shims")
+  PH.linter("src/app")
 
 @task("Hint")
 def hint():
-  PH.hinter("src/app")
   PH.hinter("src/lib/phoneapp")
+  PH.hinter("src/lib/shims")
+  PH.hinter("src/app")
   PH.hinter("src/lib/zepto")
 
 @task("Flint")
 def flint():
-  PH.flinter("src/app")
   PH.flinter("src/lib/phoneapp")
+  PH.flinter("src/lib/shims")
+  PH.flinter("src/app")
 
 
 @task("Minting")

@@ -1,35 +1,9 @@
 PhoneApp.pack('PhoneApp', function() {
   'use strict';
 
-  (function() {
-    ['ms', 'moz', 'webkit', 'o'].some(function(prefix) {
-      window.requestAnimationFrame = window[prefix + 'RequestAnimationFrame'];
-      window.cancelAnimationFrame = window[prefix + 'CancelAnimationFrame']
-                                 || window[prefix + 'CancelRequestAnimationFrame'];
-      return window.requestAnimationFrame;
-    });
-
-    if (!window.requestAnimationFrame || !window.cancelAnimationFrame) {
-      var lastTime = 0;
-      window.requestAnimationFrame = function(callback, element) {
-        var currTime = Date.now();
-        var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-        lastTime = currTime + timeToCall;
-        return window.setTimeout(function() {
-          callback(currTime + timeToCall);
-        }, timeToCall);
-      };
-      window.cancelAnimationFrame = function(id) {
-        clearTimeout(id);
-      };
-    }
-  }());
-
-
-
   var animLoop = function(render, element ) {
     var running, lastFrame = Date.now();
-    function loop(now) {
+    var loop = function(now) {
       if (running !== false) {
         requestAnimationFrame(loop, element);
         running = render(now - lastFrame, now);
