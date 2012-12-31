@@ -120,9 +120,14 @@ PhoneApp.pack('Omci.service', function(api) {
     this.foursquare = foursquare;
 
     this.initialize = function(oc) {
-      this.foursquare.configure('api.foursquare.com', null, 'v2', 'https:');
+      this.foursquare.configure({
+        host: 'api.foursquare.com',
+        version: 'v2',
+        scheme: 'https'
+      });
 
-      omci.configure(oc.host, oc.port, oc.version, 'http:');
+      oc.scheme = 'http';
+      omci.configure(oc);
 
       version = oc.fsVersion;
       remote = 'https://foursquare.com/oauth2/authenticate?client_id=' + oc.clientId +
