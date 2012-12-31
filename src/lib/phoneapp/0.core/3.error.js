@@ -1,7 +1,5 @@
-// Unchanged against regular jsboot
-
 PhoneApp.add(Error).as('NativeError');
-PhoneApp.pack('PhoneApp.core', function(api) {
+PhoneApp.pack('PhoneApp.types', function(api) {
   /*global printStackTrace:false*/
   'use strict';
 
@@ -33,28 +31,5 @@ PhoneApp.pack('PhoneApp.core', function(api) {
     return this.name + ': ' + this.message + '\nStack: ' +
         ((typeof this.stack == 'array') ? this.stack.join('\n') : this.stack);
   };
-
-});
-
-
-
-
-PhoneApp.use('PhoneApp.core.Error');
-
-PhoneApp.pack('PhoneApp.service', function(api) {
-  'use strict';
-  this.Error = function(name, message, details) {
-    api.Error.apply(this, arguments);
-    this.details = details;
-  };
-
-  this.Error.prototype = Object.create(api.Error.prototype);
-
-  ['OPENING_FAILED', 'SEND_FAILED', 'FAILED_UID', 'MEANINGLESS_DATA', 'BAD_REQUEST',
-   'MISSING', 'BAD_REQUEST', 'UNAUTHORIZED', 'INVALID_SIGNATURE', 'WRONG_CREDENTIALS',
-   'SHOULD_NOT_HAPPEN', 'SERVICE_UNAVAILABLE', 'UNAUTHORIZED', 'UNSPECIFIED'].
-      forEach(function(item) {
-        this[item] = this.prototype[item] = item;
-      }, this.Error);
 
 });

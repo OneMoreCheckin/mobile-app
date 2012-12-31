@@ -1,7 +1,21 @@
-// native xhr vs mingus xhr
-// rescope of host/port/version
-// removal of XUID reading
-// remove of XIID writing
+PhoneApp.use('PhoneApp.types.Error');
+PhoneApp.pack('PhoneApp.service', function(api) {
+  'use strict';
+  this.Error = function(name, message, details) {
+    api.Error.apply(this, arguments);
+    this.details = details;
+  };
+
+  this.Error.prototype = Object.create(api.Error.prototype);
+
+  ['OPENING_FAILED', 'SEND_FAILED', 'FAILED_UID', 'MEANINGLESS_DATA', 'BAD_REQUEST',
+   'MISSING', 'BAD_REQUEST', 'UNAUTHORIZED', 'INVALID_SIGNATURE', 'WRONG_CREDENTIALS',
+   'SHOULD_NOT_HAPPEN', 'SERVICE_UNAVAILABLE', 'UNAUTHORIZED', 'UNSPECIFIED'].
+      forEach(function(item) {
+        this[item] = this.prototype[item] = item;
+      }, this.Error);
+
+});
 
 PhoneApp.add(XMLHttpRequest).as('XMLHttpRequest');
 PhoneApp.use('PhoneApp.service.Error');
@@ -77,7 +91,7 @@ PhoneApp.pack('PhoneApp.service', function(api) {
   };
 
   var callback = function() {
-    /*jshint maxcomplexity: 40*/
+    /*jshint maxcomplexity: 40, devel:true*/
     // Get the inner object and free
     var inner = this.inner;
     var failure = this.options.onfailure;
