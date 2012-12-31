@@ -71,8 +71,6 @@ PhoneApp.pack('PhoneApp', function(api) {
     init: function() {
       Pa.Router._super('init', this);
       this.root = this.root.create();
-
-      this.transitionTo('index');
     }
   };
 

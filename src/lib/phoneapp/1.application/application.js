@@ -11,10 +11,6 @@ PhoneApp.pack('PhoneApp', function(api) {
         BACKGROUND: 'background',
         RUNNING: 'running'
       },
-      init: function() {
-        api.Object._super('init', this);
-        console.log('create');
-      },
       state: null,
       isIphone: false,
       isIpad: false,
@@ -48,41 +44,42 @@ PhoneApp.pack('PhoneApp', function(api) {
       this.rootView.appendTo(this.rootElement);
 
 
-      if (!this.device.isMobile)
-        return;
+      if (this.device.isMobile) {
 
-      if (window.KeyboardToolbarRemover)
-        cordova.require('cordova/plugin/keyboard_toolbar_remover').hide();
+        if (window.KeyboardToolbarRemover)
+          cordova.require('cordova/plugin/keyboard_toolbar_remover').hide();
 
-      if (this.autoHideSplash)
-        this.hideSplash();
+        if (this.autoHideSplash)
+          this.hideSplash();
 
-      if (window.devicePixelRatio > 1)
-        this.device.set('isRetina', true);
+        if (window.devicePixelRatio > 1)
+          this.device.set('isRetina', true);
 
 
-      if (window.device) {
-        platform = window.device.platform.toLowerCase();
-        if (platform.indexOf('iphone') !== -1)
-          this.device.set('isIphone', true);
-        else if (platform.indexOf('ipad') !== -1)
-          this.device.set('isIpad', true);
-        else if (platform.indexOf('android') != -1)
-          this.device.set('isAndroid', true);
-
+        if (window.device) {
+          platform = window.device.platform.toLowerCase();
+          if (platform.indexOf('iphone') !== -1)
+            this.device.set('isIphone', true);
+          else if (platform.indexOf('ipad') !== -1)
+            this.device.set('isIpad', true);
+          else if (platform.indexOf('android') != -1)
+            this.device.set('isAndroid', true);
 
 
 
-        var run = new PhoneApp.Run(1000, function() {
-          if (navigator.connection.type == window.Connection.NONE)
-                      this.network.set('state', this.network.states.OFFLINE);
 
-          if (navigator.connection.type != this.networkType)
-                      this.network.set('type', navigator.connection.type);
+          var run = new PhoneApp.Run(1000, function() {
+            if (navigator.connection.type == window.Connection.NONE)
+                        this.network.set('state', this.network.states.OFFLINE);
 
-        }.bind(this));
-        run.start();
+            if (navigator.connection.type != this.networkType)
+                        this.network.set('type', navigator.connection.type);
+
+          }.bind(this));
+          run.start();
+        }
       }
+      this.router.transitionTo('index');
     },
 
     bindPhoneGapEvents: function() {
