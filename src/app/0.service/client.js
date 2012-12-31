@@ -1,7 +1,7 @@
-// With the exception of native xhr vs mingus xhr
-// and the rescope of host/port/version
+// native xhr vs mingus xhr
+// rescope of host/port/version
 // removal of XUID reading
-// this is unaltered from jsboot
+// remove of XIID writing
 
 PhoneApp.add(XMLHttpRequest).as('XMLHttpRequest');
 PhoneApp.use('PhoneApp.service.Error');
