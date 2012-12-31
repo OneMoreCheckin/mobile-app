@@ -241,7 +241,7 @@ PhoneApp.pack('PhoneApp', function(api) {
               var type = typeof(newValue);
               if (type == 'boolean' || type == 'number') {
                 if (!infos.className)
-                  infos.className = PhoneApp.String.dasherize(infos.property);
+                  infos.className = infos.property.dasherize();
                 gA['class'] = gA['class'].replace(infos.className, '')
                                          .replace(infos.falsyClassName, '');
 
