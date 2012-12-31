@@ -5,7 +5,6 @@ PhoneApp.pack('PhoneApp.types', function() {
   var mutableCount = 0;
   var hashed = {};
 
-
   this.Object = function() {
     this.__class__ = '[PhoneApp.Object]';
   };
@@ -241,7 +240,7 @@ PhoneApp.pack('PhoneApp.types', function() {
 
   var f;
   var t;
-  Pa.Binding = {
+  PhoneApp.Binding = {
     oneWay: function(path) {
       return (function(n, s, k, v) {
         return v;
@@ -270,7 +269,7 @@ PhoneApp.pack('PhoneApp.types', function() {
     }
   };
 
-  Pa.Binding.bind = function(scope, key, path) {
+  PhoneApp.Binding.bind = function(scope, key, path) {
     makeProperty(scope, key, this.bothWays(path));
   };
   // (MyApp.anotherObject, "value", "MyApp.someController.value");
@@ -290,7 +289,6 @@ PhoneApp.pack('PhoneApp.types', function() {
     return this;
   };
 
-  PhoneApp.Object = this.Object;
 });
 
 
