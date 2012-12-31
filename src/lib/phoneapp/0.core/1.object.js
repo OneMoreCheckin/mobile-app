@@ -280,12 +280,12 @@ PhoneApp.pack('PhoneApp.types', function() {
   // binding = Ember.Binding.from(this.valueBinding).to("value");
 
   Function.prototype.observes = function() {
-    this.__observes__ = Array.prototype.slice.call(arguments);
+    this.__observes__ = Array.of(arguments);
     return this;
   };
 
   Function.prototype.property = function() {
-    this.__property__ = Array.prototype.slice.call(arguments);
+    this.__property__ = Array.of(arguments);
     return this;
   };
 
