@@ -28,10 +28,14 @@
 	<string>cloud</string>
 	<key>ExternalHosts</key>
 	<array>
+    <string>*.ackitup.net</string>
 		<string>*.onemorecheckin.com</string>
 		<string>*.foursquare.com</string>
 		<string>playfoursquare.s3.amazonaws.com</string>
 		<string>*.4sqi.net</string>
+    <string>*.google.com</string>
+    <string>*.googleapis.com</string>
+    <string>*.gstatic.com</string>
 	</array>
 	<key>Plugins</key>
 	<dict>

@@ -121,8 +121,8 @@ partner
 
   var Venue = api.Object.extend({
     // beenHere: {
-    //   count: 0,
-    //   marked: false
+    //   count: 0// ,
+    //   // marked: false
     // },
     canonicalUrl: '',
     categories: [],
@@ -134,11 +134,14 @@ partner
     //   items: Array[6],
     //   summary: "Toi et 5 amis avez visité ce lieu"
     // },
-    // hereNow: Object
+    hereNow: {
+      count: 0
+    },
     id: '',
     // like: true,
     // likes: Object
     // listed: Object
+
     location: {
       cc: '',
       city: '',
@@ -169,17 +172,38 @@ partner
           this.set(key, mesh[key]);
       }, this);
       this.set('createdAt', new Date(parseInt(this.createdAt, 10) * 1000));
-    }
+    },
+
+    description: (function(){
+      return '<ul><li>Here now: ' + this.hereNow.count + '</li>' +
+           '<li>Total checkins: ' + this.stats.checkinsCount + '</li></ul>';
+    }.property('stats', 'hereNow')),
+
+    info: (function(){
+      return '<div id="info-window"><h3>' + this.name + '</h3>' + this.description + '</div>';
+    }.property('description', 'name')),
+
+
+    icon: (function(){
+      // Return whatever appropriate depending on categories
+    }.property('categories')),
+
+    // Probably override with proper dimensions here
+    // size: [10, 10],
+    // origin: [0, 0],
+    // offset: [5, 2]
+
+
     // pageUpdates: Object
     // photos: Object
     // reasons: Object
     // shortUrl: "http://4sq.com/mPmdjT",
     // specials: Object
-    // stats: {
+    stats: {
     //   checkinsCount: 434
     //   tipCount: 1
     //   usersCount: 14
-    // },
+    },
     // tags: Array[0]
     // timeZone: "Europe/Paris",
     // tips: Object
@@ -211,10 +235,12 @@ partner
     // name: '',
     // url: null,
     // users: 0,
-    venue: '',
+    venue: 0,
+    aVenue: null,
 
     init: function(){
       api.Object._super('init', this);
+      this.set('aVenue', Venue.create());
     },
 
     fromObject: function(mesh){
@@ -222,10 +248,8 @@ partner
         if(key in this)
           this.set(key, mesh[key]);
       }, this);
-      var v = Venue.create();
-      v.fromObject({id: this.venue});
-      v.fetch();
-      this.set('venue', v);
+      this.aVenue.fromObject({id: this.venue});
+      this.aVenue.fetch();
 
       // this.set('createdAt', new Date(parseInt(this.createdAt, 10) * 1000));
     }
@@ -236,20 +260,18 @@ partner
 
   this.user = User.create();
 
-  var venues = [];
+  var venues = [this.user.lastCheckin.aVenue];
   this.venues = new api.ArrayController();
   this.venues.content = venues;
 
   this.venues.search = function(latitude, longitude, cat, limit){
-    venues = [];
-    this.content = [];
+    venues.clear();
     api.venues.search((function(data){
       data.response.venues.forEach(function(vm){
         var v = Venue.create();
         v.fromObject(vm);
         venues.pushObject(v);
       });
-      this.content = venues;
     }.bind(this)), function(){
       console.error('Terrible terrible bad bad things happened.');
     }, latitude, longitude, cat, limit);
