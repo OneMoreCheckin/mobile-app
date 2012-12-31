@@ -9,45 +9,44 @@ PhoneApp.pack('PhoneApp.service', function(api) {
   /*global File, DOMParser, Blob*/
   'use strict';
 
+  var hasModern = (typeof File != 'undefined') && (typeof Blob != 'undefined');
+
   this.SimpleClient = function() {
     var host;
-    var port;
-    var version;
-    var scheme;
-    var userId;
+    var port = '';
+    var version = '';
+    var scheme = '';
+    var Backend = api.XMLHttpRequest;
 
-    Object.defineProperty(this, 'userId', {
-      get: function() {
-        return userId;
-      },
-      set: function(v) {
-        userId = v;
-      }
-    });
-
-    Object.defineProperty(this, 'hostPort', {
-      get: function() {
-        return host + (port ? ':' + port : '');
-      }
-    });
-
-    Object.defineProperty(this, 'version', {
-      get: function() {
-        return version;
-      }
-    });
-
-    this.configure = function(h, p, v, s) {
-      host = h;
-      port = p;
-      scheme = s || '';
-      version = v;
-      userId = null;
+    this.configure = function(options) {
+      if(options.host)
+        host = options.host;
+      if(options.port)
+        port = options.port;
+      if(options.scheme)
+        scheme = options.scheme + ':';
+      if(options.version)
+        version = options.version;
+      if(options.backend)
+        Backend = options.backend;
     };
+
+    Object.defineProperty(this, 'Backend', {
+      get: function(){
+        return Backend;
+      }
+    });
+
+
+    // Object.defineProperty(this, 'version', {
+    //   get: function() {
+    //     return version;
+    //   }
+    // });
 
     this.url = function(options) {
       // XXX use an IRL object instead of that crap
-      var url = scheme + '//' + host + (port ? ':' + port : '') + '/' + version;
+      var url = scheme + '//' + host + (port ? ':' + port : '') + (version ? '/' + version : '');
       // Optional serviceName
       if (options.service)
         url += '/' + options.service;
@@ -66,31 +65,33 @@ PhoneApp.pack('PhoneApp.service', function(api) {
 
       // Build-up query string if any
       var query = [];
-      if (options.params)
-        Object.keys(options.params).forEach(function(i) {
-          query.push(encodeURIComponent(i) + '=' + encodeURIComponent(options.params[i]));
-        });
+      Object.keys(options.params).forEach(function(i) {
+        query.push(encodeURIComponent(i) + '=' + encodeURIComponent(options.params[i]));
+      });
 
       if (query.length)
         url += '?' + query.join('&');
 
       return url;
     };
-
   };
 
   var callback = function() {
     /*jshint maxcomplexity: 40*/
-    // Free stuff
+    // Get the inner object and free
     var inner = this.inner;
-    var failure = this.onfailure;
-    var success = this.onsuccess;
-    var restart = this.restart;
+    var failure = this.options.onfailure;
+    var success = this.options.onsuccess;
+
+    // XXX Latest chrome seems to fire OPENED synchronously
+    if(!inner){
+      console.warn('BAD SHIT HAPPENED!');
+      return;
+    }
 
     if (inner.readyState == inner.FAILED_OPENING) {
-      // options.error = new err(err.UNAUTHORIZED);
-      // Clean-up
-      this.onsuccess = this.onfailure = this.inner = this.restart = inner.onreadystatechange = null;
+      // Clean-up what we definitely don't want to dangle out
+      this.inner = this.engine = this.options.onsuccess = this.options.onfailure = inner.onreadystatechange = null;
       this.error = new api.Error(api.Error.UNAUTHORIZED, 'Not authorized to access this', this);
       if (failure)
         failure(this.error);
@@ -101,22 +102,21 @@ PhoneApp.pack('PhoneApp.service', function(api) {
     if (inner.readyState != inner.DONE)
       return;
 
-    // Clean-up now for good
-    this.onsuccess = this.onfailure = this.inner = this.restart = inner.onreadystatechange = null;
+    var engine = this.engine;
+    // Clean-up ref to avoid dirty leak (should be partly done by shimed XHR)
+    this.inner = this.engine = this.options.onsuccess = this.options.onfailure = inner.onreadystatechange = null;
 
     try {
-      this.data = {};
-      if (inner.responseText) {
+      if (inner.responseText)
         this.data = JSON.parse(inner.responseText);
-      }
     }catch (e) {
       try {
         var parser = new DOMParser();
         this.data = parser.parseFromString(inner.responseText, 'application/xml');
       }catch (e2) {
+        this.data = inner.responseText;
         this.error = new api.Error(api.Error.MEANINGLESS_DATA, 'WHAT? ALBATROS?', this);
       }
-      this.data.responseText = inner.responseText;
     }
 
     switch (inner.status) {
@@ -124,19 +124,12 @@ PhoneApp.pack('PhoneApp.service', function(api) {
       case 201:
         break;
       case 308:
-        this.id = null;
-        this.params = {};
-        this.url = inner.getResponseHeader('Location');
-        restart.engine.query(restart.GET, this, restart.headers);
+      // GET follow this - not too sure this is accurate HTTP but required by Roxee
+        this.options.url = inner.getResponseHeader('Location');
+        engine.query(engine.GET, this.options, this.headers);
         return;
       case 400:
         this.error = new api.Error(api.Error.BAD_REQUEST, 'Bad request!', this);
-        var errorInfo = {code: 100, error: 'GENERIC_ERROR'};
-        try {
-          errorInfo = JSON.parse(inner.responseText);
-        }catch (e) {
-        }
-        this.data = errorInfo;
         break;
       case 401:
         if (inner.getResponseHeader('WWW-Authenticate')) {
@@ -178,62 +171,70 @@ PhoneApp.pack('PhoneApp.service', function(api) {
         break;
     }
 
-    if (success && !this.error)
+    if(this.error){
+      if (failure)
+        // XXX pass of data is redundant, as it attached on the detail of the error under .data
+        // but roxee historically needed this
+        failure(this.error);
+      throw this.error;
+    }
+
+    if (success)
       success(this.data);
-    // XXX Roxee depends on this old API
-    if (failure && this.error)
-      failure(this.error, this.data);
   };
 
 
   this.SimpleClient.prototype.query = function(method, options, headers) {
-    // Default method
+    // Inner XHR
+    var inner = new this.Backend();
+
+    // Normalize values and prepare url
     method = (method || this.GET);
     var url = options.url || this.url(options);
-
-    // If no headers are provided, set Accept to app/json
     if (!headers)
       headers = {};
-    headers.Accept = 'application/json';
-    // Add our signature here - XXX shit
-    // XXX doesn't work with foursquare API...
-    // headers['X-IID'] = 'web';
+    if(!headers.Accept)
+      headers.Accept = 'application/json';
 
-    // Inner XHR
-    var inner = new api.XMLHttpRequest();
-    // Reference the inner xhr and other useful objects to possibly restart
-    options.inner = inner;
+    var rescope = {
+      options: options,
+      method: method,
+      headers: headers,
+      // Set response fields
+      error: null,
+      data: {},
+      exception: null
+    };
 
-    // Set response fields
-    options.error = null;
-    options.data = null;
-
-    // Attach our callback mech
-    inner.onreadystatechange = callback.bind(options);
+    // Attach our callback mechanism
+    inner.onreadystatechange = callback.bind(rescope);
 
     try {
       inner.open(method, url, true);
     }catch (e) {
-      options.exception = e.toString();
-      throw new api.Error(api.Error.OPENING_FAILED, 'Failed opening likely bogus request', options);
+      rescope.exception = e.toString();
+      rescope.error = new api.Error(api.Error.OPENING_FAILED, 'Failed opening likely bogus request', rescope);
+      if(options.onfailure)
+        options.onfailure(rescope.error);
+      throw rescope.error;
     }
 
     // Prepare payload if any
     var payload = options.payload;
 
     if (method == this.POST) {
-      if ((typeof File != 'undefined') && (typeof Blob != 'undefined') && ((payload instanceof File) ||
-          (payload instanceof Blob))) {
-        headers['Content-Type'] = payload.type;
-      }else {
-        try {
-          if (!('Content-Type' in headers) || (headers['Content-Type'] == 'application/json')) {
-            payload = JSON.stringify(payload);
-            headers['Content-Type'] = 'application/json';
-          }
+      if(!headers['Content-Type']){
+        if (hasModern && ((payload instanceof File) || (payload instanceof Blob)))
+          headers['Content-Type'] = payload.type;
+        else
+          headers['Content-Type'] = 'application/json';
+      }
+
+      if(headers['Content-Type'] == 'application/json') {
+        try{
+          payload = JSON.stringify(payload);
         }catch (e) {
-          if (!('Content-Type' in headers))
-            headers['Content-Type'] = 'image/jpeg';
+          headers['Content-Type'] = 'application/octet-stream';
         }
       }
     }
@@ -242,19 +243,19 @@ PhoneApp.pack('PhoneApp.service', function(api) {
       inner.setRequestHeader(i, headers[i]);
     });
 
-    // For restarters
-    options.restart = {
-      engine: this,
-      method: method,
-      headers: headers
-    };
-
     try {
       inner.send(payload);
     }catch (e) {
-      options.exception = e;
-      throw new api.Error(api.Error.SEND_FAILED, 'Failed sending. Bogus payload?', options);
+      rescope.exception = e.toString();
+      rescope.error = new api.Error(api.Error.SEND_FAILED, 'Failed sending. Bogus payload?', rescope);
+      if(options.onfailure)
+        options.onfailure(rescope.error);
+      throw rescope.error;
     }
+
+    // Rescope ourselves if all went well, we might need that later on
+    rescope.inner = inner;
+    rescope.engine = this;
   };
 
   this.SimpleClient.HEAD = this.SimpleClient.prototype.HEAD = 'HEAD';
