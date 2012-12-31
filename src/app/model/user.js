@@ -160,7 +160,7 @@ partner
         if(success)
           success(this);
       }.bind(this)), function(){
-        console.error('Something is very wrong with 4sq');
+        // console.error('Something is very wrong with 4sq');
         if(failure)
           failure();
       }, this.id);
@@ -273,7 +273,7 @@ partner
         venues.pushObject(v);
       });
     }.bind(this)), function(){
-      console.error('Terrible terrible bad bad things happened.');
+      // console.error('Terrible terrible bad bad things happened.');
     }, latitude, longitude, cat, limit);
   };
 

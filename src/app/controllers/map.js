@@ -3,6 +3,7 @@ PhoneApp.use('PhoneApp.types.ArrayController');
 
 PhoneApp.pack('Omci.controller', function(api) {
   'use strict';
+  /*global google:false*/
 
   var UNINITIALIZED = 'UNINITIALIZED';
   var LOADING = 'LOADING';
@@ -25,20 +26,20 @@ PhoneApp.pack('Omci.controller', function(api) {
       return;
     if(googleMapReady != LOADING) {
       googleMapReady = LOADING;
-      var script = document.createElement("script");
+      var script = document.createElement('script');
       script.src = 'http://maps.google.com/maps/api/js?v=3.7&sensor=true&callback=Omci.controller.onmapready';
       script.type = 'text/javascript';
 
-      script.addEventListener('error', function(e) {
+      script.addEventListener('error', function(/*e*/) {
         googleMapReady = ERROR;
         if(onfailure)
           onfailure();
       }, false);
    
-      script.addEventListener('load', function(e) {
+      script.addEventListener('load', function(/*e*/) {
         setTimeout(function() {
           if (googleMapReady == LOADING){
-            googleMapsReady = ERROR;
+            googleMapReady = ERROR;
             if(onfailure)
               onfailure();
           }

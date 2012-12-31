@@ -3,17 +3,20 @@ PhoneApp.use('PhoneApp.service.Error');
 
 PhoneApp.pack('Omci.service', function(api) {
   'use strict';
+  /*global plugins:false*/
 
   var read = function(){
+    /*jshint devel:true*/
     try{
       return JSON.parse(localStorage.getItem('omci')) || {};
     }catch(e){
-      console.error('Failed reading from localStorage', localStorage.getItem('omci'));
+      console.error('Failed reading from localStorage');
       return {};
     }
   };
 
   var write = function(data){
+    /*jshint devel:true*/
     try{
       localStorage.setItem('omci', JSON.stringify(data));
     }catch(e){
@@ -40,7 +43,6 @@ PhoneApp.pack('Omci.service', function(api) {
   var failureCbk;
 
   var onFailure = function(){
-    console.warn('failing shit!');
     seed.code = null;
     seed.token = null;
     seed.oauth = null;
@@ -53,7 +55,6 @@ PhoneApp.pack('Omci.service', function(api) {
     omci.query(
         omci.GET, {
           onsuccess: function(data) {
-            console.warn('Authentication success', data);
             seed.token = data.token;
             seed.oauth = data.oauth;
             seed.userId = data.uid;
@@ -74,7 +75,6 @@ PhoneApp.pack('Omci.service', function(api) {
         omci.GET, {
           onsuccess: function(data){
             // Handle info data here
-            console.warn('Info query success', data);
             successCbk(data);
           },
           onfailure: onFailure,
@@ -138,22 +138,19 @@ PhoneApp.pack('Omci.service', function(api) {
       successCbk = onSuccess;
       failureCbk = onFailure;
       if(seed.token){
-        console.warn('got a seed token, trying to get infos');
         info();
         return;
       }
       if(seed.code){
-        console.warn('got a seed code, trying to authenticate, then info');
         authenticate(info);
         return;
       }
-      console.warn('got dog shit, getting dirty');
       try{
         plugins.childBrowser.onLocationChange = cordovaSpy;
         plugins.childBrowser.showWebPage(remote);
       }catch(e){
-        console.error('Not in cordova! Using window open instead');
         windowRef = window.open(remote);
+        throw new Error('Not using cordova! Falling back to window hack instead');
       }
     };
 
