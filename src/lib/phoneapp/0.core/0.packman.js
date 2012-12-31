@@ -13,7 +13,7 @@
     }
     if (lastAdd) {
       if (!lastAdd.name)
-        throw new Error('NEED_A_NAME', 'Trying to bind something without name');
+        throw new Error('NEED_A_NAME: Trying to bind "something" without any name');
       toAdd.push(lastAdd);
       lastAdd = null;
     }
@@ -23,7 +23,7 @@
     name.split('.').forEach(function(fragment) {
       if (!glob || !(fragment in glob))
         if (!optional)
-          throw new Error('MISSING:' + name, 'Trying to require something that doesn\'t exist: ' + name);
+          throw new Error('MISSING: Trying to require something that doesn\'t exist' + name);
         else
           return (glob = undefined);
         glob = glob[fragment];
@@ -56,14 +56,14 @@
     var api = {};
     localAdd.forEach(function(item) {
       if (item.name in api)
-        throw new Error('ALREADY_DEFINED You are shadowing ' + api[item.name] + ' with ' +
+        throw new Error('ALREADY_DEFINED: You are shadowing ' + api[item.name] + ' with ' +
             item + ' for name ' + item.name);
       api[item.name] = item.value;
     });
 
     localUse.forEach(function(item) {
       if (item.name in api)
-        throw new Error('ALREADY_DEFINED You are shadowing name ' + item.name);
+        throw new Error('ALREADY_DEFINED: You are shadowing name ' + item.name);
       api[item.name] = simplePull(globalObject, item.module, item.optional);
     });
     return api;
@@ -81,7 +81,7 @@
 
   this.add = function(a, optional) {
     if ((a === undefined) && !optional)
-      throw new Error('UNDEFINED', 'Requesting something local that is undefined');
+      throw new Error('UNDEFINED: Requesting something local that is undefined');
     flush();
     lastAdd = {value: a};
     return this;
