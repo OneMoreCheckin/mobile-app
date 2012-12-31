@@ -5,7 +5,7 @@
     K: function() {},
     TEMPLATES: Handlebars.templates || {},
     ENV: {
-      HANLDEBARS_EXPOSE_OBJECTS: []
+      HANDLEBARS_EXPOSE_OBJECTS: []
     }
   };
 
