@@ -1,4 +1,5 @@
 PhoneApp.pack('PhoneApp', function() {
+  /*global requestAnimationFrame:true*/
   'use strict';
 
   var animLoop = function(render, element ) {
@@ -9,7 +10,7 @@ PhoneApp.pack('PhoneApp', function() {
         running = render(now - lastFrame, now);
         lastFrame = now;
       }
-    }
+    };
     loop();
   };
 
@@ -114,7 +115,7 @@ PhoneApp.pack('PhoneApp', function() {
     }
   };
 
-  animLoop(function(deltaT, now ) {
+  animLoop(function(deltaT/*, now*/) {
     if (deltaT > 160)
       return;
     var item = renderQueue.shift();

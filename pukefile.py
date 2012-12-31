@@ -50,21 +50,21 @@ def default():
 
 @task("Lint")
 def lint():
-  PH.linter("src/lib/phoneapp")
   PH.linter("src/lib/shims")
+  PH.linter("src/lib/phoneapp")
   PH.linter("src/app")
 
 @task("Hint")
 def hint():
-  PH.hinter("src/lib/phoneapp")
   PH.hinter("src/lib/shims")
+  PH.hinter("src/lib/phoneapp")
   PH.hinter("src/app")
   PH.hinter("src/lib/zepto")
 
 @task("Flint")
 def flint():
-  PH.flinter("src/lib/phoneapp")
   PH.flinter("src/lib/shims")
+  PH.flinter("src/lib/phoneapp")
   PH.flinter("src/app")
 
 
