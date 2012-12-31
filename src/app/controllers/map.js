@@ -133,7 +133,7 @@ PhoneApp.pack('Omci.controller', function(api) {
 
       onfailure = this.onfailure;
 
-      this.markers = new api.ArrayController();
+      this.markers = api.ArrayController.create();
       this.markers.content = this.venues;
 
       var infowindow;

@@ -81,7 +81,7 @@ partner
       this._badges = [];
       this.badges = {};
       ['cities', 'expertise', 'foursquare', 'partner'].forEach(function(cat){
-        this.badges[cat] = new api.ArrayController();
+        this.badges[cat] = api.ArrayController.create();
         this.badges[cat].content = this._badges;
         this.badges[cat].filter = function(item){
           return item.type == (cat == 'cities' ? '4sqcities' : cat);
@@ -261,7 +261,7 @@ partner
   this.user = User.create();
 
   var venues = [this.user.lastCheckin.aVenue];
-  this.venues = new api.ArrayController();
+  this.venues = api.ArrayController.create();
   this.venues.content = venues;
 
   this.venues.search = function(latitude, longitude, cat, limit){
