@@ -199,7 +199,7 @@ PhoneApp.pack('PhoneApp', function(api) {
     },
 
     _computeAttributesBindings: function(attributes, bindingId) {
-      var gA = {class: ''},
+      var gA = {class: '', style: ''},
           view = this;
 
       attributes.forEach(function(binding) {
@@ -276,6 +276,75 @@ PhoneApp.pack('PhoneApp', function(api) {
 
           }, this);
 
+        } else if (currentAttribute == 'style') {
+          if (typeof(currentValue) == 'string')
+            currentValue = currentValue.split(/\s+/);
+
+          currentValue.forEach(function(attr) {
+            var infos = _parsePropertyPath(attr),
+                observer;
+
+            infos.styleName = infos.className;
+            infos.styleValue = infos.falsyClassName;
+            infos.isBinding = (infos.styleValue.indexOf('{{this}}') != -1);
+            if (!infos.path && !infos.isBinding) {
+              gA['style'] += ' ' + infos.styleName+':'+infos.styleValue;
+              return;
+            }
+
+            infos.parent = infos.parent ? this.get(infos.parent) : this;
+
+            observer = function(attr, old, newValue, justCompute) {
+              if (view._isDestroying)
+                return;
+
+              if (!node && !justCompute)
+                node = (!currentId) ?
+                    view.element :
+                    view.element.querySelector(currentId);
+
+              if (node)
+                gA['style'] = node.getAttribute('style');
+
+              var styles = {};
+              gA['style'].split(';').forEach(function(i) {
+                if (!i)
+                  return;
+                var s = i.split(':'); styles[s.shift().trim()]= s.shift()
+              });
+
+              if (newValue)
+                styles[infos.styleName.trim()] = infos.styleValue.replace('{{this}}', newValue);
+              else
+                delete styles[infos.styleName.trim()];
+
+
+              gA['style'] = '';
+              Object.keys(styles).forEach(function(k) {
+                gA['style'] += k+':'+styles[k]+';';
+              });
+
+              if (justCompute)
+                return;
+
+
+              Pa.renderLoop.schedule(
+                  renderAttribute, view, [node, 'style', gA['style']]
+              );
+
+
+            };
+            observer(infos.property, '', this.get(infos.path), true);
+
+            this._meta_observers.push({
+              parent: infos.parent,
+              property: infos.property,
+              callback: observer
+            });
+            infos.parent.addObserver(infos.property, observer);
+
+
+          }, this);
         } else {
           var split = currentValue.split('.'),
               property = split.pop(),
