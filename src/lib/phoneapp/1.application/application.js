@@ -6,13 +6,13 @@ PhoneApp.pack('PhoneApp', function(api) {
     rootElement: $('body').get(0),
     ready: PhoneApp.K,
     autoHideSplash: false,
-    device: Pa.Object.create({
+    device: api.Object.create({
       states: {
         BACKGROUND: 'background',
         RUNNING: 'running'
       },
       init: function() {
-        Pa.Object._super('init', this);
+        api.Object._super('init', this);
         console.log('create');
       },
       state: null,
@@ -24,7 +24,7 @@ PhoneApp.pack('PhoneApp', function(api) {
         return /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
       }).property()
     }),
-    network: Pa.Object.create({
+    network: api.Object.create({
       types: window.Connection || {},
       states: {
         ONLINE: 'online',
