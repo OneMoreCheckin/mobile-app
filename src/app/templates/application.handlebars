@@ -1,6 +1,6 @@
 <div id="menu">
   <div id="menu-header">
-    <div class="avatar" style="background-image:url({{Omci.model.user.avatar}})"></div>
+    <div class="avatar" {{bindAttr style="Omci.model.user.avatar:background-image:url({{this}})"}}></div>
       {{Omci.model.user.firstName}} {{Omci.model.user.lastName}}
   </div>
   <h3>Badges</h3>

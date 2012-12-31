@@ -33,12 +33,24 @@ PhoneApp.pack('Omci.views', function() {
     templateName: 'application',
 
     didInsertElement: function() {
+      Omci.hideSplash();
+      Omci.model.user.bootstrap(function() {
+        console.log('success');
+        Omci.router.transitionTo('application');
+        
+      }, function () {
+
+      });
       console.warn('root view inserted');
-      this.menu = new Swipe(document.getElementById('container'));
-      this.menu.activate(true);
+       this.menu = new Swipe(document.getElementById('container'));
+      //this.menu.activate(true);
       var unscrollable = function(e) { e.preventDefault(); };
       this.$('#menu').on('touchmove', unscrollable);
-      Omci.hideSplash();
+      // this.menu = new Swipe(document.getElementById('container'));
+      // this.menu.activate(true);
+      // var unscrollable = function(e) { e.preventDefault(); };
+      // this.$('#menu').on('touchmove', unscrollable);
+      
       // $('#page').hide();
       // window.setTimeout(function () {
 
@@ -46,31 +58,7 @@ PhoneApp.pack('Omci.views', function() {
       // }, 5000);
       // 
 
-        var root = this;
-                console.log('before');
-        ChildBrowser.install();
-    //     var cb = window.plugins.childBrowser;
-    //     console.log(cb);
-    //     console.log('after');
-    //     if(cb != null) {
-    //     cb.onLocationChange = function(loc){ root.locChanged(loc); };
-    //     cb.onClose = function(){root.onCloseBrowser(); };
-    //     cb.onOpenExternal = function(){root.onOpenExternal(); };
-    //     cb.showWebPage("https://foursquare.com/oauth2/authenticate?client_id=V4E5YSHBAG34FPQZA2X2ABUCHQP4M1AFIYWA5ZUTQWGSIPZE&response_type=code&redirect_uri=http://local.onemorecheckin.com");
-
-    //     }
-
-    // function onCloseBrowser() {
-    //     console.log("onCloseBrowser!");
-    // }
-
-    // function locChanged(loc) {
-    //     console.log("locChanged!");
-    // }
-
-    // function onOpenExternal() {
-    //     alert("onOpenExternal!");
-    // }
+      ChildBrowser.install();
     },
 
     willDestroyElement: function() {
