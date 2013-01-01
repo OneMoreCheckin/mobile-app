@@ -40,22 +40,22 @@
             console.log('******** router -> splash');
           },
 
-          connectOutlets: function(router) {
-            router.applicationController.connectOutlet({
-              viewClass: Omci.views.Splash
-            });
-          }
+          // connectOutlets: function(router) {
+          //   router.applicationController.connectOutlet({
+          //     viewClass: Omci.views.Splash
+          //   });
+          // }
         }),
         application: Pa.Route.extend({
           route: '/app',
           enter: function() {
             console.log('****** router -> app');
           },
-          connectOutlets: function(router) {
-            router.applicationController.connectOutlet({
-              viewClass: Omci.views.Youhou
-            });
-          }
+          // connectOutlets: function(router) {
+          //   router.applicationController.connectOutlet({
+          //     viewClass: Omci.views.Youhou
+          //   });
+          // }
         })
 
       })

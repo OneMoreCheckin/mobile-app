@@ -114,10 +114,20 @@ partner
     },
 
     bootstrap: function(onSuccess, onFailure) {
+      api.core.checkAuthentication((function(data) {
+        this.fromObject(data);
+        onSuccess(this);
+      }.bind(this)), onFailure);
+    },
+    authenticate: function(onSuccess, onFailure) {
       api.core.requestAuthentication((function(data) {
         this.fromObject(data);
         onSuccess(this);
       }.bind(this)), onFailure);
+    },
+
+    logout: function () {
+      api.core.logout();
     }
   };
 

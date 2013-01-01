@@ -33,32 +33,23 @@ PhoneApp.pack('Omci.views', function() {
     templateName: 'application',
 
     didInsertElement: function() {
-      Omci.hideSplash();
       Omci.model.user.bootstrap(function() {
-        console.log('success');
-        Omci.router.transitionTo('application');
-
+        //Authenticated : OK
+        Omci.rootView.$('#splash').addClass('quick-hide');
+        Pa.renderLoop.schedule(function () {
+          Omci.hideSplash();
+        });
+        
       }, function() {
-
+        Omci.hideSplash();
       });
       console.warn('root view inserted');
       this.menu = new Swipe(document.getElementById('container'));
-      //this.menu.activate(true);
       var unscrollable = function(e) { e.preventDefault(); };
       this.$('#menu').on('touchmove', unscrollable);
-      // this.menu = new Swipe(document.getElementById('container'));
-      // this.menu.activate(true);
-      // var unscrollable = function(e) { e.preventDefault(); };
-      // this.$('#menu').on('touchmove', unscrollable);
-
-      // $('#page').hide();
-      // window.setTimeout(function () {
-
-      //     $('#page').show();
-      // }, 5000);
-      //
 
       ChildBrowser.install();
+      
     },
 
     willDestroyElement: function() {
@@ -79,6 +70,22 @@ PhoneApp.pack('Omci.views', function() {
         shuffle($('.badges li'));
       });
 
+    },
+
+    logout: function (e) {
+      Omci.model.user.logout();
+      $('#splash-loading').hide();
+      $('#splash-connect').show();
+      this.$('#splash').removeClass('hide').removeClass('quick-hide');
+    },
+    login: function (e) {
+      $('#splash-connect').hide();
+      $('#splash-loading').show();
+      Omci.model.user.authenticate(function () {  
+        Omci.rootView.$('#splash').addClass('hide');
+      }, function () {
+        console.error('authentication fail');
+      });
     }
   });
 });

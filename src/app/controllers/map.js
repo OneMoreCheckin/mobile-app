@@ -57,7 +57,7 @@ PhoneApp.pack('Omci.controller', function(api) {
 
   document.addEventListener('online', loadAPI, false);
 
-  loadAPI();
+  //loadAPI();
 
   this.Marker = api.Object.extend({
     background: {

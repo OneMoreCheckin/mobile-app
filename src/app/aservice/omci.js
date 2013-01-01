@@ -20,7 +20,7 @@ PhoneApp.pack('Omci.service', function(api) {
     try{
       localStorage.setItem('omci', JSON.stringify(data));
     }catch(e){
-      console.error('Failed writing to localStorage');
+      console.error('Failed writing to localStorage', e);
     }
   };
 
@@ -139,7 +139,7 @@ PhoneApp.pack('Omci.service', function(api) {
         opener.postMessage({code: p.code}, '*');
     };
 
-    this.requestAuthentication = function(onSuccess, onFailure){
+    this.checkAuthentication = function (onSuccess, onFailure) {
       successCbk = onSuccess;
       failureCbk = onFailure;
       if(seed.token){
@@ -150,12 +150,25 @@ PhoneApp.pack('Omci.service', function(api) {
         authenticate(info);
         return;
       }
+
+      onFailure();
+    },
+
+    this.requestAuthentication = function(onSuccess, onFailure){
       try{
         plugins.childBrowser.onLocationChange = cordovaSpy;
         plugins.childBrowser.showWebPage(remote);
       }catch(e){
         windowRef = window.open(remote);
-        throw new Error('Not using cordova! Falling back to window hack instead');
+        console.error('Not using cordova! Falling back to window hack instead');
+      }
+    };
+
+    this.logout = function () {
+      try {
+        localStorage.setItem('omci', '{}');
+      } catch (e) {
+        console.error('logout localStorage error');
       }
     };
 

@@ -1,22 +1,5 @@
 @import "compass/css3/user-interface";
 
-
-.test-splash, .test-youhou {
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  z-index:10;
-  background-color:#000;
-  color:#FFF;
-}
-
-.test-youhou {
-  background-color:#FFF;
-  color:#000;
-}
-
 #menu {
   position:fixed;
   top:0;
@@ -24,6 +7,7 @@
   left:0;
   right:0;
   @include user-select(none);
+  background-color:#282f38;
 
   #menu-header {
     height:43px;
