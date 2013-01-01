@@ -97,6 +97,7 @@ PhoneApp.pack('PhoneApp.types', function(api) {
   };
 
   this.ArrayController = api.Object.extend({
+    length: 0,
     init: function(){
       api.Object._super('init', this);
 
@@ -141,6 +142,7 @@ PhoneApp.pack('PhoneApp.types', function(api) {
             s.replace(needle, 0, item);
           }
         });
+        this.set('length', s.length);
       };
 
       this.destroy = function() {
@@ -148,6 +150,7 @@ PhoneApp.pack('PhoneApp.types', function(api) {
         arr = false;
         c = false;
         m = false;
+        this.set('length', 0);
         s.clear();
       };
 
@@ -174,6 +177,7 @@ PhoneApp.pack('PhoneApp.types', function(api) {
             s.pushObject(item);
           });
           s.quickSort(sort);
+          this.set('length', s.length);
         }
       });
 
@@ -191,6 +195,7 @@ PhoneApp.pack('PhoneApp.types', function(api) {
               s.pushObject(item);
             });
             s.quickSort(sort);
+            this.set('length', s.length);
           }
         }
       });
@@ -208,6 +213,7 @@ PhoneApp.pack('PhoneApp.types', function(api) {
               s.pushObject(item);
             });
             s.quickSort(sort);
+            this.set('length', s.length);
           }
         }
       });
@@ -218,8 +224,10 @@ PhoneApp.pack('PhoneApp.types', function(api) {
         },
         set: function(callback) {
           sort = callback;
-          if (arr)
+          if (arr){
             s.quickSort(sort);
+            this.set('length', s.length);
+          }
         }
       });
     }
