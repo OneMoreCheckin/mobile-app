@@ -11,7 +11,7 @@
 
   });
 
-  Handlebars.registerHelper('bind', function (path) {
+  Handlebars.registerHelper('bind', function(path) {
     var infos = path.split('.');
     var property = infos.pop();
     var parent = PhoneApp.get(infos.join('.'));

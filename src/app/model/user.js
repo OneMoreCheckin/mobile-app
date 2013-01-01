@@ -29,9 +29,9 @@ PhoneApp.pack('Omci.model', function(api) {
     mayorships: 0,
     tips: 0,
     todos: 0,
-    fromObject: function(mesh){
-      Object.keys(mesh).forEach(function(key){
-        if(key in this)
+    fromObject: function(mesh) {
+      Object.keys(mesh).forEach(function(key) {
+        if (key in this)
           this.set(key, mesh[key]);
       }, this);
     }
@@ -49,17 +49,17 @@ PhoneApp.pack('Omci.model', function(api) {
     more: 0,
     name: '',
     type: '',
-    init: function(){
+    init: function() {
       this.categories = [];
       api.Object._super('init', this);
     },
-    fromObject: function(mesh){
-      Object.keys(mesh).forEach(function(key){
-        if(key in this)
+    fromObject: function(mesh) {
+      Object.keys(mesh).forEach(function(key) {
+        if (key in this)
           this.set(key, mesh[key]);
       }, this);
       this.categories.clear();
-      mesh.cat.forEach(function(item){
+      mesh.cat.forEach(function(item) {
         this.categories.pushObject(item);
       }, this);
     }
@@ -71,19 +71,19 @@ PhoneApp.pack('Omci.model', function(api) {
     gender: '',
     lastName: '',
 
-/*
+    /*
 4sqcities
 expertise
 foursquare
 partner
  */
-    init: function(){
+    init: function() {
       this._badges = [];
       this.badges = {};
-      ['cities', 'expertise', 'foursquare', 'partner'].forEach(function(cat){
+      ['cities', 'expertise', 'foursquare', 'partner'].forEach(function(cat) {
         this.badges[cat] = api.ArrayController.create();
         this.badges[cat].content = this._badges;
-        this.badges[cat].filter = function(item){
+        this.badges[cat].filter = function(item) {
           return item.type == (cat == 'cities' ? '4sqcities' : cat);
         };
       }, this);
@@ -94,18 +94,18 @@ partner
       api.Object._super('init', this);
     },
 
-    formatedName: (function () {
+    formatedName: (function() {
       return this.firstName + ' ' + this.lastName;
     }).property('lastName', 'firstName'),
 
-    fromObject: function(mesh){
-      Object.keys(mesh.user).forEach(function(key){
-        if(key in this)
+    fromObject: function(mesh) {
+      Object.keys(mesh.user).forEach(function(key) {
+        if (key in this)
           this.set(key, mesh.user[key]);
       }, this);
       this.stats.fromObject(mesh.stats);
       this._badges.clear();
-      mesh.badges.forEach(function(item){
+      mesh.badges.forEach(function(item) {
         var b = Badge.create();
         b.fromObject(item);
         this._badges.pushObject(b);
@@ -113,8 +113,8 @@ partner
       this.lastCheckin.fromObject(mesh.lastCheckin);
     },
 
-    bootstrap: function(onSuccess, onFailure){
-      api.core.requestAuthentication((function(data){
+    bootstrap: function(onSuccess, onFailure) {
+      api.core.requestAuthentication((function(data) {
         this.fromObject(data);
         onSuccess(this);
       }.bind(this)), onFailure);
@@ -158,37 +158,37 @@ partner
     // mayor: Object
     name: '',
 
-    fetch: function(success, failure){
-      api.venues.read((function(data){
+    fetch: function(success, failure) {
+      api.venues.read((function(data) {
         this.fromObject(data.response.venue);
-        if(success)
+        if (success)
           success(this);
-      }.bind(this)), function(){
+      }.bind(this)), function() {
         // console.error('Something is very wrong with 4sq');
-        if(failure)
+        if (failure)
           failure();
       }, this.id);
     },
 
-    fromObject: function(mesh){
-      Object.keys(mesh).forEach(function(key){
-        if(key in this)
+    fromObject: function(mesh) {
+      Object.keys(mesh).forEach(function(key) {
+        if (key in this)
           this.set(key, mesh[key]);
       }, this);
       this.set('createdAt', new Date(parseInt(this.createdAt, 10) * 1000));
     },
 
-    description: (function(){
+    description: (function() {
       return '<ul><li>Here now: ' + this.hereNow.count + '</li>' +
-           '<li>Total checkins: ' + this.stats.checkinsCount + '</li></ul>';
+          '<li>Total checkins: ' + this.stats.checkinsCount + '</li></ul>';
     }.property('stats', 'hereNow')),
 
-    info: (function(){
+    info: (function() {
       return '<div id="info-window"><h3>' + this.name + '</h3>' + this.description + '</div>';
     }.property('description', 'name')),
 
 
-    icon: (function(){
+    icon: (function() {
       // Return whatever appropriate depending on categories
     }.property('categories')),
 
@@ -204,10 +204,10 @@ partner
     // shortUrl: "http://4sq.com/mPmdjT",
     // specials: Object
     stats: {
-    //   checkinsCount: 434
-    //   tipCount: 1
-    //   usersCount: 14
-    },
+      //   checkinsCount: 434
+      //   tipCount: 1
+      //   usersCount: 14
+    }
     // tags: Array[0]
     // timeZone: "Europe/Paris",
     // tips: Object
@@ -227,7 +227,7 @@ partner
     // id: '',
     // isMayor: false,
 
-/*    location: Object
+    /*    location: Object
       cc: "FR"
       city: "Paris"
       country: "France"
@@ -235,21 +235,21 @@ partner
       lat: 48.87026909751365
       lng: 2.3962543168971036
       state: "Île-de-France"
-*/
+    */
     // name: '',
     // url: null,
     // users: 0,
     venue: 0,
     aVenue: null,
 
-    init: function(){
+    init: function() {
       api.Object._super('init', this);
       this.set('aVenue', Venue.create());
     },
 
-    fromObject: function(mesh){
-      Object.keys(mesh).forEach(function(key){
-        if(key in this)
+    fromObject: function(mesh) {
+      Object.keys(mesh).forEach(function(key) {
+        if (key in this)
           this.set(key, mesh[key]);
       }, this);
       this.aVenue.fromObject({id: this.venue});
@@ -268,15 +268,15 @@ partner
   this.venues = api.ArrayController.create();
   this.venues.content = venues;
 
-  this.venues.search = function(latitude, longitude, cat, limit){
+  this.venues.search = function(latitude, longitude, cat, limit) {
     venues.clear();
-    api.venues.search((function(data){
-      data.response.venues.forEach(function(vm){
+    api.venues.search((function(data) {
+      data.response.venues.forEach(function(vm) {
         var v = Venue.create();
         v.fromObject(vm);
         venues.pushObject(v);
       });
-    }.bind(this)), function(){
+    }.bind(this)), function() {
       // console.error('Terrible terrible bad bad things happened.');
     }, latitude, longitude, cat, limit);
   };

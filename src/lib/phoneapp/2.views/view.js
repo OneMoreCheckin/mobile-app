@@ -296,7 +296,7 @@ PhoneApp.pack('PhoneApp', function(api) {
             infos.styleValue = infos.falsyClassName;
             infos.isBinding = (infos.styleValue.indexOf('{{this}}') != -1);
             if (!infos.path && !infos.isBinding) {
-              gA['style'] += ' ' + infos.styleName+':'+infos.styleValue;
+              gA['style'] += ' ' + infos.styleName + ':' + infos.styleValue;
               return;
             }
 
@@ -318,7 +318,7 @@ PhoneApp.pack('PhoneApp', function(api) {
               (gA['style'] || '').split(';').forEach(function(i) {
                 if (!i)
                   return;
-                var s = i.split(':'); styles[s.shift().trim()]= s.shift()
+                var s = i.split(':'); styles[s.shift().trim()] = s.shift();
               });
 
               if (newValue)
@@ -329,7 +329,7 @@ PhoneApp.pack('PhoneApp', function(api) {
 
               gA['style'] = '';
               Object.keys(styles).forEach(function(k) {
-                gA['style'] += k+':'+styles[k]+';';
+                gA['style'] += k + ':' + styles[k] + ';';
               });
 
               if (justCompute)
@@ -427,7 +427,7 @@ PhoneApp.pack('PhoneApp', function(api) {
       return boostrap;
     },
 
-    _addMetamorph: function (parent, property) {
+    _addMetamorph: function(parent, property) {
       var m = new PhoneApp.Metamorph(this, parent, property);
       this._metamorphs.push(m);
       return m;

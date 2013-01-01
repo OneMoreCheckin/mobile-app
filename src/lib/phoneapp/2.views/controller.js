@@ -9,7 +9,7 @@ PhoneApp.pack('PhoneApp', function(api) {
     isController: true,
     content: null,
 
-    init: function () {
+    init: function() {
       PhoneApp.Controller._super('init', this);
     },
 

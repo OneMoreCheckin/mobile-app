@@ -3,16 +3,16 @@ PhoneApp.pack('PhoneApp', function() {
   'use strict';
   var metamorphCount = 0;
 
-  this.Metamorph = (function (parentView, parent, property) {
+  this.Metamorph = (function(parentView, parent, property) {
     this.id = ++metamorphCount;
-    this.startNodeId = 'metamorph-'+this.id+'-start';
-    this.endNodeId = 'metamorph-'+this.id+'-end';
+    this.startNodeId = 'metamorph-' + this.id + '-start';
+    this.endNodeId = 'metamorph-' + this.id + '-end';
 
-    var observer = function (property, old, newValue) {
+    var observer = function(property, old, newValue) {
       var start = document.getElementById(this.startNodeId);
       var end = document.getElementById(this.endNodeId);
 
-      if (!start || !end) 
+      if (!start || !end)
         throw new Error('Miss Metamorph hooks');
 
       var nextElement = start.nextSibling;
@@ -22,8 +22,8 @@ PhoneApp.pack('PhoneApp', function() {
       //   console.log('**** next element', nextElement);
       //   nextElement = nextElement.nextSibling;
       // }
-      // 
-      PhoneApp.renderLoop.schedule(function () {
+      //
+      PhoneApp.renderLoop.schedule(function() {
         if (typeof(newValue) == 'string') {
           if (nextElement == end)
             end.parentNode.insertBefore(end, document.createTextNode(newValue || ''));
@@ -54,15 +54,15 @@ PhoneApp.pack('PhoneApp', function() {
 
     parent.addObserver(property, observer);
 
-    this.renderWrapper = function () {
-      return '<script id="'+this.startNodeId+'"></script>' +
-              (parent.get(property) || '') +
-             '<script id="'+this.endNodeId+'"></script>';
+    this.renderWrapper = function() {
+      return '<script id="' + this.startNodeId + '"></script>' +
+          (parent.get(property) || '') +
+             '<script id="' + this.endNodeId + '"></script>';
     };
 
-    this.destroy = function () {
+    this.destroy = function() {
       parent.removeObserver(property, observer);
     };
-    
+
   });
 });

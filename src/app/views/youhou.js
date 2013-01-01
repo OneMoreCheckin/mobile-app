@@ -4,7 +4,7 @@ PhoneApp.pack('Omci.views', function() {
 
   this.Youhou = Pa.View.extend({
     templateName: 'menu',
-    didInsertElement: function () {
+    didInsertElement: function() {
       console.warn('did insert menu *********************');
     }
   });

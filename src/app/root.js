@@ -25,7 +25,7 @@
     }.property()),
 
     router: Pa.Router.create({
-      applicationController: (function () {
+      applicationController: (function() {
         return Omci.rootController;
       }.property()),
 
@@ -36,11 +36,11 @@
         }),
         splash: Pa.Route.extend({
           route: '/splash',
-          enter: function () {
+          enter: function() {
             console.log('******** router -> splash');
           },
 
-          connectOutlets: function (router) {
+          connectOutlets: function(router) {
             router.applicationController.connectOutlet({
               viewClass: Omci.views.Splash
             });
@@ -48,17 +48,17 @@
         }),
         application: Pa.Route.extend({
           route: '/app',
-          enter: function () {
+          enter: function() {
             console.log('****** router -> app');
           },
-          connectOutlets: function (router) {
+          connectOutlets: function(router) {
             router.applicationController.connectOutlet({
               viewClass: Omci.views.Youhou
             });
           }
         })
 
-      }),
+      })
 
     })
   });

@@ -5,7 +5,7 @@ PhoneApp.pack('PhoneApp.types', function() {
   var dashCache = {};
 
   String.prototype.dasherize = function() {
-    if(!this.length)
+    if (!this.length)
       return '';
     return dashCache[this] || (dashCache[this] = this.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase());
   };
