@@ -12,7 +12,11 @@
   });
 
   Handlebars.registerHelper('bind', function (path) {
-    var m = this.view._addMetamorph(path);
+    var infos = path.split('.');
+    var property = infos.pop();
+    var parent = PhoneApp.get(infos.join('.'));
+
+    var m = this.view._addMetamorph(parent, property);
     return new Handlebars.SafeString(m.renderWrapper());
   });
 })();

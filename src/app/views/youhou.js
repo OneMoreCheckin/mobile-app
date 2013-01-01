@@ -3,6 +3,9 @@ PhoneApp.pack('Omci.views', function() {
   'use strict';
 
   this.Youhou = Pa.View.extend({
-    template: Handlebars.compile('youhou')
+    templateName: 'menu',
+    didInsertElement: function () {
+      console.warn('did insert menu *********************');
+    }
   });
 });

@@ -3,6 +3,8 @@ PhoneApp.pack('Omci.views', function() {
   'use strict';
 
   this.Splash = Pa.View.extend({
+    classNames: ['test-splash'],
+    
     template: Handlebars.compile('coucou')
   });
 });

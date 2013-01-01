@@ -40,7 +40,6 @@ PhoneApp.pack('PhoneApp', function(api) {
 
       $(this.rootElement).empty();
       this.rootView.controller = this.rootController;
-      this.rootController.view = this.rootView;
       this.rootView.appendTo(this.rootElement);
 
 

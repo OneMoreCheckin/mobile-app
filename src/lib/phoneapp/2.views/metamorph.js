@@ -3,15 +3,11 @@ PhoneApp.pack('PhoneApp', function() {
   'use strict';
   var metamorphCount = 0;
 
-  this.Metamorph = (function (path) {
+  this.Metamorph = (function (parentView, parent, property) {
     this.id = ++metamorphCount;
     this.startNodeId = 'metamorph-'+this.id+'-start';
     this.endNodeId = 'metamorph-'+this.id+'-end';
-    this.property = path;
 
-    var infos = path.split('.');
-    var property = infos.pop();
-    var parent = PhoneApp.get(infos.join('.'));
     var observer = function (property, old, newValue) {
       var start = document.getElementById(this.startNodeId);
       var end = document.getElementById(this.endNodeId);
@@ -20,13 +16,38 @@ PhoneApp.pack('PhoneApp', function() {
         throw new Error('Miss Metamorph hooks');
 
       var nextElement = start.nextSibling;
+
+
       // while (nextElement != end) {
       //   console.log('**** next element', nextElement);
       //   nextElement = nextElement.nextSibling;
       // }
       // 
       PhoneApp.renderLoop.schedule(function () {
-        nextElement.textContent = newValue;
+        if (typeof(newValue) == 'string') {
+          if (nextElement == end)
+            end.parentNode.insertBefore(end, document.createTextNode(newValue || ''));
+          else
+            nextElement.textContent = newValue || '';
+        } else {
+          var dom = newValue ? newValue.render() : document.createTextNode('');
+          if (newValue) {
+            newValue._parentView = parentView;
+            parentView._childViews.push(newValue);
+            newValue.willInsertElement();
+          }
+          if (nextElement == end) {
+            end.parentNode.insertBefore(dom, end);
+          } else {
+            nextElement.parentNode.replaceChild(dom, nextElement);
+          }
+
+          if (newValue)
+            newValue.didInsertElement();
+
+          if (old && old.isView)
+            old.destroy();
+        }
       });
 
     }.bind(this);
@@ -35,7 +56,7 @@ PhoneApp.pack('PhoneApp', function() {
 
     this.renderWrapper = function () {
       return '<script id="'+this.startNodeId+'"></script>' +
-              PhoneApp.get(this.property) +
+              (parent.get(property) || '') +
              '<script id="'+this.endNodeId+'"></script>';
     };
 

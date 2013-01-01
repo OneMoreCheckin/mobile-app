@@ -2,7 +2,7 @@
   'use strict';
 
   Handlebars.registerHelper('outlet', function(path, options) {
-    var outletName = 'default';
+    var outletName = 'view';
 
     if (typeof(path) == 'string')
       outletName = path;
@@ -17,14 +17,10 @@
     if (!currentView.isView)
       throw new Error('currentView is not a view :)');
 
+    this.controller.set('view', null);
 
-    var outletView = PhoneApp.View.create({
-      controller: this.controller,
-      classNames: 'outlet'
-    });
-    currentView.appendChild(outletView);
-
-    return new Handlebars.SafeString(outletView.renderWrapper().outerHTML);
+    var m = currentView._addMetamorph(this.controller, outletName);
+    return new Handlebars.SafeString(m.renderWrapper());
 
   });
 })();

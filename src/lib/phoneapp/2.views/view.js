@@ -37,7 +37,10 @@ PhoneApp.pack('PhoneApp', function(api) {
   var renderAttribute = function(node, attr, value) {
     if (!node)
       return;
-    node.setAttribute(attr, value);
+    if (value)
+      node.setAttribute(attr, value);
+    else
+      node.removeAttribute(attr);
   };
 
   this.View = api.Object.extend({
@@ -181,6 +184,9 @@ PhoneApp.pack('PhoneApp', function(api) {
       node = document.createElement(this.tagName);
 
       Object.keys(attributes).forEach(function(attr) {
+        if (!attributes[attr])
+          return;
+
         node.setAttribute(attr, attributes[attr]);
       });
       node.setAttribute('id', this.elementId);
@@ -309,7 +315,7 @@ PhoneApp.pack('PhoneApp', function(api) {
                 gA['style'] = node.getAttribute('style');
 
               var styles = {};
-              gA['style'].split(';').forEach(function(i) {
+              (gA['style'] || '').split(';').forEach(function(i) {
                 if (!i)
                   return;
                 var s = i.split(':'); styles[s.shift().trim()]= s.shift()
@@ -359,10 +365,10 @@ PhoneApp.pack('PhoneApp', function(api) {
             if (view._isDestroying)
               return;
 
-            if (gA[property] == newValue)
+            if (gA[currentAttribute] == newValue)
               return;
 
-            gA[property] = newValue;
+            gA[currentAttribute] = newValue;
 
             if (justCompute)
               return;
@@ -373,7 +379,7 @@ PhoneApp.pack('PhoneApp', function(api) {
                   view.element.querySelector(currentId);
 
             Pa.renderLoop.schedule(
-                renderAttribute, view, [node, property, gA[property]]
+                renderAttribute, view, [node, currentAttribute, gA[currentAttribute]]
             );
           };
 
@@ -413,13 +419,16 @@ PhoneApp.pack('PhoneApp', function(api) {
 
       var boostrap = 'data-phoneapp-binding=' + currentId;
       Object.keys(attributes).forEach(function(attr) {
+        if (attributes[attr] == '')
+          return;
+
         boostrap += ' ' + attr + '="' + attributes[attr] + '"';
       });
       return boostrap;
     },
 
-    _addMetamorph: function (property) {
-      var m = new PhoneApp.Metamorph(property);
+    _addMetamorph: function (parent, property) {
+      var m = new PhoneApp.Metamorph(this, parent, property);
       this._metamorphs.push(m);
       return m;
     },
