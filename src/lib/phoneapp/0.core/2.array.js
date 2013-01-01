@@ -118,7 +118,7 @@ PhoneApp.pack('PhoneApp.types', function(api) {
         return (a < b) ? -1 : (a == b ? 0 : 1);
       };
 
-      var obs = function(index, added, removed) {
+      var obs = (function(index, added, removed) {
         removed.forEach(function(item) {
           var needle = c.indexOf(item, index);
           if (needle != -1) {
@@ -143,7 +143,7 @@ PhoneApp.pack('PhoneApp.types', function(api) {
           }
         });
         this.set('length', s.length);
-      };
+      }.bind(this));
 
       this.destroy = function() {
         arr.removeArrayObserver(obs);
