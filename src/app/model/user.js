@@ -62,7 +62,12 @@ PhoneApp.pack('Omci.model', function(api) {
       mesh.cat.forEach(function(item) {
         this.categories.pushObject(item);
       }, this);
-    }
+    },
+
+    image: (function () {
+      var res = (Omci.device.isRetina ? 300 : 57);
+      return '//playfoursquare.s3.amazonaws.com/badge/' + res + this.img;
+    }.property())
   });
 
   var userDescriptor = {

@@ -29,7 +29,25 @@ def default():
     app.merge(FileList('src/app', filter="*.js",exclude="*root.js"));
     combine(app, 'build/js/app.js')
 
-    sh('handlebars src/app/templates -r src/app/templates -f build/js/templates.js', header="build templates")
+    knownHelpers = [
+      'action',
+      'bind',
+      'bindAttr',
+      'collection',
+      'each',
+      'if',
+      'log',
+      'outlet',
+      'unless',
+      'view',
+      'with'
+    ]
+
+    helperCmd = ''
+    for helper in knownHelpers:
+      helperCmd += '-k %s ' % helper
+
+    sh('handlebars src/app/templates -r src/app/templates -f build/js/templates.js %s' % helperCmd, header="build templates")
 
     deepcopy('src/index.html', 'build/')
 

@@ -43,6 +43,8 @@ PhoneApp.pack('PhoneApp', function(api) {
       this.rootView.controller = this.rootController;
       this.rootView.appendTo(this.rootElement);
 
+      if (window.devicePixelRatio > 1)
+          this.device.set('isRetina', true);
 
       if (this.device.isMobile) {
 
@@ -51,10 +53,6 @@ PhoneApp.pack('PhoneApp', function(api) {
 
         if (this.autoHideSplash)
           this.hideSplash();
-
-        if (window.devicePixelRatio > 1)
-          this.device.set('isRetina', true);
-
 
         if (window.device) {
           platform = window.device.platform.toLowerCase();

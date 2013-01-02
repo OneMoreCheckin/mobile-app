@@ -40,11 +40,9 @@
     </div>
 
     {{#collection contentBinding="Omci.model.user.badges.foursquare" tagName="ul" classNames="badges"}}
-    <li>
-      <div class="illustration" style="background-image:url({{img}})"></div>
-      <h4>{{name}}</h4>
-      <p>{{details}}</p>
-    </li>
+      <div class="illustration" style="background-image:url({{view.content.image}})"></div>
+      <h4>{{view.content.name}}</h4>
+      <p>{{view.content.details}}</p>
     {{/collection}}
   </div>
   
