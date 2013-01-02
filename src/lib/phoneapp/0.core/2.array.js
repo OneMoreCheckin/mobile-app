@@ -104,7 +104,8 @@ PhoneApp.pack('PhoneApp.types', function(api) {
       var arr = false;
       var c = false;
       var m = false;
-      var s = [];
+      var s = false;
+      var t = [];
 
       var filter = function() {
         return true;
@@ -118,6 +119,8 @@ PhoneApp.pack('PhoneApp.types', function(api) {
         return (a < b) ? -1 : (a == b ? 0 : 1);
       };
 
+      var limit = Infinity;
+
       var obs = (function(index, added, removed) {
         removed.forEach(function(item) {
           var needle = c.indexOf(item, index);
@@ -125,9 +128,18 @@ PhoneApp.pack('PhoneApp.types', function(api) {
             c.splice(needle, 1);
             item = m.splice(needle, 1);
             needle = s.indexOf(item);
-            s.replace(needle, 1);
+            s.splice(needle, 1);
+            if(needle < t.length)
+              t.replace(needle, 1);
           }
         });
+
+        // removed.forEach(function(item) {
+        //   var needle = t.indexOf(item);
+        //   if(needle != -1)
+        //     t.replace(needle, 1);
+        // });
+
 
         added.forEach(function(item) {
           if (filter(item)) {
@@ -139,10 +151,21 @@ PhoneApp.pack('PhoneApp.types', function(api) {
               needle = idx;
               return sort(sub, item) >= 0;
             });
-            s.replace(needle, 0, item);
+            s.splice(needle, 0, item);
+            if(needle < limit){
+              t.replace(needle, 0, item);
+              // Overflow? Remove from the end
+              if(t.length > limit)
+                t.replace(t.length - 1, 1);
+            }
           }
         });
-        this.set('length', s.length);
+
+        // Underflow?
+        if(t.length < limit)
+          t.replace(idx, 0, s.slice(t.length, limit));
+
+        this.set('length', t.length);
       }.bind(this));
 
       this.destroy = function() {
@@ -150,8 +173,9 @@ PhoneApp.pack('PhoneApp.types', function(api) {
         arr = false;
         c = false;
         m = false;
+        s = false;
         this.set('length', 0);
-        s.clear();
+        t.clear();
       };
 
       Object.defineProperty(this, 'original', {
@@ -163,7 +187,7 @@ PhoneApp.pack('PhoneApp.types', function(api) {
       Object.defineProperty(this, 'content', {
         enumerable: true,
         get: function() {
-          return s;
+          return t;
         },
         set: function(a) {
           if (arr)
@@ -172,12 +196,14 @@ PhoneApp.pack('PhoneApp.types', function(api) {
           arr.addArrayObserver(obs);
           c = arr.filter(filter);
           m = c.map(map);
-          s.clear();
-          m.forEach(function(item){
-            s.pushObject(item);
-          });
+          s = Array.from(m);
           s.quickSort(sort);
-          this.set('length', s.length);
+          t.clear();
+          s.some(function(item){
+            t.pushObject(item);
+            return t.length == limit;
+          });
+          this.set('length', t.length);
         }
       });
 
@@ -190,12 +216,14 @@ PhoneApp.pack('PhoneApp.types', function(api) {
           if (arr) {
             c = arr.filter(filter);
             m = c.map(map);
-            s.clear();
-            m.forEach(function(item){
-              s.pushObject(item);
-            });
+            s = Array.from(m);
             s.quickSort(sort);
-            this.set('length', s.length);
+            t.clear();
+            s.some(function(item){
+              t.pushObject(item);
+              return t.length == limit;
+            });
+            this.set('length', t.length);
           }
         }
       });
@@ -208,12 +236,14 @@ PhoneApp.pack('PhoneApp.types', function(api) {
           map = callback;
           if (arr) {
             m = c.map(map);
-            s.clear();
-            m.forEach(function(item){
-              s.pushObject(item);
-            });
+            s = Array.from(m);
             s.quickSort(sort);
-            this.set('length', s.length);
+            t.clear();
+            s.some(function(item){
+              t.pushObject(item);
+              return t.length == limit;
+            });
+            this.set('length', t.length);
           }
         }
       });
@@ -226,10 +256,36 @@ PhoneApp.pack('PhoneApp.types', function(api) {
           sort = callback;
           if (arr){
             s.quickSort(sort);
-            this.set('length', s.length);
+            t.clear();
+            s.some(function(item){
+              t.pushObject(item);
+              return t.length == limit;
+            });
+            this.set('length', t.length);
           }
         }
       });
+
+      Object.defineProperty(this, 'limit', {
+        get: function() {
+          return limit;
+        },
+        set: function(value) {
+          limit = value;
+          if (arr){
+            if(t.length > limit)
+              t.replace(limit, t.length - limit);
+            else{
+              var n = s.slice(t.length, limit);
+              n.unshift(0);
+              n.unshift(t.length);
+              t.replace.apply(t, n);
+            }
+            this.set('length', t.length);
+          }
+        }
+      });
+
     }
   });
 
