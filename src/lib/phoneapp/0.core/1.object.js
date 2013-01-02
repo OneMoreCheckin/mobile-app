@@ -86,12 +86,7 @@ PhoneApp.pack('PhoneApp.types', function() {
   this.Object.create = this.Object.prototype.create = function(o) {
     /*jshint forin:false*/
     var ret = new (this.extend(o))();
-
-    ret.init();
-    if (typeof ret.__id__ == 'undefined') {
-      console.error('You broke init you perv!!! Observes and Properties won\'t work on this one!', ret);
-      throw new Error('BANG_BANG!');
-    }
+    hashed[ret.__id__ = mutableCount++] = {};
 
     var doo = [];
     for (var i in ret)
@@ -132,6 +127,12 @@ PhoneApp.pack('PhoneApp.types', function() {
       }
     }, ret);
 
+    ret.init();
+    // if (typeof ret.__id__ == 'undefined') {
+    //   console.error('You broke init you perv!!! Observes and Properties won\'t work on this one!', ret);
+    //   throw new Error('BANG_BANG!');
+    // }
+
     return ret;
   };
 
@@ -164,7 +165,6 @@ PhoneApp.pack('PhoneApp.types', function() {
 
   this.Object.prototype.init = function() {
     // console.log('-> Base PhoneApp Object init');
-    hashed[this.__id__ = mutableCount++] = {};
   };
 
   this.Object.prototype.addObserver = function(key, listener, collapse) {
