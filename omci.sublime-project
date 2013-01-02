@@ -1,9 +1,0 @@
-{
-	"folders":
-	[
-		{
-			"path": "/Users/raildecom/workspace/webitup/omci/mobile-app",
-      "folder_exclude_patterns": [".sass-cache", "build"]
-		}
-	]
-}
