@@ -163,7 +163,7 @@ PhoneApp.pack('PhoneApp.types', function(api) {
 
         // Underflow?
         if(t.length < limit)
-          t.replace(idx, 0, s.slice(t.length, limit));
+          t.replace(t.length, 0, s.slice(t.length, limit));
 
         this.set('length', t.length);
       }.bind(this));
