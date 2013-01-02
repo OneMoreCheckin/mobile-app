@@ -126,8 +126,10 @@ PhoneApp.pack('PhoneApp.types', function(api) {
           var needle = c.indexOf(item, index);
           if (needle != -1) {
             c.splice(needle, 1);
-            item = m.splice(needle, 1);
+            item = m.splice(needle, 1).pop();
+            // XXX this is dead buggy 
             needle = s.indexOf(item);
+            console.warn('ASSERT:', item, needle);
             s.splice(needle, 1);
             if(needle < t.length)
               t.replace(needle, 1);
@@ -147,22 +149,25 @@ PhoneApp.pack('PhoneApp.types', function(api) {
             item = map(item);
             m.splice(index, 0, item);
             var needle = 0;
+            console.warn('****', s.length);
             s.some(function(sub, idx) {
-              needle = idx;
-              return sort(sub, item) >= 0;
+              console.warn(sort(sub, item));
+              if(sort(sub, item) >= 0)
+                needle = idx + 1;
+              return sort(sub, item) < 0;
             });
             s.splice(needle, 0, item);
-            if(needle < limit){
+            if(needle <= t.length && needle < limit)
               t.replace(needle, 0, item);
-              // Overflow? Remove from the end
-              if(t.length > limit)
-                t.replace(t.length - 1, 1);
-            }
           }
         });
 
+        // Overflow?
+        if(t.length > limit)
+          t.replace(limit, t.length - limit);
+
         // Underflow?
-        if(t.length < limit)
+        if(limit != Infinity && t.length < limit && t.length < s.length)
           t.replace(t.length, 0, s.slice(t.length, limit));
 
         this.set('length', t.length);
@@ -276,10 +281,7 @@ PhoneApp.pack('PhoneApp.types', function(api) {
             if(t.length > limit)
               t.replace(limit, t.length - limit);
             else{
-              var n = s.slice(t.length, limit);
-              n.unshift(0);
-              n.unshift(t.length);
-              t.replace.apply(t, n);
+              t.replace.apply(t, [t.length, 0, s.slice(t.length, limit)]);
             }
             this.set('length', t.length);
           }
