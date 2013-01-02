@@ -14,15 +14,15 @@ PhoneApp.pack('PhoneApp', function(api) {
     },
 
     connectOutlet: function(params) {
-      var viewClass = params['viewClass'];
-      var controller = params['controller'] || this;
-      var context = params['context'] || null;
-      var outletName = params['outletName'] || 'view';
+      var viewClass = params.viewClass;
+      var controller = params.controller || this;
+      var context = params.context || null;
+      var outletName = params.outletName || 'view';
 
       if (controller && context)
         controller.set('content', context);
 
-      var oldView = this.get(outletName);
+      // var oldView = this.get(outletName);
       var view = viewClass.create();
       view.set('controller', controller);
       this.set(outletName, view);

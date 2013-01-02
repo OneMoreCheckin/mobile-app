@@ -1,5 +1,5 @@
 (function() {
-
+  'use strict';
   Handlebars.registerHelper('action', function(path, context, options) {
     if (!options && context.hash) {
       options = context;

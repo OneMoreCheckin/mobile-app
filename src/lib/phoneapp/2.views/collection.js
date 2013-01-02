@@ -1,6 +1,6 @@
 PhoneApp.use('PhoneApp.types.Object');
 PhoneApp.pack('PhoneApp', function(api) {
-
+  'use strict';
 
   this.CollectionView = this.View.extend({
     content: null,
@@ -14,5 +14,5 @@ PhoneApp.pack('PhoneApp', function(api) {
         console.error('******* array', arguments);
       });
     }
-  })
+  });
 });

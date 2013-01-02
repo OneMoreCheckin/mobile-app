@@ -3,12 +3,12 @@ PhoneApp.pack('PhoneApp', function() {
   'use strict';
   var metamorphCount = 0;
 
-  this.Metamorph = (function(parentView, parent, property) {
+  this.Metamorph = function(parentView, parent, property) {
     this.id = ++metamorphCount;
     this.startNodeId = 'metamorph-' + this.id + '-start';
     this.endNodeId = 'metamorph-' + this.id + '-end';
 
-    var observer = function(property, old, newValue) {
+    var observer = (function(property, old, newValue) {
       var start = document.getElementById(this.startNodeId);
       var end = document.getElementById(this.endNodeId);
 
@@ -50,7 +50,7 @@ PhoneApp.pack('PhoneApp', function() {
         }
       });
 
-    }.bind(this);
+    }.bind(this));
 
     parent.addObserver(property, observer);
 
@@ -64,5 +64,5 @@ PhoneApp.pack('PhoneApp', function() {
       parent.removeObserver(property, observer);
     };
 
-  });
+  };
 });

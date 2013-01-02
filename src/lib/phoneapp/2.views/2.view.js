@@ -1,6 +1,6 @@
 PhoneApp.use('PhoneApp.types.Object');
 PhoneApp.pack('PhoneApp', function(api) {
-  /*jshint devel:true*/
+  /*jshint devel:true, camelcase:false*/
   'use strict';
 
   var viewAttributeBindingNumber = 0,
@@ -214,8 +214,7 @@ PhoneApp.pack('PhoneApp', function(api) {
         var currentAttribute = binding.attribute,
             currentValue = binding.value,
             currentId = '[data-phoneapp-binding="' + bindingId + '"]',
-            node,
-            lastClassNames;
+            node;
 
 
         if (currentAttribute == 'class') {
@@ -296,7 +295,7 @@ PhoneApp.pack('PhoneApp', function(api) {
             infos.styleValue = infos.falsyClassName;
             infos.isBinding = (infos.styleValue.indexOf('{{this}}') != -1);
             if (!infos.path && !infos.isBinding) {
-              gA['style'] += ' ' + infos.styleName + ':' + infos.styleValue;
+              gA.style += ' ' + infos.styleName + ':' + infos.styleValue;
               return;
             }
 
@@ -312,10 +311,10 @@ PhoneApp.pack('PhoneApp', function(api) {
                     view.element.querySelector(currentId);
 
               if (node)
-                gA['style'] = node.getAttribute('style');
+                gA.style = node.getAttribute('style');
 
               var styles = {};
-              (gA['style'] || '').split(';').forEach(function(i) {
+              (gA.style || '').split(';').forEach(function(i) {
                 if (!i)
                   return;
                 var s = i.split(':'); styles[s.shift().trim()] = s.shift();
@@ -327,9 +326,9 @@ PhoneApp.pack('PhoneApp', function(api) {
                 delete styles[infos.styleName.trim()];
 
 
-              gA['style'] = '';
+              gA.style = '';
               Object.keys(styles).forEach(function(k) {
-                gA['style'] += k + ':' + styles[k] + ';';
+                gA.style += k + ':' + styles[k] + ';';
               });
 
               if (justCompute)
@@ -337,7 +336,7 @@ PhoneApp.pack('PhoneApp', function(api) {
 
 
               Pa.renderLoop.schedule(
-                  renderAttribute, view, [node, 'style', gA['style']]
+                  renderAttribute, view, [node, 'style', gA.style]
               );
 
 
@@ -419,7 +418,7 @@ PhoneApp.pack('PhoneApp', function(api) {
 
       var boostrap = 'data-phoneapp-binding=' + currentId;
       Object.keys(attributes).forEach(function(attr) {
-        if (attributes[attr] == '')
+        if (!attributes[attr])
           return;
 
         boostrap += ' ' + attr + '="' + attributes[attr] + '"';

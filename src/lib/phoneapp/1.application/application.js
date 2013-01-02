@@ -1,5 +1,6 @@
 PhoneApp.use('PhoneApp.types.Object');
 PhoneApp.pack('PhoneApp', function(api) {
+  /*global cordova:true*/
   'use strict';
 
   this.Application = api.Object.extend({
@@ -17,8 +18,8 @@ PhoneApp.pack('PhoneApp', function(api) {
       isRetina: false,
       isAndroid: false,
       isMobile: (function() {
-        return /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-      }).property()
+        return (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent);
+      }.property())
     }),
     network: api.Object.create({
       types: window.Connection || {},

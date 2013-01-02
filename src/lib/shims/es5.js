@@ -1,8 +1,13 @@
 // Copyright 2009-2012 by contributors, MIT License
 // vim: ts=4 sts=4 sw=4 expandtab
 
+/*jshint maxcomplexity:25,maxstatements:75,maxparams:7,camelcase:false,quotmark:double,nomen:false,eqnull:true,
+forin:false*/
+/*global YUI:false,define:false,Date:true*/
+
 // Module systems magic dance
 (function (definition) {
+    "use strict";
     // RequireJS
     if (typeof define == "function") {
         define(definition);
@@ -14,6 +19,7 @@
         definition();
     }
 })(function () {
+"use strict";
 
 /**
  * Brings an environment as close to ECMAScript 5 compliance
@@ -31,8 +37,6 @@
 
 // ES-5 15.3.4.5
 // http://es5.github.com/#x15.3.4.5
-
-function Empty() {}
 
 if (!Function.prototype.bind) {
     Function.prototype.bind = function bind(that) { // .length is 1
@@ -112,10 +116,7 @@ if (!Function.prototype.bind) {
 
         };
         if(target.prototype) {
-            Empty.prototype = target.prototype;
-            bound.prototype = new Empty();
-            // Clean up dangling references.
-            Empty.prototype = null;
+            bound.prototype = Object.create(target.prototype);
         }
         // XXX bound.length is never writable, so don't even try
         //
@@ -196,21 +197,8 @@ if ([1,2].splice(0).length != 2) {
             return array_splice.apply(this, [
                 start === void 0 ? 0 : start,
                 deleteCount === void 0 ? (this.length - start) : deleteCount
-            ].concat(slice.call(arguments, 2)))
+            ].concat(slice.call(arguments, 2)));
         }
-    };
-}
-
-// ES5 15.4.4.12
-// http://es5.github.com/#x15.4.4.13
-// Return len+argCount.
-// [bugfix, ielt8]
-// IE < 8 bug: [].unshift(0) == undefined but should be "1"
-if ([].unshift(0) != 1) {
-    var array_unshift = Array.prototype.unshift;
-    Array.prototype.unshift = function() {
-        array_unshift.apply(this, arguments);
-        return this.length;
     };
 }
 
@@ -280,7 +268,7 @@ if (!Array.prototype.map) {
                 this.split("") :
                 object,
             length = self.length >>> 0,
-            result = Array(length),
+            result = new Array(length),
             thisp = arguments[1];
 
         // If no callback function or if callback is not a callable function
@@ -555,7 +543,8 @@ if (!Object.keys) {
         ],
         dontEnumsLength = dontEnums.length;
 
-    for (var key in {"toString": null}) {
+    var key;
+    for (key in {"toString": null}) {
         hasDontEnumBug = false;
     }
 
@@ -568,10 +557,10 @@ if (!Object.keys) {
             throw new TypeError("Object.keys called on a non-object");
         }
 
-        var keys = [];
+        var k = [];
         for (var name in object) {
             if (owns(object, name)) {
-                keys.push(name);
+                k.push(name);
             }
         }
 
@@ -579,11 +568,11 @@ if (!Object.keys) {
             for (var i = 0, ii = dontEnumsLength; i < ii; i++) {
                 var dontEnum = dontEnums[i];
                 if (owns(object, dontEnum)) {
-                    keys.push(dontEnum);
+                    k.push(dontEnum);
                 }
             }
         }
-        return keys;
+        return k;
     };
 
 }
@@ -666,7 +655,7 @@ try {
 } catch (e) {
 }
 if (!dateToJSONIsSupported) {
-    Date.prototype.toJSON = function toJSON(key) {
+    Date.prototype.toJSON = function toJSON(/*key*/) {
         // When the toJSON method is called with argument key, the following
         // steps are taken:
 
@@ -733,11 +722,11 @@ if (!Date.parse || "Date.parse is buggy") {
                 return date;
             }
             return NativeDate.apply(this, arguments);
-        };
+        }
 
         // 15.9.1.15 Date Time String Format.
         var isoDateExpression = new RegExp("^" +
-            "(\\d{4}|[\+\-]\\d{6})" + // four-digit year capture or sign +
+            "(\\d{4}|[+\\-]\\d{6})" + // four-digit year capture or sign +
                                       // 6-digit extended year
             "(?:-(\\d{2})" + // optional month capture
             "(?:-(\\d{2})" + // optional day capture
@@ -871,7 +860,7 @@ if("0".split(void 0, 0).length) {
     String.prototype.split = function(separator, limit) {
         if(separator === void 0 && limit === 0)return [];
         return string_split.apply(this, arguments);
-    }
+    };
 }
 
 // ECMA-262, 3rd B.2.3
@@ -890,15 +879,15 @@ if("".substr && "0b".substr(-1) !== "b") {
     String.prototype.substr = function(start, length) {
         return string_substr.call(
             this,
-            start < 0 ? ((start = this.length + start) < 0 ? 0 : start) : start,
+            start < 0 ? (start = this.length + start) < 0 ? 0 : start : start,
             length
         );
-    }
+    };
 }
 
 // ES5 15.5.4.20
 // http://es5.github.com/#x15.5.4.20
-var ws = "\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003" +
+var ws = "\x09\x0A\x0B\x0C\x0D \xA0\u1680\u180E\u2000\u2001\u2002\u2003" +
     "\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028" +
     "\u2029\uFEFF";
 if (!String.prototype.trim || ws.trim()) {

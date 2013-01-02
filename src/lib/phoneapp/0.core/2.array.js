@@ -127,9 +127,7 @@ PhoneApp.pack('PhoneApp.types', function(api) {
           if (needle != -1) {
             c.splice(needle, 1);
             item = m.splice(needle, 1).pop();
-            // XXX this is dead buggy 
             needle = s.indexOf(item);
-            console.warn('ASSERT:', item, needle);
             s.splice(needle, 1);
             if(needle < t.length)
               t.replace(needle, 1);
@@ -149,9 +147,7 @@ PhoneApp.pack('PhoneApp.types', function(api) {
             item = map(item);
             m.splice(index, 0, item);
             var needle = 0;
-            console.warn('****', s.length);
             s.some(function(sub, idx) {
-              console.warn(sort(sub, item));
               if(sort(sub, item) >= 0)
                 needle = idx + 1;
               return sort(sub, item) < 0;

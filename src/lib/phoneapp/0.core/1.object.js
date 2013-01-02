@@ -81,7 +81,7 @@ PhoneApp.pack('PhoneApp.types', function() {
 
 
 
-  var bindCheck = /.+Binding$/;
+  var bindCheck = /[A-Za-z0-9]Binding$/;
 
   this.Object.create = this.Object.prototype.create = function(o) {
     /*jshint forin:false*/
