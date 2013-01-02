@@ -80,6 +80,9 @@ PhoneApp.pack('PhoneApp.types', function() {
   };
 
 
+
+  var bindCheck = /.+Binding$/;
+
   this.Object.create = this.Object.prototype.create = function(o) {
     /*jshint forin:false*/
     var ret = new (this.extend(o))();
@@ -98,6 +101,14 @@ PhoneApp.pack('PhoneApp.types', function() {
       var w = this[key];
       if (!w)
         return;
+
+      // Binding syntax helper
+      if(bindCheck.test(key)){
+        PhoneApp.Binding.bind(this, key.substr(0, key.length - 7), w);
+        delete this[key];
+        return;
+      }
+
       if (w.hasOwnProperty('__observes__')) {
         // Resolve points
         w.__observes__.forEach(function(item) {
@@ -265,12 +276,12 @@ PhoneApp.pack('PhoneApp.types', function() {
       this.bind(scope, t, f);
       f = undefined;
       t = undefined;
+    },
+    bind: function(scope, key, path) {
+      makeProperty(scope, key, this.bothWays(path));
     }
   };
 
-  PhoneApp.Binding.bind = function(scope, key, path) {
-    makeProperty(scope, key, this.bothWays(path));
-  };
   // (MyApp.anotherObject, "value", "MyApp.someController.value");
 
 
@@ -289,5 +300,4 @@ PhoneApp.pack('PhoneApp.types', function() {
   };
 
 });
-
 
