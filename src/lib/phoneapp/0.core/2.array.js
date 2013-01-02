@@ -146,7 +146,7 @@ PhoneApp.pack('PhoneApp.types', function(api) {
             c.splice(index, 0, item);
             item = map(item);
             m.splice(index, 0, item);
-            var needle;
+            var needle = 0;
             s.some(function(sub, idx) {
               needle = idx;
               return sort(sub, item) >= 0;

@@ -18,8 +18,10 @@ def default():
     libs = FileList('src/lib/zepto', filter="*.js")
     combine(libs, 'build/js/zepto.js')
 
-    libs = FileList('src/lib/shims/')
-    libs.merge(FileList('src/lib/phoneapp/', filter="*namespace.js"))
+    shims = FileList('src/lib/shims/')
+    combine(shims, 'build/js/shims.js')
+     
+    libs = FileList('src/lib/phoneapp/', filter="*namespace.js")
     libs.merge(FileList('src/lib/phoneapp/', filter="*.js", exclude="*namespace.js"))
     combine(libs, 'build/js/phoneapp.js')
 

@@ -39,15 +39,13 @@
       </ul>
     </div>
 
-    <!-- <ul class="badges">
-      {{#each Omci.model.badges.foursquare}}
-      <li>
-        <div class="illustration" style="background-image:url({{img}})"></div>
-        <h4>{{name}}</h4>
-        <p>{{details}}</p>
-      </li>
-      {{/each}}
-    </ul> -->
+    {{#collection contentBinding="Omci.model.user.badges.foursquare" tagName="ul" classNames="badges"}}
+    <li>
+      <div class="illustration" style="background-image:url({{img}})"></div>
+      <h4>{{name}}</h4>
+      <p>{{details}}</p>
+    </li>
+    {{/collection}}
   </div>
   
 </div>

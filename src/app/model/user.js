@@ -79,7 +79,7 @@ partner
  */
     init: function() {
       this._badges = [];
-      this.badges = {};
+      this.badges = Pa.types.Object.create();
       ['cities', 'expertise', 'foursquare', 'partner'].forEach(function(cat) {
         this.badges[cat] = api.ArrayController.create();
         this.badges[cat].content = this._badges;
