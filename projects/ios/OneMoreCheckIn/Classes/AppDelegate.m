@@ -54,6 +54,8 @@
  */
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
+        
+    
     NSURL* url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
     NSString* invokeString = nil;
 
@@ -104,12 +106,23 @@
         NSLog(@"AppDelegate forcing status bar to: %d from: %d", newOrient, curDevOrientation);
         [[UIApplication sharedApplication] setStatusBarOrientation:newOrient];
     }
-
+    
+    //Tap To Top hack
+    self.window.backgroundColor = [UIColor clearColor];
+    self.window.windowLevel = UIWindowLevelStatusBar+1.f;
+    //End of hack
+    
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
 
     return YES;
 }
+
+- (void)statusBarClicked
+{
+    NSLog(@"clicked");
+}
+
 
 // this happens while we are running ( in the background, or from within our own app )
 // only valid if OneMoreCheckIn-Info.plist specifies a protocol to handle

@@ -56,3 +56,6 @@ cordova.define("cordova/plugin/powermanagement", function(require, exports, modu
   var powermanagement = new PowerManagement();
   module.exports = powermanagement;
 });
+
+
+

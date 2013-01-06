@@ -4,12 +4,11 @@
   left:0;
   right:0;
   bottom:0;
-
   background-color:#e4e1dd;
   @include border-top-left-radius(5px);
   @include box-sizing(border-box);
   @include box-shadow(-3px 0 5px rgba(0,0,0,0.6));
-  background-image: url(data:image/png;base64,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);
+  background-image: url(../images/omci/pattern/noise.png);
 
   #container-header {
     height:43px;
@@ -57,107 +56,169 @@
 }
 
 #page {
-  -webkit-overflow-scrolling : touch;
-  overflow:scroll;
-  position:fixed;
-  top:45px;
-  bottom:0;
-  left:0;
-  right:0;
 
-  > .filters {
-    width:100%;
-    background-color:rgba(0,0,0,0.8);
-    border-bottom:1px solid rgba(80,80,80,0.6);
-    padding:10px;
-    @include box-sizing(border-box);
+  
 
-    > ul {
-      margin:0;
-      padding:0;
-      @include display-box;
-      @include box-orient(horizontal);
-      @include box-align(stretch);
+  .scrollable {
+
+    -webkit-overflow-scrolling : touch;
+    overflow-y:auto;
+    margin:0;
+    padding:0px;
+    position:fixed;
+    top:45px;
+    bottom:0;
+    left:0;
+    right:0;
+
+    > .filters, > .badges {
+      @include translate3d(0,0,0);
+    }
+
+    > .filters {
       width:100%;
-      @include border-bottom-radius(5px);
-      border-bottom:1px solid rgba(75,75,75,0.6);
+      background-image: url(../images/omci/pattern/noise.png);
+      background-color:#171717;
+      border-bottom:1px solid rgb(80,80,80);
+      padding:10px;
+      @include box-sizing(border-box);
 
-      > li {
-        list-style:none;
-        @include box-flex(1);
-        color:#b0aeab;
-        font-family:"SignikaSemibold";
-        text-align:center;
-        border:1px solid #010101;
-        border-left-width:0;
-        border-right-width:0;
-        padding:8px 0;
-        @include background-image(linear-gradient(#444444, #383838));
-        @include box-shadow(inset 0px 1px 1px rgba(0,0,0,0.3));
-        text-shadow:0 -1px 2px rgba(0,0,0,0.7);
+      > ul {
+        margin:0;
+        padding:0;
+        @include display-box;
+        @include box-orient(horizontal);
+        @include box-align(stretch);
+        width:100%;
+        @include border-bottom-radius(5px);
+        border-bottom:1px solid rgba(75,75,75,0.6);
 
-        &.active {
-          color:#efece8;
-          background:#1f1f1f;
-        }
+        > li {
+          list-style:none;
+          @include box-flex(1);
+          color:#b0aeab;
+          font-family:"SignikaSemibold";
+          text-align:center;
+          border:1px solid #010101;
+          border-left-width:0;
+          border-right-width:0;
+          padding:8px 0;
+          @include background-image(linear-gradient(#444444, #383838));
+          @include box-shadow(inset 0px 1px 1px rgba(0,0,0,0.3));
+          text-shadow:0 -1px 2px rgba(0,0,0,0.7);
+
+          &.active {
+            color:#efece8;
+            background:#1f1f1f;
+          }
 
 
-        &:first-of-type {
-          @include border-left-radius(5px);
-          border-left-width:1px;
-        }
+          &:first-of-type {
+            @include border-left-radius(5px);
+            border-left-width:1px;
+          }
 
-        &:last-of-type {
-          @include border-right-radius(5px);
-          border-right-width:1px;
+          &:last-of-type {
+            @include border-right-radius(5px);
+            border-right-width:1px;
+          }
         }
       }
     }
-  }
 
-  > .badges {
-    margin:10px;
-    padding:0;
-    
+    > .pull-to-refresh {
+        height: 300px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: -300px;
+        z-index: -1;
+        @include background-image(url(../images/omci/pattern/noise.png), linear-gradient(#3e3e3e 30%, #171717 100%));
+        border-bottom:1px solid #010101;
+        color:#f1f1f1;
 
-    > li {
-      width:100%;
-      padding:10px;
-      @include border-radius(5px);
-      background-color:#faf9f7;
-      margin:0 0 10px 0;
-      @include box-sizing(border-box);
-      border-top:1px solid #FFF;
-      @include box-shadow(0 0 3px rgba(0,0,0,0.4));
-      list-style:none;
-      min-height:45px;
+        > .loading, >.ok-refresh {
+          display:none;
+        }
 
-      > .illustration {
-        height:45px;
-        width:45px;
-        background-size:45px;
-        display:inline-block;
-        float:left;
-      }
+        > .default {
+          display:block;
+        }
 
-      > h4 {
-        color:#645a5a;
-        margin:0;
-        padding:0;
-        margin-left:60px;
-        line-height:1.5em;
-        font-family:"SignikaSemibold";
-        font-weight:normal;
-        font-size:16px;
-      }
+        > .loading, > .ok-refresh, > .default {
+          position:absolute;
+          bottom:0;
+          left:0;
+          right:0;
+          text-align:center;
+          font-size:15px;
+        }
 
-      > p {
-        color:#8f877e;
-        display:block;
-        margin:0;
-        padding:0;
-        margin-left:60px;
-        font-size:14px;
+        &.drop-to-refresh {
+          > .default, > .loading {
+            display:none;
+          }
+
+          > .ok-refresh {
+            display:block;
+          }
+        }
+
+        &.loading {
+          > .default, > .ok-refresh {
+            display:none;
+          }
+
+          > .loading {
+            display:block;
+          }
+        }
+    }
+
+    > .badges {
+      margin:0;
+      padding:10px;  
+      min-height:100%;
+
+      > li {
+        width:100%;
+        padding:10px;
+        @include border-radius(5px);
+        background-color:#faf9f7;
+        margin:0 0 10px 0;
+        @include box-sizing(border-box);
+        border-top:1px solid #FFF;
+        @include box-shadow(0 0 3px rgba(0,0,0,0.4));
+        list-style:none;
+        min-height:70px;
+
+        > .illustration {
+          height:45px;
+          width:45px;
+          background-size:45px;
+          display:inline-block;
+          float:left;
+        }
+
+        > h4 {
+          color:#645a5a;
+          margin:0;
+          padding:0;
+          margin-left:60px;
+          line-height:1.5em;
+          font-family:"SignikaSemibold";
+          font-weight:normal;
+          font-size:16px;
+        }
+
+        > p {
+          color:#8f877e;
+          display:block;
+          margin:0;
+          padding:0;
+          margin-left:60px;
+          font-size:14px;
+        }
       }
     }
   }

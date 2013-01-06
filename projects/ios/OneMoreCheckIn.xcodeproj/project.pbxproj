@@ -42,6 +42,7 @@
 		30A0434914DC770100060A13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434614DC770100060A13 /* Localizable.strings */; };
 		30E1352710E2C1420031B30D /* Cordova.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30E1352610E2C1420031B30D /* Cordova.plist */; };
 		30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		705CF31E1698C016006C4604 /* TapToTop.m in Sources */ = {isa = PBXBuildFile; fileRef = 705CF31D1698C016006C4604 /* TapToTop.m */; };
 		70B911EC168B651800C850D2 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70B911EB168B651800C850D2 /* icon-72@2x.png */; };
 		70B911F3168FDCBA00C850D2 /* ChildBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 70B911ED168FDCBA00C850D2 /* ChildBrowser.bundle */; };
 		70B911F4168FDCBA00C850D2 /* ChildBrowserCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B911EF168FDCBA00C850D2 /* ChildBrowserCommand.m */; };
@@ -107,6 +108,8 @@
 		30E1352610E2C1420031B30D /* Cordova.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Cordova.plist; path = ../Cordova.plist; sourceTree = "<group>"; };
 		30E5649113A7FCAF007403D8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* OneMoreCheckIn-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OneMoreCheckIn-Prefix.pch"; sourceTree = "<group>"; };
+		705CF31C1698C016006C4604 /* TapToTop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapToTop.h; sourceTree = "<group>"; };
+		705CF31D1698C016006C4604 /* TapToTop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapToTop.m; sourceTree = "<group>"; };
 		70B911EB168B651800C850D2 /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72@2x.png"; sourceTree = "<group>"; };
 		70B911ED168FDCBA00C850D2 /* ChildBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChildBrowser.bundle; sourceTree = "<group>"; };
 		70B911EE168FDCBA00C850D2 /* ChildBrowserCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildBrowserCommand.h; sourceTree = "<group>"; };
@@ -262,6 +265,8 @@
 				70B911F0168FDCBA00C850D2 /* ChildBrowserViewController.h */,
 				70B911F1168FDCBA00C850D2 /* ChildBrowserViewController.m */,
 				70B911F2168FDCBA00C850D2 /* ChildBrowserViewController.xib */,
+				705CF31C1698C016006C4604 /* TapToTop.h */,
+				705CF31D1698C016006C4604 /* TapToTop.m */,
 			);
 			name = Plugins;
 			path = OneMoreCheckIn/Plugins;
@@ -434,6 +439,7 @@
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				70B911F4168FDCBA00C850D2 /* ChildBrowserCommand.m in Sources */,
 				70B911F5168FDCBA00C850D2 /* ChildBrowserViewController.m in Sources */,
+				705CF31E1698C016006C4604 /* TapToTop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,7 +503,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "OneMoreCheckIn/OneMoreCheckIn-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = OneMoreCheckIn;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -515,7 +521,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "OneMoreCheckIn/OneMoreCheckIn-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = OneMoreCheckIn;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

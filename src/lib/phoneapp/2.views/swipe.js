@@ -92,10 +92,11 @@
       style.webkitTransitionDuration = style.MozTransitionDuration = style.msTransitionDuration =
           style.OTransitionDuration = style.transitionDuration = duration + 'ms';
 
-      var position = this.activated ? '0px' : (this.foldedPosition * this.width / 100) + 'px';
+      var position = this.activated ? 0 : (this.foldedPosition * this.width / 100);
+
       // translate to given index position
-      style.MozTransform = style.webkitTransform = 'translate3d(' + position + ',0,0)';
-      style.msTransform = style.OTransform = 'translateX(' + position + ')';
+      style.MozTransform = style.webkitTransform = 'translate3d(' + position + 'px,0,0)';
+      style.msTransform = style.OTransform = 'translateX(' + position + 'px)';
     },
 
     handleEvent: function(e) {
@@ -138,6 +139,7 @@
       // reset deltaX
       this.deltaX = 0;
 
+      
       // set transition time to 0 for 1-to-1 touch movement
       this.element.style.MozTransitionDuration = this.element.style.webkitTransitionDuration = 0;
 
@@ -181,7 +183,7 @@
 
         if (progress > -5 && progress < this.foldedPosition + 5)
           this.element.style.MozTransform = this.element.style.webkitTransform = 'translate3d(' +
-              (this.deltaX) + 'px,0,0)';
+              (this.deltaX < 0 ? 0 : this.deltaX) + 'px,0,0)';
         e.stopPropagation();
         e.stopImmediatePropagation();
         e.preventDefault();
@@ -196,6 +198,7 @@
       this.locked = undefined;
       this.direction = 0;
       this.isScrolling = undefined;
+
       // if not scrolling vertically
       if (!this.isScrolling) {
 

@@ -71,9 +71,7 @@ PhoneApp.pack('PhoneApp', function(api) {
     _metamorphs: null,
 
     context: function() {
-      var controller = null;
-      if (this.controller)
-        controller = this.controller;
+      var controller = this.controller;
 
       //XXX return this._parentView.context ?
       if (this._parentView && this._parentView.controller)
@@ -85,15 +83,6 @@ PhoneApp.pack('PhoneApp', function(api) {
 
       context.controller = controller;
       context.view = this;
-
-      context.get = (function(key) {
-        var path = key.split('.');
-        if (path[0] == 'view')
-          path.shift();
-
-        return this.get(path.join('.'));
-      }.bind(this));
-
       return context;
 
     }.property('controller'),
@@ -144,6 +133,17 @@ PhoneApp.pack('PhoneApp', function(api) {
       var node = this.render();
       $(node).appendTo(parentNode);
       this.didInsertElement();
+    },
+
+    insertChildAt: function(view, position) {
+      this.willInsertElement();
+      PhoneApp.renderLoop.schedule(function () {
+        this.element.insertBefore(view.renderWrapper(), this.element.children[position]);
+        view.didInsertElement();
+      }, this);
+      view._parentView = this;
+      this._childViews.push(view);
+      return view;
     },
 
     appendChild: function(view) {

@@ -6,8 +6,11 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+#import <Cordova/CDVPlugin.h>
 
-@interface TapToTop : NSObject
+@interface TapToTop : CDVPlugin
 
+@property (nonatomic, retain) NSString* callbackId;
+
+-(void)install:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
 @end

@@ -85,3 +85,4 @@ if (cordovaRef && cordovaRef.addConstructor) {
 
 
 })();
+

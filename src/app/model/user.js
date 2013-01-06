@@ -66,7 +66,7 @@ PhoneApp.pack('Omci.model', function(api) {
 
     image: (function () {
       var res = (Omci.device.isRetina ? 300 : 57);
-      return '//playfoursquare.s3.amazonaws.com/badge/' + res + this.img;
+      return 'http://playfoursquare.s3.amazonaws.com/badge/' + res + this.img;
     }.property())
   });
 
@@ -88,9 +88,10 @@ partner
       ['cities', 'expertise', 'foursquare', 'partner'].forEach(function(cat) {
         this.badges[cat] = api.ArrayController.create();
         this.badges[cat].content = this._badges;
-        this.badges[cat].filter = function(item) {
-          return item.type == (cat == 'cities' ? '4sqcities' : cat);
-        };
+        this.badges[cat].refresh = this.refresh.bind(this);
+        // this.badges[cat].filter = function(item) {
+        //   return item.type == (cat == 'cities' ? '4sqcities' : cat);
+        // };
       }, this);
 
       this.stats = Stats.create();
@@ -102,6 +103,11 @@ partner
     formatedName: (function() {
       return this.firstName + ' ' + this.lastName;
     }).property('lastName', 'firstName'),
+
+    refresh: function (cbk) {
+      if (cbk)
+        window.setTimeout(cbk, 2000);
+    },
 
     fromObject: function(mesh) {
       Object.keys(mesh.user).forEach(function(key) {

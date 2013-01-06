@@ -10,12 +10,12 @@
     ready: function() {
       console.log('application ready');
     },
-    onPause: function() {
-      console.log('going background', this.state);
-    },
-    onResume: function() {
-      console.log('going forground', this.state);
-    },
+    // onPause: function() {
+    //   console.log('going background', this.state);
+    // },
+    // onResume: function() {
+    //   console.log('going forground', this.state);
+    // },
     rootController: (function() {
       return Omci.controllers.Application.create();
     }.property()),
