@@ -10,7 +10,7 @@
     <li {{action view.sort "level" on="tap"}}>By level</li>
   </ul>
 </div>
-{{#collection content=controller.content tagName="ul" classNames="badges"}}
+{{#collection content=controller tagName="ul" classNames="badges"}}
   <div class="illustration" style="background-image:url({{view.content.image}})"></div>
   <h4>{{view.content.name}}</h4>
   <p>{{{view.content.details}}} Level {{view.content.achievement}}, Complete {{view.content.complete}}, Need {{view.content.more}} check-ins</p>
