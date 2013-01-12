@@ -100,7 +100,11 @@ PhoneApp.pack('PhoneApp.types', function() {
       // Binding syntax helper
       if(bindCheck.test(key)){
         PhoneApp.Binding.bind(this, key.substr(0, key.length - 7), w);
-        delete Object.getPrototypeOf(this)[key];
+        // Depending on wether the *Binding property comes from o or from a parent class...
+        if(this.hasOwnProperty(key))
+          delete this[key];
+        else
+          delete Object.getPrototypeOf(this)[key];
         return;
       }
 
