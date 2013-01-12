@@ -100,7 +100,7 @@ PhoneApp.pack('PhoneApp.types', function() {
       // Binding syntax helper
       if(bindCheck.test(key)){
         PhoneApp.Binding.bind(this, key.substr(0, key.length - 7), w);
-        delete this[key];
+        delete Object.getPrototypeOf(this)[key];
         return;
       }
 
