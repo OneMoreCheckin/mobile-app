@@ -1,7 +1,7 @@
 PhoneApp.use('PhoneApp.types.Object');
 PhoneApp.use('PhoneApp.types.ArrayController');
 
-PhoneApp.pack('Omci.controller', function(api) {
+PhoneApp.pack('Omci.controllers', function(api) {
   'use strict';
   /*global google:false*/
 

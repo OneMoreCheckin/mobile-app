@@ -74,7 +74,7 @@ PhoneApp.pack('PhoneApp', function(api) {
       var controller = this.controller;
 
       //XXX return this._parentView.context ?
-      if (this._parentView && this._parentView.controller)
+      if (!controller && this._parentView && this._parentView.controller)
         controller = this._parentView.controller;
       var context = {};
       PhoneApp.ENV.HANDLEBARS_EXPOSE_OBJECTS.forEach(function(i) {
@@ -433,7 +433,7 @@ PhoneApp.pack('PhoneApp', function(api) {
     },
 
 
-    destroy: function() {
+    destroy: function(keepDom) {
       this.willDestroyElement();
       this._isDestroying = true;
 
@@ -446,7 +446,7 @@ PhoneApp.pack('PhoneApp', function(api) {
       });
 
       //Parent has already destroyed dom element
-      if (this._parentView && this._parentView._isDestroying) {
+      if (keepDom || (this._parentView && this._parentView._isDestroying)) {
         this._destroyElement();
       } else {
         PhoneApp.renderLoop.add(this, 'destroy', this._destroyElement);

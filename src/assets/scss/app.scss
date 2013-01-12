@@ -33,7 +33,6 @@ html, body, body > .app, .application {
 body {
   font-family: "SignikaRegular", "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
   @include background-image(linear-gradient(#23a8d4, #1380b8));
-  -webkit-backface-visibility: hidden;
 }
 
 button {

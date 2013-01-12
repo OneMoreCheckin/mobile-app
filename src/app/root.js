@@ -1,7 +1,7 @@
 (function() {
   /*jshint devel:true*/
   'use strict';
-  PhoneApp.ENV.HANDLEBARS_EXPOSE_OBJECTS = ['Omci'];
+  PhoneApp.ENV.HANDLEBARS_EXPOSE_OBJECTS = ['Pa', 'Omci', 'PhoneApp'];
 
   window.Omci = Pa.Application.create({
     rootElement: function() {
@@ -24,9 +24,15 @@
       return Omci.views.Application.create();
     }.property()),
 
+
+
     router: Pa.Router.create({
       applicationController: (function() {
         return Omci.rootController;
+      }.property()),
+
+      badgesController: (function () {
+        return Omci.controllers.Badges.create();
       }.property()),
 
       root: Pa.Route.extend({

@@ -33,25 +33,7 @@
   <div id="page"> 
     
 
-    <div class="scrollable">
-      <div class="pull-to-refresh">
-        <p class="default">Pull down to refresh</p>
-        <p class="ok-refresh">Release to refresh</p>
-        <p class="loading">Loading ...</p>
-      </div>
-      <div class="filters">
-        <ul>
-          <li class="active" {{action "view.sort" on="tap"}} data-sort="nearest">Nearest</li>
-          <li {{action "view.sort" on="tap"}} data-sort="easiest">Easiest</li>
-          <li {{action "view.sort" on="tap"}} data-sort="level">By level</li>
-        </ul>
-      </div>
-    {{#collection contentBinding="Omci.model.user.badges.foursquare" tagName="ul" classNames="badges"}}
-      <div class="illustration" style="background-image:url({{view.content.image}})"></div>
-      <h4>{{view.content.name}}</h4>
-      <p>{{{view.content.details}}}</p>
-    {{/collection}}
-    </div>
+    {{view Omci.views.Badges controller=Omci.router.badgesController}}
   </div>
   
 </div>

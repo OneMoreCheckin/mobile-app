@@ -108,15 +108,15 @@
     }
     
     //Tap To Top hack
-    self.window.backgroundColor = [UIColor clearColor];
-    self.window.windowLevel = UIWindowLevelStatusBar+1.f;
+//    self.window.backgroundColor = [UIColor redColor];
+//    self.window.windowLevel = UIWindowLevel+1.f;
     //End of hack
     
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-
     return YES;
 }
+
 
 - (void)statusBarClicked
 {

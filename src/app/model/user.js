@@ -84,14 +84,19 @@ partner
  */
     init: function() {
       this._badges = [];
+
       this.badges = Pa.types.Object.create();
+      this.badges.SORT_NEAREST = function (a, b) { return (a.complete > b.complete) ? -1 : (a.complete == b.complete ? 0 : 1)};
+      this.badges.SORT_EASIEST = function (a, b) { return (a.more < b.more) ? -1 : (a.more == b.more ? 0 : 1)};
+      this.badges.SORT_LEVEL = function (a, b) { return (a.achievement > b.achievement) ? -1 : (a.achievement == b.achievement ? 0 : 1)};
       ['cities', 'expertise', 'foursquare', 'partner'].forEach(function(cat) {
         this.badges[cat] = api.ArrayController.create();
         this.badges[cat].content = this._badges;
         this.badges[cat].refresh = this.refresh.bind(this);
-        // this.badges[cat].filter = function(item) {
-        //   return item.type == (cat == 'cities' ? '4sqcities' : cat);
-        // };
+        this.badges[cat].filter = function(item) {
+          return item.type == (cat == 'cities' ? '4sqcities' : cat);
+        };
+        // this.badges[cat].sort = this.badges.SORT_NEAREST;
       }, this);
 
       this.stats = Stats.create();

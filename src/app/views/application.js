@@ -2,32 +2,6 @@ PhoneApp.pack('Omci.views', function() {
   /*jshint devel:true*/
   'use strict';
 
-  var shuffle = function(elems) {
-
-    var allElems = (function() {
-      var ret = [], l = elems.length;
-      while (l--) { ret[ret.length] = elems[l]; }
-      return ret;
-    })();
-
-    var shuffled = (function() {
-      var l = allElems.length, ret = [];
-      while (l--) {
-        var random = Math.floor(Math.random() * allElems.length),
-            randEl = allElems[random].cloneNode(true);
-        allElems.splice(random, 1);
-        ret[ret.length] = randEl;
-      }
-      return ret;
-    })(), l = elems.length;
-
-    while (l--) {
-      elems[l].parentNode.insertBefore(shuffled[l], elems[l].nextSibling);
-      elems[l].parentNode.removeChild(elems[l]);
-    }
-
-  }
-
   this.Application = Pa.View.extend({
     classNames: ['omci', 'application'],
     templateName: 'application',
@@ -62,18 +36,6 @@ PhoneApp.pack('Omci.views', function() {
 
     toggleMenu: function(e) {
       this.menu.activate(!this.menu.activated);
-    },
-
-    sort: function(e) {
-      var node = e.target;
-      var sort = node.getAttribute('data-sort');
-      $(node).siblings().removeClass('active');
-      $(node).addClass('active');
-
-      Pa.renderLoop.schedule(function() {
-        shuffle($('.badges li'));
-      });
-
     },
 
     logout: function (e) {

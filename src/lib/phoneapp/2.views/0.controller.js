@@ -9,10 +9,6 @@ PhoneApp.pack('PhoneApp', function(api) {
     isController: true,
     content: null,
 
-    init: function() {
-      PhoneApp.Controller._super('init', this);
-    },
-
     connectOutlet: function(params) {
       var viewClass = params.viewClass;
       var controller = params.controller || this;

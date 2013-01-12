@@ -20,7 +20,6 @@
         path = Pa.get(path);
       }
     }
-      
     return new Handlebars.SafeString(
         this.view._addAction(options.hash.on, path, context)
     );

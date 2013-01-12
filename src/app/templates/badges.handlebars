@@ -1,0 +1,17 @@
+<div class="pull-to-refresh">
+  <p class="default">Pull down to refresh</p>
+  <p class="ok-refresh">Release to refresh</p>
+  <p class="loading">Loading ...</p>
+</div>
+<div class="filters">
+  <ul>
+    <li class="active" {{action view.sort "nearest" on="tap"}}>Nearest</li>
+    <li {{action view.sort "easiest" on="tap"}}>Easiest</li>
+    <li {{action view.sort "level" on="tap"}}>By level</li>
+  </ul>
+</div>
+{{#collection content=controller.content tagName="ul" classNames="badges"}}
+  <div class="illustration" style="background-image:url({{view.content.image}})"></div>
+  <h4>{{view.content.name}}</h4>
+  <p>{{{view.content.details}}} Level {{view.content.achievement}}, Complete {{view.content.complete}}, Need {{view.content.more}} check-ins</p>
+{{/collection}}
