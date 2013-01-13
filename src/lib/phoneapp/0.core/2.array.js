@@ -149,12 +149,10 @@ PhoneApp.pack('PhoneApp.types', function(api) {
             item = map(item);
             m.splice(index, 0, item);
             var needle = 0;
-            // console.warn('****', s.length);
             s.some(function(sub, idx) {
-              //console.warn(sort(sub, item));
-              if(sort(sub, item) >= 0)
+              if(sort(item, sub) >= 0)
                 needle = idx + 1;
-              return sort(sub, item) < 0;
+              return sort(item, sub) < 0;
             });
             s.splice(needle, 0, item);
             if(needle <= t.length && needle < limit)
