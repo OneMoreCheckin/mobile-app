@@ -21,9 +21,7 @@ def default():
     shims = FileList('src/lib/shims/')
     combine(shims, 'build/js/shims.js')
      
-    libs = FileList('src/lib/phoneapp/', filter="*namespace.js")
-    libs.merge(FileList('src/lib/phoneapp/', filter="*.js", exclude="*namespace.js"))
-    combine(libs, 'build/js/phoneapp.js')
+    combine('https://raw.github.com/jsBoot/phoneapp.js/master/build/phoneapp.js', 'build/js/phoneapp.js')
 
     app = FileList('src/app', filter="*root.js")
     app.merge(FileList('src/app', filter="*.js",exclude="*root.js"));

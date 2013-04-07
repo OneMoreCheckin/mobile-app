@@ -54,6 +54,9 @@ PhoneApp.pack('Omci.model', function(api) {
       api.Object._super('init', this);
     },
     fromObject: function(mesh) {
+      if (mesh.details) {
+        mesh.details = mesh.details.replace(/<a\b[^>]*>(.*?)<\/a>/i, '$1');
+      }
       Object.keys(mesh).forEach(function(key) {
         if (key in this)
           this.set(key, mesh[key]);
@@ -110,6 +113,7 @@ partner
     }).property('lastName', 'firstName'),
 
     refresh: function (cbk) {
+      console.warn('refresh');
       if (cbk)
         window.setTimeout(cbk, 2000);
     },

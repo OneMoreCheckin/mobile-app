@@ -7,6 +7,8 @@ PhoneApp.pack('Omci.views', function() {
     templateName: 'application',
 
     didInsertElement: function() {
+      Omci.router = Omci.router.create();
+
       Omci.model.user.bootstrap(function() {
         //Authenticated : OK
         Omci.rootView.$('#splash').addClass('quick-hide');
@@ -19,14 +21,7 @@ PhoneApp.pack('Omci.views', function() {
       });
       console.warn('root view inserted');
       this.menu = new Swipe(document.getElementById('container'));
-      
-      // window.setTimeout(function () {
-      //   cordova.exec(function() {console.log('ok')}, function() {console.log('pas bon')}, 'TapToTop', 'install', []);
-      // }, 5000);
       // this.menu.activate(true);
-      // var unscrollable = function(e) { e.preventDefault(); };
-      // this.$('#menu').on('touchmove', unscrollable);
-
       ChildBrowser.install();
     },
 
@@ -36,6 +31,17 @@ PhoneApp.pack('Omci.views', function() {
 
     toggleMenu: function(e) {
       this.menu.activate(!this.menu.activated);
+    },
+
+    goTo: function (e) {
+
+      this.menu.activate(true);
+      Omci.router.transitionTo('badges.' + e.context);
+
+      Pa.renderLoop.schedule(function () {
+        $('#menu li').removeClass('is-active');
+        $(e.target).addClass('is-active');
+      });
     },
 
     logout: function (e) {

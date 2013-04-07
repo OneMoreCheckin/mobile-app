@@ -10,55 +10,70 @@
   @include box-shadow(-3px 0 5px rgba(0,0,0,0.6));
   background-image: url(../images/omci/pattern/noise.png);
 
-  #container-header {
-    height:43px;
-    border-top:1px solid #65c3e2;
-    border-bottom:1px solid #0369a2;
-    @include background-image(linear-gradient(#23a8d4, #1380b8));
-    @include border-top-left-radius(5px);
-    @include user-select(none);
-
-    button {
-      width:21px;
-      height:21px;
-      margin:0;
-      padding:0;
-      margin-top:11px;
-      margin-left:15px;
-      background:none;
-      border:0px;
-      float:left;
-
-      &:hover {
-        span {
-          background-color:#bfc7c9;
-        }
-      }
-
-      span {
-        width:100%;
-        display:block;
-        margin:0;
-        padding:0;
-        background-color:#e7e6e2;
-        margin-top:2px;
-        margin-bottom:1px;
-        height:3px;
-        float:left;
-        @include box-shadow(0px 1px 1px rgba(0,0,0,0.4));
-        @include border-radius(3px);
-
-      }
-    }
-  }
+  
 
   
 }
 
-#page {
 
   
 
+  .badges-container {
+    -webkit-transform: translate3d(1000000px, 0,0);
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+
+    .container-header {
+      height:43px;
+      border-top:1px solid #65c3e2;
+      border-bottom:1px solid #0369a2;
+      @include background-image(linear-gradient(#23a8d4, #1380b8));
+      @include border-top-left-radius(5px);
+      @include user-select(none);
+      > .title {
+        position:absolute;
+        left:0;
+        top:0;
+        right:0;
+        text-align:center;
+        color:#f2f2f2;
+        font-size:18px;
+        line-height:2.6em;
+        @include text-shadow(0 1px 2px rgba(0,0,0,0.6));
+      }
+      button {
+        width:21px;
+        height:21px;
+        margin:0;
+        padding:0;
+        margin-top:11px;
+        margin-left:15px;
+        background:none;
+        border:0px;
+        position:absolute;
+        left:0;
+        right:0;
+
+        span {
+          width:100%;
+          display:block;
+          margin:0;
+          padding:0;
+          background-color:#e7e6e2;
+          margin-top:2px;
+          margin-bottom:1px;
+          height:3px;
+          float:left;
+          @include box-shadow(0px 1px 1px rgba(0,0,0,0.4));
+          @include border-radius(3px);
+
+        }
+      }
+    }
+  }
   .scrollable {
 
     -webkit-overflow-scrolling : touch;
@@ -70,6 +85,7 @@
     bottom:0;
     left:0;
     right:0;
+
 
     > .filters, > .badges {
       @include translate3d(0,0,0);
@@ -222,4 +238,3 @@
       }
     }
   }
-}
