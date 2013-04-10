@@ -53,10 +53,10 @@ PhoneApp.pack('Omci.views', function() {
 
 
     badgesReady: function () {
-      console.warn('DATA READY');
       if (!Omci.model.user.dataReady)
         return;
-      
+
+      console.warn('DATA READY');
       window.setTimeout(function () {
        Pa.renderLoop.schedule(function () {
           $('#splash').removeClass('loading');

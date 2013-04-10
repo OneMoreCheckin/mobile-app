@@ -23,7 +23,15 @@ PhoneApp.pack('Omci.views.badges', function() {
         default:
           this.content.sort = Omci.model.user.badges.SORT_NEAREST;
       }
-    }
+    },
+
+    isLoadingUpdated: function () {
+      Omci.model.user.bootstrap(function() {
+        this.set('isLoading', false);
+      }.bind(this), function () {
+        this.set('isLoading', false);
+      }.bind(this));
+    }.observes('isLoading')
   });
 
   this.Foursquare = Badges.extend({

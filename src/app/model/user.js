@@ -1,12 +1,12 @@
 Omci.service.core.initialize({
-  // host: 'api.onemorecheckin.com',
-  // port: '',
-  host: 'ackitup.net',
-  port: '5051',
+  host: 'api.onemorecheckin.com',
+  port: '',
+  // host: 'ackitup.net',
+  // port: '5051',
   version: '1.0',
-  clientId: 'V4E5YSHBAG34FPQZA2X2ABUCHQP4M1AFIYWA5ZUTQWGSIPZE', // KPA3DXY55S1OWUAXKDNTXUCE0AL4AI0EMPKO2BSIVU2IUSAH
+  clientId: 'KPA3DXY55S1OWUAXKDNTXUCE0AL4AI0EMPKO2BSIVU2IUSAH', //'V4E5YSHBAG34FPQZA2X2ABUCHQP4M1AFIYWA5ZUTQWGSIPZE', // KPA3DXY55S1OWUAXKDNTXUCE0AL4AI0EMPKO2BSIVU2IUSAH
   fsVersion: '20121230',
-  callback: 'http://local.onemorecheckin.com'
+  callback: 'http://void.onemorecheckin.com'
   // callback: location.protocol + '://' + location.host + '/' + location.pathname;
 });
 
