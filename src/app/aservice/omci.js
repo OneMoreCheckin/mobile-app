@@ -43,6 +43,7 @@ PhoneApp.pack('Omci.service', function(api) {
   var failureCbk;
 
   var onFailure = function(){
+    console.error('ON FAILURE CHECK AUTH');
     seed.code = null;
     seed.token = null;
     seed.oauth = null;
@@ -142,19 +143,26 @@ PhoneApp.pack('Omci.service', function(api) {
     this.checkAuthentication = function (onSuccess, onFailure) {
       successCbk = onSuccess;
       failureCbk = onFailure;
+      console.warn('**** check auth token ' + seed.token);
       if(seed.token){
         info();
         return;
       }
+
+      console.warn('**** check auth code ' + seed.code);
+
       if(seed.code){
         authenticate(info);
         return;
       }
 
+      console.error('**** ON FAILURE CHECK AUTH');
       onFailure();
     },
 
     this.requestAuthentication = function(onSuccess, onFailure){
+      successCbk = onSuccess;
+      failureCbk = onFailure;
       try{
         plugins.childBrowser.onLocationChange = cordovaSpy;
         plugins.childBrowser.showWebPage(remote);

@@ -11,13 +11,13 @@
 	<key>TopActivityIndicator</key>
 	<string>gray</string>
 	<key>EnableLocation</key>
-	<true/>
+	<false/>
 	<key>EnableViewportScale</key>
 	<false/>
 	<key>AutoHideSplashScreen</key>
 	<false/>
 	<key>ShowSplashScreenSpinner</key>
-	<true/>
+	<false/>
 	<key>MediaPlaybackRequiresUserAction</key>
 	<false/>
 	<key>AllowInlineMediaPlayback</key>
@@ -28,6 +28,8 @@
 	<string>cloud</string>
 	<key>ExternalHosts</key>
 	<array>
+		<string>*.google-analytics.com</string>
+		<string>*.akamai.net</string>
 		<string>*.ackitup.net</string>
 		<string>*.onemorecheckin.com</string>
 		<string>*.foursquare.com</string>

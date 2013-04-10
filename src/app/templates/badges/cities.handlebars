@@ -1,7 +1,7 @@
 <div class="container-header">
     <span class="title">Cities</span>
 
-  <button type="button" {{action "Omci.rootView.toggleMenu" on="tap"}}>
+  <button type="button" class="toggle-menu" {{action "Omci.rootView.toggleMenu" on="tap"}}>
     <span></span>
     <span></span>
     <span></span>
@@ -22,6 +22,12 @@
   {{#collection content=view.content tagName="ul" classNames="badges"}}
     <div class="illustration" style="background-image:url({{view.content.image}})"></div>
     <h4>{{view.content.name}}</h4>
-    <p>{{view.content.details}} Level {{view.content.achievement}}, Complete {{view.content.complete}}, Need {{view.content.more}} check-ins</p>
+    <p>{{view.content.details}}</p>
+    <div class="infos">
+        <div class="progress" style="width:{{view.content.complete}}%"></div>
+        <div class="text">
+       <span class="number">{{view.content.more}}</span> <span class="label">more check-ins</span>  <span class="expect"><small>/</small>{{view.content.infos.expect}}</span>
+       </div> 
+    </div>
   {{/collection}}
 </div>

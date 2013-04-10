@@ -1,4 +1,34 @@
 (function() {
+  /*global moment*/
+  'use strict';
+
+  this.registerHelper('moment', function(time, options) {
+    var chain;
+    if (options.hash.duration) {
+      chain = moment.duration(time, options.hash.duration);
+      delete options.hash.duration;
+    } else
+      chain = moment(time);
+
+
+    Object.keys(options.hash).forEach(function(option) {
+      chain = chain[option](options.hash[option]);
+    });
+
+    return chain;
+  });
+
+  this.registerHelper('ifequal', function(val1, val2, options) {
+    if (val1 === val2) {
+      return options.fn(this);
+    } else {
+      return options.inverse(this);
+    }
+  });
+}).apply(Handlebars);
+
+
+(function() {
   /*jshint devel:true*/
   'use strict';
   PhoneApp.ENV.HANDLEBARS_EXPOSE_OBJECTS = ['Pa', 'Omci', 'PhoneApp'];

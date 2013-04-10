@@ -1,7 +1,21 @@
 <div id="splash">
   <div id="splash-logo"></div>
   <button id="splash-connect" type="button" {{action "view.login" on="tap"}}>Connect to Foursquare</button>
-  <span id="splash-loading" style="display:none">Loading your badges ...</span>
+  <div id="splash-message" class="retry">
+    <div class="front">
+      <span class="title">Network Error</span>
+      <span class="description">Please check<br /> your connection</span>
+    </div>
+    <span class="back">
+      <div class="bg-circle"></div>
+      <hr />
+      <div class="border-circle"></div>
+      <div class="inner-circle">
+        <div class="rotative"></div>
+      </div>
+      <div class="center-circle"></div>
+    </span>
+  </div>
 </div>
 
 <div id="menu">
@@ -11,7 +25,7 @@
   </div>
   <h3>Badges</h3>
   <ul>
-    <li {{action "view.goTo" "foursquare" on="tap"}} {{bindAttr data-badge="Omci.model.user.badges.foursquare.length"}}>Foursquare</li>
+    <li {{action "view.goTo" "foursquare" on="tap"}} {{bindAttr data-badge="Omci.model.user.badges.foursquare.length"}} class="is-active">Foursquare</li>
     <li {{action "view.goTo" "cities" on="tap"}} {{bindAttr data-badge="Omci.model.user.badges.cities.length"}}>Cities</li>
     <li {{action "view.goTo" "expertise" on="tap"}} {{bindAttr data-badge="Omci.model.user.badges.expertise.length"}}>Expertise</li>
     <li {{action "view.goTo" "partner" on="tap"}} {{bindAttr data-badge="Omci.model.user.badges.partner.length"}}>Partner</li>
