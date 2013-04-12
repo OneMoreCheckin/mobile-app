@@ -95,11 +95,14 @@ PhoneApp.pack('Omci.service', function(api) {
   };
 
   var cordovaSpy = function(loc){
+    loc = loc.url;
     var p = readParams({search: '?' + loc.split('?').pop()});
     if(p.code){
       seed.code = p.code;
       write(seed);
-      plugins.childBrowser.close();
+      windowRef.removeEventListener('loadstart', cordovaSpy);
+      windowRef.removeEventListener('exit', Omci.rootView.onBrowserClosed);
+      windowRef.close();
       authenticate(info);
     }
   };
@@ -164,8 +167,11 @@ PhoneApp.pack('Omci.service', function(api) {
       successCbk = onSuccess;
       failureCbk = onFailure;
       try{
-        plugins.childBrowser.onLocationChange = cordovaSpy;
-        plugins.childBrowser.showWebPage(remote);
+        // plugins.childBrowser.onLocationChange = cordovaSpy;
+        // plugins.childBrowser.showWebPage(remote);
+        windowRef = window.open(remote, '_blank', 'location=yes');
+        windowRef.addEventListener('loadstart', cordovaSpy);
+        windowRef.addEventListener('exit', Omci.rootView.onBrowserClosed);
       }catch(e){
         windowRef = window.open(remote);
         console.error('Not using cordova! Falling back to window hack instead');

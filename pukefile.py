@@ -64,6 +64,8 @@ def default():
 
     deepcopy('src/lib/handlebars', 'build/js')
 
+    deepcopy('build/', 'projects/ios/www/')
+
 
 
 @task("Lint")

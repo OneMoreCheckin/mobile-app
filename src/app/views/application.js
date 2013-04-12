@@ -29,12 +29,12 @@ PhoneApp.pack('Omci.views', function() {
 
       this.menu = new Swipe(document.getElementById('container'));
       // this.menu.activate(true);
-      ChildBrowser.install();
-      window.plugins.childBrowser.onClose = function () {
-          if (Omci.network.state == Omci.network.states.OFFLINE) {
-            $('#splash').removeClass('loading').addClass('network-error');
-          }
-      }
+
+      // window.plugins.childBrowser.onClose = function () {
+      //     if (Omci.network.state == Omci.network.states.OFFLINE) {
+      //       $('#splash').removeClass('loading').addClass('network-error');
+      //     }
+      // }
 
       $('#container').on('touchend', function (e) {
         if (this.menu.activated)
@@ -49,6 +49,14 @@ PhoneApp.pack('Omci.views', function() {
         e.stopImmediatePropagation();
         return false;
       }.bind(this));
+    },
+
+    onBrowserClosed: function () {
+      if (Omci.network.state == Omci.network.states.OFFLINE) {
+        $('#splash').removeClass('loading').addClass('network-error');
+      } else {
+        $('#splash').removeClass('loading').removeClass('network-error');
+      }
     },
 
 
