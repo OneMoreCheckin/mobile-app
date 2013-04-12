@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0450"
+   LastUpgradeVersion = "0460"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-               BuildableName = "OneMoreCheckIn.app"
-               BlueprintName = "OneMoreCheckIn"
-               ReferencedContainer = "container:OneMoreCheckIn.xcodeproj">
+               BuildableName = "Onemorecheckin.app"
+               BlueprintName = "Onemorecheckin"
+               ReferencedContainer = "container:Onemorecheckin.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "OneMoreCheckIn.app"
-            BlueprintName = "OneMoreCheckIn"
-            ReferencedContainer = "container:OneMoreCheckIn.xcodeproj">
+            BuildableName = "Onemorecheckin.app"
+            BlueprintName = "Onemorecheckin"
+            ReferencedContainer = "container:Onemorecheckin.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -58,9 +58,9 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-                     BuildableName = "OneMoreCheckIn.app"
-                     BlueprintName = "OneMoreCheckIn"
-                     ReferencedContainer = "container:OneMoreCheckIn.xcodeproj">
+                     BuildableName = "Onemorecheckin.app"
+                     BlueprintName = "Onemorecheckin"
+                     ReferencedContainer = "container:Onemorecheckin.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
             </ActionContent>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "OneMoreCheckIn.app"
-            BlueprintName = "OneMoreCheckIn"
-            ReferencedContainer = "container:OneMoreCheckIn.xcodeproj">
+            BuildableName = "Onemorecheckin.app"
+            BlueprintName = "Onemorecheckin"
+            ReferencedContainer = "container:Onemorecheckin.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -88,9 +88,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "OneMoreCheckIn.app"
-            BlueprintName = "OneMoreCheckIn"
-            ReferencedContainer = "container:OneMoreCheckIn.xcodeproj">
+            BuildableName = "Onemorecheckin.app"
+            BlueprintName = "Onemorecheckin"
+            ReferencedContainer = "container:Onemorecheckin.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

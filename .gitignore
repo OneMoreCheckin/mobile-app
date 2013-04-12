@@ -4,6 +4,8 @@
 /projects/ios/cordova/console.log
 /build/*
 !/build/.gitkeep
+/projects/ios/www/*
+!/projects/ios/www/.gitkeep
 /projects/android/bin/
 /projects/android/gen/
 Build
