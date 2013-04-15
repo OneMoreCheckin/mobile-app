@@ -12,8 +12,7 @@ def default():
     # libs = FileList('src/lib/foundation', filter="*.js")
     # combine(libs, 'build/js/foundation.js')
 
-    libs = FileList('src/lib/phonegap', filter="*.js")
-    combine(libs, 'build/js/phonegap.js')
+    
 
     libs = FileList('src/lib/zepto', filter="*.js")
     combine(libs, 'build/js/zepto.js')
@@ -65,7 +64,13 @@ def default():
     deepcopy('src/lib/handlebars', 'build/js')
 
     deepcopy('build/', 'projects/ios/www/')
+    libs = FileList('src/lib/phonegap/ios', filter="*.js")
+    combine(libs, 'projects/ios/www/js/phonegap.js')
 
+
+    deepcopy('build/', 'projects/android/assets/www/')
+    libs = FileList('src/lib/phonegap/android', filter="*.js")
+    combine(libs, 'projects/android/assets/www/js/phonegap.js')
 
 
 @task("Lint")

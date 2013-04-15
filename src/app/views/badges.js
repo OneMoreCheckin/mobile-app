@@ -26,6 +26,9 @@ PhoneApp.pack('Omci.views.badges', function() {
     },
 
     isLoadingUpdated: function () {
+      if (!this.isLoading)
+        return;
+      
       Omci.model.user.bootstrap(function() {
         this.set('isLoading', false);
       }.bind(this), function () {

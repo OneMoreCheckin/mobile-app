@@ -40,12 +40,12 @@
     ready: function() {
       console.log('application ready');
     },
-    // onPause: function() {
-    //   console.log('going background', this.state);
-    // },
-    // onResume: function() {
-    //   console.log('going forground', this.state);
-    // },
+    onPause: function() {
+      console.warn('going background');
+    },
+    onResume: function() {
+      console.log('going forground');
+    },
     rootController: (function() {
       return Omci.controllers.Application.create();
     }.property()),

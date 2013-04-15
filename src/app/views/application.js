@@ -9,6 +9,7 @@ PhoneApp.pack('Omci.views', function() {
     userLogged: false,
 
     didInsertElement: function() {
+      console.warn('root view inserted');
       Omci.router = Omci.router.create();
 
       Omci.model.user.bootstrap(function() {
@@ -24,7 +25,6 @@ PhoneApp.pack('Omci.views', function() {
           $('#splash').addClass('play');
         });
       });
-      console.warn('root view inserted');
       
 
       this.menu = new Swipe(document.getElementById('container'));
