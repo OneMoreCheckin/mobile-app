@@ -861,7 +861,6 @@ PhoneApp.pack('Omci.views', function() {
         });
       });
       
-      console.log(localStorage.getItem('omci'));
 
       this.menu = new Swipe(document.getElementById('container'));
       // this.menu.activate(true);

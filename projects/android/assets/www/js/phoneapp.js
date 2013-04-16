@@ -1212,7 +1212,8 @@ PhoneApp.use('PhoneApp.types.Object');
 PhoneApp.pack('PhoneApp', function(api) {
   /*global cordova:true*/
   'use strict';
-
+  
+  
   this.Application = api.Object.extend({
     rootElement: $('body').get(0),
     ready: PhoneApp.K,
@@ -1292,11 +1293,15 @@ PhoneApp.pack('PhoneApp', function(api) {
           run.start();
         }
       }
-      this.router.transitionTo('index');
+      if (this.router && this.router.transitionTo)
+        this.router.transitionTo('index');
     },
 
     bindPhoneGapEvents: function() {
+      console.log('binding the stuff');
       document.addEventListener('deviceready', function() {
+        console.log('device ready');
+
         this.onDeviceReady();
         this.ready();
       }.bind(this), false);
@@ -1810,8 +1815,10 @@ PhoneApp.pack('PhoneApp', function(api) {
     },
 
     _computeAttributesBindings: function(attributes, bindingId) {
-      var gA = {class: '', style: ''},
-          view = this;
+      var gA = {};
+      gA['class'] = '';
+      gA['style'] = '';
+      var view = this;
 
       attributes.forEach(function(binding) {
         var currentAttribute = binding.attribute,
