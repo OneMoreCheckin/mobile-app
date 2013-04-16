@@ -1,14 +1,10 @@
-//
-//  GoogleAnalyticsPlugin.h
-//  Onemorecheckin
-//
-//  Created by Manu on 16/04/13.
-//
-//
+#import <Foundation/Foundation.h>
+#import "GAI.h"
+#import <Cordova/CDV.h>
+@interface GoogleAnalyticsPlugin : CDVPlugin
 
-#ifndef __Onemorecheckin__GoogleAnalyticsPlugin__
-#define __Onemorecheckin__GoogleAnalyticsPlugin__
+- (void) trackerWithTrackingId:(CDVInvokedUrlCommand*)command;
+- (void) trackEventWithCategory:(CDVInvokedUrlCommand*)command;
+- (void) trackView:(CDVInvokedUrlCommand*)command;
 
-#include <iostream>
-
-#endif /* defined(__Onemorecheckin__GoogleAnalyticsPlugin__) */
+@end
