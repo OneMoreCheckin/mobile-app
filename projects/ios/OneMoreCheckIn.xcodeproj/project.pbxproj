@@ -42,6 +42,9 @@
 		30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FC414816E50CA1004E6F35 /* icon-72@2x.png */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
+		703946BB171DE9A5008C8252 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 703946BA171DE9A5008C8252 /* libGoogleAnalytics.a */; };
+		7083C1B6171D927100D6BB83 /* GoogleAnalyticsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7083C1B5171D927100D6BB83 /* GoogleAnalyticsPlugin.m */; };
+		7083C1B8171D94B600D6BB83 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7083C1B7171D94B600D6BB83 /* CoreData.framework */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
 /* End PBXBuildFile section */
@@ -104,6 +107,15 @@
 		30FC414816E50CA1004E6F35 /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72@2x.png"; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Onemorecheckin-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Onemorecheckin-Prefix.pch"; sourceTree = "<group>"; };
 		5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		703946BA171DE9A5008C8252 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
+		7083C1AA171D91D200D6BB83 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		7083C1AB171D91D200D6BB83 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		7083C1AC171D91D300D6BB83 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		7083C1AD171D91D300D6BB83 /* GAITransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITransaction.h; sourceTree = "<group>"; };
+		7083C1AE171D91D300D6BB83 /* GAITransactionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITransactionItem.h; sourceTree = "<group>"; };
+		7083C1B3171D923B00D6BB83 /* GoogleAnalyticsPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleAnalyticsPlugin.h; sourceTree = "<group>"; };
+		7083C1B5171D927100D6BB83 /* GoogleAnalyticsPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleAnalyticsPlugin.m; sourceTree = "<group>"; };
+		7083C1B7171D94B600D6BB83 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* Onemorecheckin-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Onemorecheckin-Info.plist"; path = "../Onemorecheckin-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = Onemorecheckin/config.xml; sourceTree = "<group>"; };
@@ -114,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7083C1B8171D94B600D6BB83 /* CoreData.framework in Frameworks */,
 				5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
@@ -130,6 +143,7 @@
 				301BF5C5109A6A2B0062928A /* SystemConfiguration.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
 				30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */,
+				703946BB171DE9A5008C8252 /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +232,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7083C1B7171D94B600D6BB83 /* CoreData.framework */,
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
@@ -248,6 +263,7 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				7083C1A8171D91D200D6BB83 /* GoogleAnalytics */,
 			);
 			name = Plugins;
 			path = Onemorecheckin/Plugins;
@@ -292,6 +308,29 @@
 				30A0434614DC770100060A13 /* Localizable.strings */,
 			);
 			path = se.lproj;
+			sourceTree = "<group>";
+		};
+		7083C1A8171D91D200D6BB83 /* GoogleAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				7083C1A9171D91D200D6BB83 /* SDK */,
+				7083C1B3171D923B00D6BB83 /* GoogleAnalyticsPlugin.h */,
+				7083C1B5171D927100D6BB83 /* GoogleAnalyticsPlugin.m */,
+			);
+			path = GoogleAnalytics;
+			sourceTree = "<group>";
+		};
+		7083C1A9171D91D200D6BB83 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				7083C1AA171D91D200D6BB83 /* GAI.h */,
+				7083C1AB171D91D200D6BB83 /* GAITrackedViewController.h */,
+				7083C1AC171D91D300D6BB83 /* GAITracker.h */,
+				703946BA171DE9A5008C8252 /* libGoogleAnalytics.a */,
+				7083C1AD171D91D300D6BB83 /* GAITransaction.h */,
+				7083C1AE171D91D300D6BB83 /* GAITransactionItem.h */,
+			);
+			path = SDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +470,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				7083C1B6171D927100D6BB83 /* GoogleAnalyticsPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +534,11 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Onemorecheckin/Onemorecheckin-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Onemorecheckin/Plugins/GoogleAnalytics/SDK\"",
+					"\"$(SRCROOT)/../../../../../../Downloads/GoogleAnalytics/Library\"",
+				);
 				PRODUCT_NAME = Onemorecheckin;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -511,6 +556,11 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Onemorecheckin/Onemorecheckin-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Onemorecheckin/Plugins/GoogleAnalytics/SDK\"",
+					"\"$(SRCROOT)/../../../../../../Downloads/GoogleAnalytics/Library\"",
+				);
 				PRODUCT_NAME = Onemorecheckin;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

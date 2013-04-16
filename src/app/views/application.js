@@ -15,6 +15,7 @@ PhoneApp.pack('Omci.views', function() {
       Omci.model.user.bootstrap(function() {
         //Authenticated : OK
         console.log('boot ok');
+        Omci.rootView.analytics.sendView('/home');
         $('#splash').removeClass('network-error');
         Omci.rootView.set('userLogged', true);
         
@@ -25,7 +26,10 @@ PhoneApp.pack('Omci.views', function() {
           $('#splash').addClass('play');
         });
       });
-      
+
+      this.analytics = cordova.require('cordova/plugin/GoogleAnalytics');
+      this.analytics.startTrackerWithAccountID('UA-27075824-11');
+      this.analytics.sendView('/splash');
 
       this.menu = new Swipe(document.getElementById('container'));
       // this.menu.activate(true);
@@ -43,6 +47,10 @@ PhoneApp.pack('Omci.views', function() {
         if ($(e.target).hasClass('toggle-menu'))
           return;
 
+        var path = Omci.router.currentPath.split('.');
+        path.pop();
+        path = '/' + path.join('/');
+        Omci.rootView.analytics.sendView(path);
         this.menu.activate(true);
 
         e.preventDefault();
@@ -93,12 +101,16 @@ PhoneApp.pack('Omci.views', function() {
     },
 
     toggleMenu: function(e) {
+      if (this.menu.activated)
+        this.analytics.sendView('/home');
+
       this.menu.activate(!this.menu.activated);
     },
 
     goTo: function (e) {
       this.menu.activate(true);
       Omci.router.transitionTo('badges.' + e.context);
+      this.analytics.sendView('/badges/'+e.context);
 
       Pa.renderLoop.schedule(function () {
         $('#menu li').removeClass('is-active');
@@ -113,6 +125,8 @@ PhoneApp.pack('Omci.views', function() {
       var callback = function (key) {
         if (key != 2)
           return;
+
+        this.analytics.sendView('/logout');
         Omci.model.user.logout();
         this.$('#splash').removeClass('hide').removeClass('quick-hide').addClass('play');
 
@@ -127,6 +141,7 @@ PhoneApp.pack('Omci.views', function() {
       $('#splash').addClass('loading');
       Omci.model.user.authenticate(function () {
         console.warn('authenticate');
+        Omci.rootView.analytics.sendView('/home');
         $('#splash').removeClass('network-error');
         Omci.rootView.set('userLogged', true);
       }, function () {

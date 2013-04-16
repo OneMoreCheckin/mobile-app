@@ -65,11 +65,15 @@ def default():
 
     deepcopy('build/', 'projects/ios/www/')
     libs = FileList('src/lib/phonegap/ios', filter="*.js")
+    libs.merge(FileList('src/lib/phonegap/plugins', filter="*.js"))
     combine(libs, 'projects/ios/www/js/phonegap.js')
+
+    deepcopy('projects/ios/www/js/phonegap.js', 'build/js')
 
 
     deepcopy('build/', 'projects/android/assets/www/')
     libs = FileList('src/lib/phonegap/android', filter="*.js")
+    libs.merge(FileList('src/lib/phonegap/plugins', filter="*.js"))
     combine(libs, 'projects/android/assets/www/js/phonegap.js')
 
 
