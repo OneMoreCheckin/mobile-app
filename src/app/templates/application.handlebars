@@ -32,6 +32,9 @@
   </ul>
   <h3>Profile</h3>
   <ul>
+    {{#if Omci.device.isIos}}
+    <li {{action "view.showFeedback" on="tap"}}>Feedback</li>
+    {{/if}}
     <li {{action "view.logout" on="tap"}}>Logout</li>
   </ul>
 </div>

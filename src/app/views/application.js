@@ -11,6 +11,7 @@ PhoneApp.pack('Omci.views', function() {
     didInsertElement: function() {
       console.warn('root view inserted');
       Omci.router = Omci.router.create();
+      Omci.router.transitionTo('index');
 
       Omci.model.user.bootstrap(function() {
         //Authenticated : OK
@@ -30,6 +31,8 @@ PhoneApp.pack('Omci.views', function() {
       this.analytics = cordova.require('cordova/plugin/GoogleAnalytics');
       this.analytics.startTrackerWithAccountID('UA-27075824-11');
       this.analytics.sendView('/splash');
+
+      this.feedback = cordova.require('cordova/plugin/UserVoice');
 
       this.menu = new Swipe(document.getElementById('container'));
       // this.menu.activate(true);
@@ -117,6 +120,11 @@ PhoneApp.pack('Omci.views', function() {
         $('#menu li').removeClass('is-active');
         $(e.target).addClass('is-active');
       });
+    },
+
+    showFeedback: function () {
+      this.feedback.open();
+      this.analytics.sendView('/feedback');
     },
 
     logout: function (e) {
