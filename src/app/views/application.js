@@ -29,7 +29,7 @@ PhoneApp.pack('Omci.views', function() {
       });
 
       this.analytics = cordova.require('cordova/plugin/GoogleAnalytics');
-      this.analytics.startTrackerWithAccountID('UA-27075824-11');
+      this.analytics.startTrackerWithAccountID('UA-25787547-2');
       this.analytics.sendView('/splash');
 
       this.feedback = cordova.require('cordova/plugin/UserVoice');

@@ -32,7 +32,7 @@
     <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
     <content src="index.html" />
 
-    <log level="DEBUG"/>
+    <!--  <log level="DEBUG"/> -->
     <preference name="useBrowserHistory" value="true" />
     <preference name="exit-on-suspend" value="false" />
     <preference name="disallowOverscroll" value="true" />
