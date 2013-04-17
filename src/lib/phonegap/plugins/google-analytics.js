@@ -9,13 +9,13 @@
     };
 
     GA.prototype.startTrackerWithAccountID = function(id) {
-      cordova.exec(function () {},function () {}, "GoogleAnalyticsPlugin", "trackerWithTrackingId", [id]);
+      exec(function () {},function () {}, "GoogleAnalyticsPlugin", "trackerWithTrackingId", [id]);
     };
 
     GA.prototype.sendView = function(pageUri) {
       if (!pageUri)
-        pageUri = document.location.href;
-      cordova.exec(function () {},function () {}, "GoogleAnalyticsPlugin", "trackView", [pageUri]);
+        pageUri = '/';
+      exec(function () {},function () {}, "GoogleAnalyticsPlugin", "trackView", [pageUri]);
     };
 
     GA.prototype.sendEvent = function(category,action,label,value) {
@@ -23,7 +23,7 @@
         action,
         label,
         (isNaN(parseInt(value)) ? -1 : value)];
-      cordova.exec(function () {},function () {}, "GoogleAnalyticsPlugin", "trackEventWithCategory", options);
+      exec(function () {},function () {}, "GoogleAnalyticsPlugin", "trackEventWithCategory", options);
     };
 
     // GA.prototype.setCustomVariable = function(index,name,value) {

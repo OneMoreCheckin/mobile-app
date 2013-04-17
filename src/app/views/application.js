@@ -54,7 +54,8 @@ PhoneApp.pack('Omci.views', function() {
         this.menu.activate(true);
 
         e.preventDefault();
-        e.stopImmediatePropagation();
+        if (e.stopImmediatePropagation)
+          e.stopImmediatePropagation();
         return false;
       }.bind(this));
     },
