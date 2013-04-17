@@ -678,7 +678,6 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Onemorecheckin/Plugins/GoogleAnalytics/SDK\"",
 					"\"$(SRCROOT)/../../../../../../Downloads/GoogleAnalytics/Library\"",
-					"\"$(SRCROOT)/Onemorecheckin/Plugins/SDK\"",
 					"\"$(SRCROOT)/Onemorecheckin/Plugins/UserVoice/SDK\"",
 				);
 				PRODUCT_NAME = Onemorecheckin;
@@ -702,7 +701,6 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Onemorecheckin/Plugins/GoogleAnalytics/SDK\"",
 					"\"$(SRCROOT)/../../../../../../Downloads/GoogleAnalytics/Library\"",
-					"\"$(SRCROOT)/Onemorecheckin/Plugins/SDK\"",
 					"\"$(SRCROOT)/Onemorecheckin/Plugins/UserVoice/SDK\"",
 				);
 				PRODUCT_NAME = Onemorecheckin;
