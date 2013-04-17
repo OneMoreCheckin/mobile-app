@@ -69,7 +69,7 @@
         // console.log(' ##ROUTER## enter ', route.route, route.slideContainer);
         if (route.view) {
           route.view.element.style.webkitTransition = '0ms';
-          route.view.element.style.webkitTransform = 'translate3d(0px,0,0)';
+          route.view.element.style.webkitTransform = 'translateX(0px)';
         }
 
       },
@@ -77,7 +77,7 @@
       leaveHook: function(route) {
         // console.error(' ##ROUTER## leave ', route.route, route);
         if (route.view)
-          route.view.element.style.webkitTransform = 'translate3d(1000000px, 0, 0)';
+          route.view.element.style.webkitTransform = 'translateX(100%)';
       },
 
 
