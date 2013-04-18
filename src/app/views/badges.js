@@ -6,7 +6,7 @@ PhoneApp.pack('Omci.views.badges', function() {
     sort: function(e) {
       var node = e.target;
       var $node = $(node);
-      
+
       if ($node.hasClass('active'))
         return;
 
@@ -14,24 +14,24 @@ PhoneApp.pack('Omci.views.badges', function() {
       $node.siblings().removeClass('active');
       $node.addClass('active');
       switch (e.context) {
-        case "level":
+        case 'level':
           this.content.sort = Omci.model.user.badges.SORT_LEVEL;
-        break;
-        case "easiest":
+          break;
+        case 'easiest':
           this.content.sort = Omci.model.user.badges.SORT_EASIEST;
-        break;
+          break;
         default:
           this.content.sort = Omci.model.user.badges.SORT_NEAREST;
       }
     },
 
-    isLoadingUpdated: function () {
+    isLoadingUpdated: function() {
       if (!this.isLoading)
         return;
-      
+
       Omci.model.user.bootstrap(function() {
         this.set('isLoading', false);
-      }.bind(this), function () {
+      }.bind(this), function() {
         this.set('isLoading', false);
       }.bind(this));
     }.observes('isLoading')

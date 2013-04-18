@@ -61,7 +61,7 @@
         return Omci.rootController;
       }.property()),
 
-      badgesController: (function () {
+      badgesController: (function() {
         return Omci.controllers.Badges.create();
       }.property()),
 
@@ -91,7 +91,7 @@
           index: Pa.Route.extend({
             redirectsTo: 'foursquare'
           }),
-          setup: function () {
+          setup: function() {
             console.log('***** global setup');
           },
 
@@ -103,11 +103,11 @@
 
             list: Pa.Route.extend({
               route: 'list',
-              view: (function () {
+              view: (function() {
                 return Omci.views.badges.Foursquare.create();
               }.property()),
 
-              setup: function () {
+              setup: function() {
                 this.view.appendTo(document.getElementById('container'));
               },
 
@@ -123,16 +123,16 @@
 
             list: Pa.Route.extend({
               route: 'list',
-              view: (function () {
+              view: (function() {
                 return Omci.views.badges.Partner.create();
               }.property()),
-              
-              setup: function () {
+
+              setup: function() {
                 this.view.appendTo(document.getElementById('container'));
               },
 
               connectOutlets: function(router) {
-                
+
               }
             })
           }),
@@ -144,11 +144,11 @@
 
             list: Pa.Route.extend({
               route: 'list',
-              view: (function () {
+              view: (function() {
                 return Omci.views.badges.Expertise.create();
               }.property()),
-              
-              setup: function () {
+
+              setup: function() {
                 this.view.appendTo(document.getElementById('container'));
               },
 
@@ -165,11 +165,11 @@
 
             list: Pa.Route.extend({
               route: 'list',
-              view: (function () {
+              view: (function() {
                 return Omci.views.badges.Cities.create();
               }.property()),
-              
-              setup: function () {
+
+              setup: function() {
                 this.view.appendTo(document.getElementById('container'));
               },
 

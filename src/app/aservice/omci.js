@@ -5,28 +5,28 @@ PhoneApp.pack('Omci.service', function(api) {
   'use strict';
   /*global plugins:false*/
 
-  var read = function(){
+  var read = function() {
     /*jshint devel:true*/
-    try{
+    try {
       return JSON.parse(localStorage.getItem('omci')) || {};
-    }catch(e){
+    }catch (e) {
       console.error('Failed reading from localStorage');
       return {};
     }
   };
 
-  var write = function(data){
+  var write = function(data) {
     /*jshint devel:true*/
-    try{
+    try {
       localStorage.setItem('omci', JSON.stringify(data));
-    }catch(e){
+    }catch (e) {
       console.error('Failed writing to localStorage', e);
     }
   };
 
-  var readParams = function(loc){
+  var readParams = function(loc) {
     var s = {}, q, p = (loc || location).search.substr(1).split('&');
-    p.forEach(function(item){
+    p.forEach(function(item) {
       q = item.split('=');
       s[q.shift()] = decodeURIComponent(q.join('='));
     });
@@ -42,7 +42,7 @@ PhoneApp.pack('Omci.service', function(api) {
   var successCbk;
   var failureCbk;
 
-  var onFailure = function(){
+  var onFailure = function() {
     console.error('ON FAILURE CHECK AUTH');
     seed.code = null;
     seed.token = null;
@@ -74,7 +74,7 @@ PhoneApp.pack('Omci.service', function(api) {
   var info = function() {
     omci.query(
         omci.GET, {
-          onsuccess: function(data){
+          onsuccess: function(data) {
             // Handle info data here
             successCbk(data);
           },
@@ -88,16 +88,16 @@ PhoneApp.pack('Omci.service', function(api) {
     );
   };
 
-  var fallbackSpy = function(e){
+  var fallbackSpy = function(e) {
     seed.code = e.data.code;
     windowRef.close();
     authenticate(info);
   };
 
-  var cordovaSpy = function(loc){
+  var cordovaSpy = function(loc) {
     loc = loc.url;
     var p = readParams({search: '?' + loc.split('?').pop()});
-    if(p.code){
+    if (p.code) {
       seed.code = p.code;
       write(seed);
       windowRef.removeEventListener('loadstart', cordovaSpy);
@@ -116,7 +116,7 @@ PhoneApp.pack('Omci.service', function(api) {
 
     Object.defineProperty(this, 'status', {
       configurable: true,
-      get: function(){
+      get: function() {
         return status;
       }
     });
@@ -135,50 +135,50 @@ PhoneApp.pack('Omci.service', function(api) {
 
       version = oc.fsVersion;
       remote = 'https://foursquare.com/oauth2/authenticate?client_id=' + oc.clientId +
-            '&response_type=code&redirect_uri=' + oc.callback;
+          '&response_type=code&redirect_uri=' + oc.callback;
 
       // If we are on remote endpoint exit, web context
       var p = readParams();
-      if(p.code)
+      if (p.code)
         opener.postMessage({code: p.code}, '*');
     };
 
-    this.checkAuthentication = function (onSuccess, onFailure) {
+    this.checkAuthentication = function(onSuccess, onFailure) {
       successCbk = onSuccess;
       failureCbk = onFailure;
       console.warn('**** check auth token ' + seed.token);
-      if(seed.token){
+      if (seed.token) {
         info();
         return;
       }
 
       console.warn('**** check auth code ' + seed.code);
 
-      if(seed.code){
+      if (seed.code) {
         authenticate(info);
         return;
       }
 
       console.error('**** ON FAILURE CHECK AUTH');
       onFailure();
-    },
+    };,
 
-    this.requestAuthentication = function(onSuccess, onFailure){
+    this.requestAuthentication = function(onSuccess, onFailure) {
       successCbk = onSuccess;
       failureCbk = onFailure;
-      try{
+      try {
         // plugins.childBrowser.onLocationChange = cordovaSpy;
         // plugins.childBrowser.showWebPage(remote);
         windowRef = window.open(remote, '_blank', 'location=yes');
         windowRef.addEventListener('loadstart', cordovaSpy);
         windowRef.addEventListener('exit', Omci.rootView.onBrowserClosed);
-      }catch(e){
+      }catch (e) {
         windowRef = window.open(remote);
         console.error('Not using cordova! Falling back to window hack instead');
       }
     };
 
-    this.logout = function () {
+    this.logout = function() {
       try {
         localStorage.setItem('omci', '{}');
       } catch (e) {
@@ -232,7 +232,7 @@ PhoneApp.pack('Omci.service.venues', function(api) {
       ll: latitude + ',' + longitude,
       limit: limit || 30
     };
-    if(cat)
+    if (cat)
       p.categoryId = cat;
     api.core.queryFoursquare(
         api.core.foursquare.GET, {

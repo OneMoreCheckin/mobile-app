@@ -19,10 +19,10 @@ PhoneApp.pack('Omci.views', function() {
         Omci.rootView.analytics.sendView('/home');
         $('#splash').removeClass('network-error');
         Omci.rootView.set('userLogged', true);
-        
+
       }, function() {
         console.log('boot fail');
-        Pa.renderLoop.schedule(function () {
+        Pa.renderLoop.schedule(function() {
           Omci.hideSplash();
           $('#splash').addClass('play');
         });
@@ -43,7 +43,7 @@ PhoneApp.pack('Omci.views', function() {
       //     }
       // }
 
-      $('#container').on('touchend', function (e) {
+      $('#container').on('touchend', function(e) {
         if (this.menu.activated)
           return true;
 
@@ -63,7 +63,7 @@ PhoneApp.pack('Omci.views', function() {
       }.bind(this));
     },
 
-    onBrowserClosed: function () {
+    onBrowserClosed: function() {
       if (Omci.network.state == Omci.network.states.OFFLINE) {
         $('#splash').removeClass('loading').addClass('network-error');
       } else {
@@ -72,27 +72,27 @@ PhoneApp.pack('Omci.views', function() {
     },
 
 
-    badgesReady: function () {
+    badgesReady: function() {
       if (!Omci.model.user.dataReady)
         return;
 
       console.warn('DATA READY');
-      window.setTimeout(function () {
-       Pa.renderLoop.schedule(function () {
+      window.setTimeout(function() {
+        Pa.renderLoop.schedule(function() {
           $('#splash').removeClass('loading');
           Omci.rootView.$('#splash').addClass('quick-hide');
           $('#splash').removeClass('play');
         });
       }, 100);
-      window.setTimeout(function () {
-       Pa.renderLoop.schedule(function () {
+      window.setTimeout(function() {
+        Pa.renderLoop.schedule(function() {
           Omci.hideSplash();
-       });
+        });
       }, 100);
 
     }.observes('Omci.model.user.dataReady'),
 
-    networkStatusUpdated: function () {
+    networkStatusUpdated: function() {
       if (!this.userLogged && Omci.network.state == Omci.network.states.OFFLINE)
         $('#splash').addClass('network-error').removeClass('loading');
 
@@ -111,27 +111,27 @@ PhoneApp.pack('Omci.views', function() {
       this.menu.activate(!this.menu.activated);
     },
 
-    goTo: function (e) {
+    goTo: function(e) {
       this.menu.activate(true);
       Omci.router.transitionTo('badges.' + e.context);
-      this.analytics.sendView('/badges/'+e.context);
+      this.analytics.sendView('/badges/' + e.context);
 
-      Pa.renderLoop.schedule(function () {
+      Pa.renderLoop.schedule(function() {
         $('#menu li').removeClass('is-active');
         $(e.target).addClass('is-active');
       });
     },
 
-    showFeedback: function () {
+    showFeedback: function() {
       this.feedback.open();
       this.analytics.sendView('/feedback');
     },
 
-    logout: function (e) {
+    logout: function(e) {
       // location.href="fb://page/240965326008435";
       // return;
-      // 
-      var callback = function (key) {
+      //
+      var callback = (function(key) {
         if (key != 2)
           return;
 
@@ -139,21 +139,21 @@ PhoneApp.pack('Omci.views', function() {
         Omci.model.user.logout();
         this.$('#splash').removeClass('hide').removeClass('quick-hide').addClass('play');
 
-      }.bind(this);
+      }.bind(this));
 
       if (Omci.device.isMobile)
-        navigator.notification.confirm('Are you sure you want to logout?', callback , 'Logout', 'No,Yes');
+        navigator.notification.confirm('Are you sure you want to logout?', callback, 'Logout', 'No,Yes');
       else
         callback(2);
     },
-    login: function (e) {
+    login: function(e) {
       $('#splash').addClass('loading');
-      Omci.model.user.authenticate(function () {
+      Omci.model.user.authenticate(function() {
         console.warn('authenticate');
         Omci.rootView.analytics.sendView('/home');
         $('#splash').removeClass('network-error');
         Omci.rootView.set('userLogged', true);
-      }, function () {
+      }, function() {
         $('#splash').removeClass('loading');
         Omci.rootView.set('userLogged', false);
         console.error('authentication fail');
