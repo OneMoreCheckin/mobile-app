@@ -24,10 +24,11 @@
 @import "container";
 @import "splash";
 
-html, body, body > .app, .application {
+html, body, body > .application {
   overflow:hidden;
   width:100%;
   height:100%;
+  position:relative;
 }
 
 body {

@@ -8,6 +8,7 @@
   right:0;
   @include user-select(none);
   background-color:#282f38;
+  overflow:hidden;
 
   #menu-header {
     height:43px;

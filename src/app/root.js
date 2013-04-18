@@ -35,7 +35,7 @@
 
   window.Omci = Pa.Application.create({
     rootElement: function() {
-      return $('.app').get(0);
+      return $('body').get(0);
     }.property(),
     ready: function() {
       console.log('application ready');

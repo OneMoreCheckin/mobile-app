@@ -10,7 +10,7 @@
   @include box-shadow(-3px 0 5px rgba(0,0,0,0.6));
   background-image: url(../images/omci/pattern/noise.png);
   @include translate3d(0,0,0);
-  
+  overflow:hidden;
 
   
 }
