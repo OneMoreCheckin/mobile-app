@@ -21,11 +21,13 @@ tmp/*
 *xxx*
 
 
-*/DerivedData/*
+*DerivedData*
 !/build/.gitkeep
 /projects/ios/www/*
 !/projects/ios/www/.gitkeep
 /projects/android/assets/
+/projects/android/bin/
+/projects/android/gen/
 /projects/ios/cordova/console.log
 
 /dist/*

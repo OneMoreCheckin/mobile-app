@@ -88,8 +88,8 @@ def build():
 
   deepcopy('src/assets/images', FileSystem.join(Yak.paths['build'], 'images'))
 
-  # fontcss = FileList('src/assets/fonts/generated', filter="*.css")
-  # combine(fontcss, FileSystem.join(Yak.paths['build'], 'fonts/pictos.css'))
+  fontcss = FileList('src/assets/fonts/', filter="*.css")
+  combine(fontcss, FileSystem.join(Yak.paths['build'], 'fonts/pictos.css'))
 
   # pictos = FileList('src/assets/fonts/generated', exclude="*.css")
   # deepcopy(pictos, FileSystem.join(Yak.paths['build'], 'fonts'))

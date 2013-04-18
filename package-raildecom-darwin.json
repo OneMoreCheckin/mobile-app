@@ -1,0 +1,13 @@
+{
+  "config": {
+
+  },
+  "directories": {
+    "src": "src",
+    "build": ".build",
+    "tmp": ".tmp",
+    "dist": "build",
+    "dist-android": "projects/android/assets/www",
+    "dist-ios": "projects/ios/www"
+  }
+}
