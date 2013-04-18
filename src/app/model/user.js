@@ -4,7 +4,9 @@ Omci.service.core.initialize({
   // host: 'ackitup.net',
   // port: '5051',
   version: '1.0',
-  clientId: 'KPA3DXY55S1OWUAXKDNTXUCE0AL4AI0EMPKO2BSIVU2IUSAH', //'V4E5YSHBAG34FPQZA2X2ABUCHQP4M1AFIYWA5ZUTQWGSIPZE', // KPA3DXY55S1OWUAXKDNTXUCE0AL4AI0EMPKO2BSIVU2IUSAH
+  clientId: 'KPA3DXY55S1OWUAXKDNTXUCE0AL4AI0EMPKO2BSIVU2IUSAH',
+  //'V4E5YSHBAG34FPQZA2X2ABUCHQP4M1AFIYWA5ZUTQWGSIPZE',
+  // KPA3DXY55S1OWUAXKDNTXUCE0AL4AI0EMPKO2BSIVU2IUSAH
   fsVersion: '20121230',
   callback: 'http://void.onemorecheckin.com'
   // callback: location.protocol + '://' + location.host + '/' + location.pathname;
@@ -20,6 +22,7 @@ PhoneApp.use('Omci.service.venues');
 PhoneApp.pack('Omci.model', function(api) {
   'use strict';
 
+  /*jshint devel:true*/
   var Stats = api.Object.extend({
     badges: 0,
     bestScore: 0,
@@ -54,6 +57,8 @@ PhoneApp.pack('Omci.model', function(api) {
       api.Object._super('init', this);
     },
     fromObject: function(mesh) {
+      /*jshint regexp:false*/
+      // XXX manu: regexp doesn't make sense it seems. Or does it?
       if (mesh.details) {
         mesh.details = mesh.details.replace(/<a\b[^>]*>(.*?)<\/a>/i, '$1');
       }
@@ -90,9 +95,15 @@ partner
       this._badges = [];
 
       this.badges = Pa.types.Object.create();
-      this.badges.SORT_NEAREST = function(a, b) { return (a.complete > b.complete) ? -1 : (a.complete == b.complete ? 0 : 1)};
-      this.badges.SORT_EASIEST = function(a, b) { return (a.more < b.more) ? -1 : (a.more == b.more ? 0 : 1)};
-      this.badges.SORT_LEVEL = function(a, b) { return (a.achievement > b.achievement) ? -1 : (a.achievement == b.achievement ? 0 : 1)};
+      this.badges.SORT_NEAREST = function(a, b) {
+        return (a.complete > b.complete) ? -1 : (a.complete == b.complete ? 0 : 1);
+      };
+      this.badges.SORT_EASIEST = function(a, b) {
+        return (a.more < b.more) ? -1 : (a.more == b.more ? 0 : 1);
+      };
+      this.badges.SORT_LEVEL = function(a, b) {
+        return (a.achievement > b.achievement) ? -1 : (a.achievement == b.achievement ? 0 : 1);
+      };
       ['cities', 'expertise', 'foursquare', 'partner'].forEach(function(cat) {
         this.badges[cat] = api.ArrayController.create();
         this.badges[cat].content = this._badges;
@@ -111,7 +122,7 @@ partner
 
     formatedName: (function() {
       return this.firstName + ' ' + this.lastName;
-    }).property('lastName', 'firstName'),
+    }.property('lastName', 'firstName')),
 
     refresh: function(cbk) {
       console.warn('refresh');

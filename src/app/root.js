@@ -1,5 +1,6 @@
+/*global Handlebars:false*/
 (function() {
-  /*global moment*/
+  /*global moment:false*/
   'use strict';
 
   this.registerHelper('moment', function(time, options) {
@@ -65,7 +66,7 @@
         return Omci.controllers.Badges.create();
       }.property()),
 
-      enterHook: function(route, context) {
+      enterHook: function(route/*, context*/) {
         // console.log(' ##ROUTER## enter ', route.route, route.slideContainer);
         if (route.view) {
           route.view.element.style.webkitTransition = '0ms';
@@ -111,7 +112,7 @@
                 this.view.appendTo(document.getElementById('container'));
               },
 
-              connectOutlets: function(router) {
+              connectOutlets: function(/*router*/) {
               }
             })
           }),
@@ -131,7 +132,7 @@
                 this.view.appendTo(document.getElementById('container'));
               },
 
-              connectOutlets: function(router) {
+              connectOutlets: function(/*router*/) {
 
               }
             })
@@ -152,7 +153,7 @@
                 this.view.appendTo(document.getElementById('container'));
               },
 
-              connectOutlets: function(router) {
+              connectOutlets: function(/*router*/) {
 
               }
             })
@@ -173,7 +174,7 @@
                 this.view.appendTo(document.getElementById('container'));
               },
 
-              connectOutlets: function(router) {
+              connectOutlets: function(/*router*/) {
 
               }
             })

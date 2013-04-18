@@ -10,7 +10,7 @@ PhoneApp.pack('Omci.views.badges', function() {
       if ($node.hasClass('active'))
         return;
 
-      var sort = node.getAttribute('data-sort');
+      // var sort = node.getAttribute('data-sort');
       $node.siblings().removeClass('active');
       $node.addClass('active');
       switch (e.context) {

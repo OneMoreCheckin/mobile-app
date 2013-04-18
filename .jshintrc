@@ -96,5 +96,8 @@
   "validthis": false,
 
   "globals": {
+    "Omci": false,
+    "Pa": false,
+    "PhoneApp": false
   }
 }

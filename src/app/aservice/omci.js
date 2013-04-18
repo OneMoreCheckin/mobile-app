@@ -3,7 +3,6 @@ PhoneApp.use('PhoneApp.service.Error');
 
 PhoneApp.pack('Omci.service', function(api) {
   'use strict';
-  /*global plugins:false*/
 
   var read = function() {
     /*jshint devel:true*/
@@ -161,7 +160,7 @@ PhoneApp.pack('Omci.service', function(api) {
 
       console.error('**** ON FAILURE CHECK AUTH');
       onFailure();
-    };,
+    };
 
     this.requestAuthentication = function(onSuccess, onFailure) {
       successCbk = onSuccess;

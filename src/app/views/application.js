@@ -1,7 +1,8 @@
 PhoneApp.pack('Omci.views', function() {
   /*jshint devel:true*/
+  /*global cordova:false,Swipe:false*/
   'use strict';
-  var huhu = false;
+  // var huhu = false;
 
   this.Application = Pa.View.extend({
     classNames: ['omci', 'application'],
@@ -96,7 +97,7 @@ PhoneApp.pack('Omci.views', function() {
       if (!this.userLogged && Omci.network.state == Omci.network.states.OFFLINE)
         $('#splash').addClass('network-error').removeClass('loading');
 
-      if (!Omci.network.state == Omci.network.states.ONLINE)
+      if (Omci.network.state != Omci.network.states.ONLINE)
         $('#splash').removeClass('network-error');
     }.observes('Omci.network.state'),
 
@@ -104,7 +105,7 @@ PhoneApp.pack('Omci.views', function() {
       console.warn('wild delete root view');
     },
 
-    toggleMenu: function(e) {
+    toggleMenu: function(/*e*/) {
       if (this.menu.activated)
         this.analytics.sendView('/home');
 
@@ -127,7 +128,7 @@ PhoneApp.pack('Omci.views', function() {
       this.analytics.sendView('/feedback');
     },
 
-    logout: function(e) {
+    logout: function(/*e*/) {
       // location.href="fb://page/240965326008435";
       // return;
       //
@@ -146,7 +147,7 @@ PhoneApp.pack('Omci.views', function() {
       else
         callback(2);
     },
-    login: function(e) {
+    login: function(/*e*/) {
       $('#splash').addClass('loading');
       Omci.model.user.authenticate(function() {
         console.warn('authenticate');
