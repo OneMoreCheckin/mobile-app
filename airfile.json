@@ -5,16 +5,17 @@
             "v2.0.1", 
             "master"
         ], 
-        "handlebars": [
-            "1.0.rc.1", 
-            "v1.0.10", 
+        "spitfire": [
+            "1.1.0", 
             "master"
         ], 
         "phoneapp": [
-            "master"
+            "master", 
+            "0.1.0"
         ], 
-        "spitfire": [
-            "1.1.0", 
+        "handlebars": [
+            "1.0.rc.1", 
+            "v1.0.10", 
             "master"
         ], 
         "zepto": [
