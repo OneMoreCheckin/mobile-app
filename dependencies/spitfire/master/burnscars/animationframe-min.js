@@ -1,0 +1,2 @@
+'use strict';(function(){for(var a=["ms","moz","webkit","o"],b=0;b<a.length&&!window.requestAnimationFrame;++b)window.requestAnimationFrame=window[a[b]+"RequestAnimationFrame"],window.cancelAnimationFrame=window[a[b]+"CancelAnimationFrame"]||window[a[b]+"CancelRequestAnimationFrame"];if(!window.requestAnimationFrame||!window.cancelAnimationFrame){var d=0;window.requestAnimationFrame=function(b){var a=Date.now(),c=Math.max(0,16-(a-d));d=a+c;return window.setTimeout(function(){b(a+c)},c)};window.cancelAnimationFrame=
+function(a){clearTimeout(a)}}})();

@@ -1,0 +1,26 @@
+{
+    "libraries": {
+        "normalize": [
+            "v2.1.1", 
+            "v2.0.1", 
+            "master"
+        ], 
+        "handlebars": [
+            "1.0.rc.1", 
+            "v1.0.10", 
+            "master"
+        ], 
+        "phoneapp": [
+            "master"
+        ], 
+        "spitfire": [
+            "1.1.0", 
+            "master"
+        ], 
+        "zepto": [
+            "v1.0", 
+            "master", 
+            "v1.0rc1"
+        ]
+    }
+}

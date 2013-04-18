@@ -1,0 +1,1 @@
+'use strict';Object.isExtensible||function(){Object.isExtensible=function(a){if(Object(a)!==a)throw new TypeError;for(var b="";a.hasOwnProperty(b);)b+="?";a[b]=true;var c=a.hasOwnProperty(b);delete a[b];return c}}();

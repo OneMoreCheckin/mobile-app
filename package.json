@@ -1,0 +1,60 @@
+{
+  "name": "mobile-app",
+  "version": "0.0.1",
+
+  "description": "",
+  "keywords": [],
+  "author": {
+    "name": "WebItUp",
+    "email": "hello@webitup.fr",
+    "url": "http://www.webitup.fr"
+  },
+  "maintainers": [
+    {
+      "name": "Raildecom",
+      "email": "dev@webitup.fr",
+      "url": "https://twitter.com/raildecom"
+    }
+  ],
+  "contributors":[
+    {
+      "name": "Raildecom",
+      "email": "dev@webitup.fr",
+      "url": "https://twitter.com/raildecom"
+    },
+    {
+      "name": "Mangled Deutz",
+      "email": "dev@webitup.fr",
+      "url": "https://twitter.com/MangledDeutz"
+    }
+  ],
+  "bugs": "https://github.com/OneMoreCheckin/mobile-app/issues",
+  "licenses": [
+     {
+         "type": "MIT",
+         "url": "http://en.wikipedia.org/wiki/MIT_License"
+     }
+  ],
+  "repositories": [
+         {
+              "type": "git",
+              "url": "https://github.com/OneMoreCheckin/mobile-app.git"
+         }
+  ],
+  "dependencies": {
+  },
+
+  "homepage": "http://www.webitup.fr",
+
+  "directories": {
+    "src": "src",
+    "build": ".build",
+    "tmp": ".tmp",
+    "dist": "dist",
+    "dist-android": "projects/android/assets/www",
+    "dist-ios": "projects/ios/www"
+  },
+
+  "config": {
+  }
+}

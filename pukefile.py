@@ -1,159 +1,126 @@
 #!/usr/bin/env puke
 # -*- coding: utf8 -*-
 
-global PH
-import helpers as PH
+global help
+from helpers import Helpers as help
+import re
+import json
 
-
-@task("default")
+@task("Default task")
 def default():
-    sh('compass compile src')
+  executeTask("build")
+  executeTask("deploy")
 
-    # libs = FileList('src/lib/foundation', filter="*.js")
-    # combine(libs, 'build/js/foundation.js')
-
-    
-
-    libs = FileList('src/lib/zepto', filter="*.js")
-    combine(libs, 'build/js/zepto.js')
-
-    shims = FileList('src/lib/shims/')
-    combine(shims, 'build/js/shims.js')
-     
-    combine('https://raw.github.com/jsBoot/phoneapp.js/master/build/phoneapp.js', 'build/js/phoneapp.js')
-
-    app = FileList('src/app', filter="*root.js")
-    app.merge(FileList('src/app', filter="*.js",exclude="*root.js"));
-    combine(app, 'build/js/app.js')
-
-    knownHelpers = [
-      'action',
-      'bind',
-      'bindAttr',
-      'collection',
-      'each',
-      'if',
-      'log',
-      'outlet',
-      'unless',
-      'view',
-      'with'
-    ]
-
-    helperCmd = ''
-    for helper in knownHelpers:
-      helperCmd += '-k %s ' % helper
-
-    sh('handlebars src/app/templates -r src/app/templates -f build/js/templates.js %s' % helperCmd, header="build templates")
-
-    deepcopy('src/index.html', 'build/')
-
-    deepcopy('src/assets/images', 'build/images')
-
-    deepcopy('src/assets/css', 'build/css')
-
-    fontcss = FileList('src/assets/fonts/generated', filter="*.css")
-    combine(fontcss, 'build/fonts/pictos.css')
-
-    pictos = FileList('src/assets/fonts/generated', exclude="*.css")
-    deepcopy(pictos, 'build/fonts/')
-
-    fonts = FileList('src/assets/fonts/signika')
-    deepcopy(fonts, 'build/fonts')
-
-    deepcopy('src/lib/handlebars', 'build/js')
-
-    deepcopy('build/', 'projects/ios/www/')
-    libs = FileList('src/lib/phonegap/ios', filter="*.js")
-    libs.merge(FileList('src/lib/phonegap/plugins', filter="*.js"))
-    combine(libs, 'projects/ios/www/js/phonegap.js')
-
-    deepcopy('projects/ios/www/js/phonegap.js', 'build/js')
+@task("All")
+def all():
+  # Cache.clean()
+  executeTask("lint")
+  executeTask("hint")
+  executeTask("build")
+  executeTask("mint")
+  executeTask("deploy")
+  executeTask("stats")
 
 
-    deepcopy('build/', 'projects/android/assets/www/')
-    libs = FileList('src/lib/phonegap/android', filter="*.js")
-    libs.merge(FileList('src/lib/phonegap/plugins', filter="*.js"))
-    combine(libs, 'projects/android/assets/www/js/phonegap.js')
-
+@task("Wash the taupe!")
+def clean():
+  Cache.clean()
+  help.cleaner()
 
 @task("Lint")
 def lint():
-  PH.linter("src/lib/shims")
-  PH.linter("src/lib/phoneapp")
-  PH.linter("src/app")
+  help.linter("src", excluding = "*/lib/*")
 
 @task("Hint")
 def hint():
-  PH.hinter("src/lib/shims")
-  PH.hinter("src/lib/phoneapp")
-  PH.hinter("src/app")
-  PH.hinter("src/lib/zepto")
+  help.hinter("src", excluding = "*/lib/*")
 
 @task("Flint")
 def flint():
-  PH.flinter("src/lib/shims")
-  PH.flinter("src/lib/phoneapp")
-  PH.flinter("src/app")
-
+  help.flinter("src", excluding = "*/lib/*")
 
 @task("Minting")
 def mint():
-  # Yahoo and yep don't support strict
-  # PH.minter('build', filter = "*yahoo.js,*yepnope.js", strict = False)
-  # PH.minter('build', excluding = "*yahoo*,*yepnope*")
-  PH.minter('build')
+  help.minter(Yak.paths['build'], strict = True)
+  # Some dirty code might not pass strict
+  # help.minter(Yak.paths['build'], strict = False)
 
 @task("Stats report deploy")
 def stats():
-  PH.stater('build')
+  help.stater(Yak.paths['build'])
+
+@task("Build package")
+def build():
+
+  sed = Sed()
+  help.replacer(sed)
+
+  sh('compass compile src')
+
+  app = FileList('src/app', filter="*root.js")
+  app.merge(FileList('src/app', filter="*.js", exclude="*root.js"))
+  combine(app, FileSystem.join(Yak.paths['build'], 'js/app.js'))
+
+  knownHelpers = [
+    'action',
+    'bind',
+    'bindAttr',
+    'collection',
+    'each',
+    'if',
+    'log',
+    'outlet',
+    'unless',
+    'view',
+    'with'
+  ]
+
+  helperCmd = ''
+  for helper in knownHelpers:
+    helperCmd += '-k %s ' % helper
+
+  stf = Std()
+  sh('handlebars src/app/templates -r src/app/templates -f .build/js/templates.js %s' % helperCmd, header="build templates", std = stf)
+  if stf.err:
+    console.fail("PROUT")
+
+  deepcopy('src/index.html', Yak.paths['build'])
+
+  deepcopy('src/assets/images', FileSystem.join(Yak.paths['build'], 'images'))
+
+  # fontcss = FileList('src/assets/fonts/generated', filter="*.css")
+  # combine(fontcss, FileSystem.join(Yak.paths['build'], 'fonts/pictos.css'))
+
+  # pictos = FileList('src/assets/fonts/generated', exclude="*.css")
+  # deepcopy(pictos, FileSystem.join(Yak.paths['build'], 'fonts'))
+
+  fonts = FileList('src/assets/fonts/signika')
+  deepcopy(fonts, FileSystem.join(Yak.paths['build'], 'fonts'))
+
+  # Phonegap is still needed on desktop
+  libs = FileList('src/lib/phonegap/ios', filter="*.js")
+  libs.merge(FileList('src/lib/phonegap/plugins', filter="*.js"))
+  combine(libs, FileSystem.join(Yak.paths['build'], 'js', 'phonegap.js'))
 
 
+@task("Deploy package")
+def deploy():
+  # Prep-up the default browser build
+  help.deployer(Yak.paths['build'], False)
+  help.deployer('dependencies', False, 'js')
 
-@task("build")
-def build(platform="ios"):
-    executeTask('execute', platform, 'debug')
+  # Copy that over to ios folder
+  deepcopy(FileList(Yak.paths['dist']), Yak.paths['dist-ios'])
 
+  # Copy that over to android folder, along with specialized phonegap
+  deepcopy(FileList(Yak.paths['dist']), Yak.paths['dist-android'])
 
-@task("clean")
-def clean(platform="ios"):
-    executeTask('execute', platform, 'clean')
+  # Phonegap for Android
+  libs = FileList('src/lib/phonegap/android', filter="*.js")
+  libs.merge(FileList('src/lib/phonegap/plugins', filter="*.js"))
+  combine(libs, FileSystem.join(Yak.paths['dist-android'], 'js', 'phonegap.js'))
 
-
-@task("emulate")
-def emulate(platform):
-    if platform == 'ios':
-        sh("./projects/ios/cordova/emulate", header="Build & launch ios simulator")
-    elif platform == 'android':
-        sh('./projects/android/cordova/emulate', header="Launch Android Simulator")
-        sh('adb wait-for-device', header="Waiting for simulator")
-        sh('adb shell \'while [ ""`getprop service.bootanim.exit` != "1" ] ; do sleep 1; done\'', header=False)
-        sh('adb shell "input keyevent 82"', header="Unlock screen")
-        sh('./projects/android/cordova/BOOM', header="Compile & open")
-
-
-@task('execute')
-def execute(platform, command):
-    whitelist = ['ios', 'android']
-    title = ''
-
-    if command == 'debug':
-        title = 'Building (target debug)'
-    elif command == 'clean':
-        title = 'Cleaning'
-    else:
-        title = command
-
-    title = '%s %s' % (title, platform)
-
-    if platform == 'all':
-        for p in whitelist:
-            sh("./projects/%s/cordova/%s" % (p, command), header=title)
-
-        return
-
-    if not platform in whitelist:
-        console.error('unknown platform', platform)
-        return
-
-    sh("./projects/%s/cordova/%s" % (platform, command), header=title)
+  # Phonegap for ios
+  libs = FileList('src/lib/phonegap/ios', filter="*.js")
+  libs.merge(FileList('src/lib/phonegap/plugins', filter="*.js"))
+  combine(libs, FileSystem.join(Yak.paths['dist-ios'], 'js', 'phonegap.js'))
