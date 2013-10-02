@@ -4,11 +4,8 @@
 
   "description": "",
   "keywords": [],
-  "author": {
-    "name": "WebItUp",
-    "email": "hello@webitup.fr",
-    "url": "http://www.webitup.fr"
-  },
+  "author": "WebItUp <dev@webitup.fr> (http://www.webitup.fr/lab)", 
+
   "maintainers": [
     {
       "name": "Raildecom",
@@ -35,16 +32,15 @@
          "url": "http://en.wikipedia.org/wiki/MIT_License"
      }
   ],
-  "repositories": [
-         {
-              "type": "git",
-              "url": "https://github.com/OneMoreCheckin/mobile-app.git"
-         }
-  ],
+  "repository":
+     {
+          "type": "git",
+          "url": "https://github.com/OneMoreCheckin/mobile-app.git"
+     },
   "dependencies": {
   },
 
-  "homepage": "http://www.webitup.fr",
+  "homepage": "http://www.onemorecheckin.com", 
 
   "directories": {
     "src": "src",
@@ -54,6 +50,16 @@
     "dist-android": "projects/android/assets/www",
     "dist-ios": "projects/ios/www"
   },
+
+  "devDependencies": {
+    "jsdoc": "*", 
+    "fixmyjs": "*", 
+    "bower": "*", 
+    "jshint": "*"
+  }, 
+
+  "bower": {
+  }, 
 
   "config": {
   }
